@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Platinum Press | Pharmaceutical Packaging Partner</title>
+<meta name="description" content="A trusted pharmaceutical packaging partner for labels, folding cartons and literature, built on quality and compliance. cGMP, ISO 9001, G7 and SGS&Co certified, with 100% in-line vision inspection.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Roboto+Condensed:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#064FBC; --blue-hover:#0A3F96; --blue-ink:#07203F; --blue-deep:#0A1A33;
+  --canvas:#F6F6F6; --surface:#FFFFFF; --ink:#0E1726; --body:#3A4150; --muted:#5D6675;
+  --line:rgba(14,23,38,.10); --line-soft:rgba(14,23,38,.06);
+  --tint:#EAF1FB; --tint-2:#F1F5FB;
+  --radius:20px; --radius-sm:14px; --pill:999px;
+  --wrap:1240px; --pad:24px;
+  --shadow-sm:0 1px 2px rgba(14,23,38,.05), 0 4px 14px rgba(14,23,38,.05);
+  --shadow-md:0 10px 30px rgba(14,23,38,.10);
+  --shadow-lg:0 24px 60px rgba(10,26,51,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--canvas);color:var(--body);font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:'Archivo',sans-serif;color:var(--ink);line-height:1.08;letter-spacing:-.02em;font-weight:800}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+
+/* eyebrow / mono label */
+.eyebrow{font-family:'Roboto Condensed',sans-serif;text-transform:uppercase;letter-spacing:.14em;font-weight:700;font-size:13px;color:var(--blue)}
+.eyebrow.on-dark{color:#8FB4EC}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.5em;font-family:'Inter',sans-serif;font-weight:600;font-size:15px;padding:14px 26px;border-radius:var(--pill);border:1.5px solid transparent;cursor:pointer;transition:all .18s ease;white-space:nowrap}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue-hover);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
+.btn-ghost.on-dark{color:#fff;border-color:rgba(255,255,255,.35)}
+.btn-ghost.on-dark:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-white{background:#fff;color:var(--blue-ink)}
+.btn-white:hover{transform:translateY(-1px);box-shadow:var(--shadow-md)}
+
+/* ---------- top bar + nav ---------- */
+.topbar{background:var(--blue-ink);color:rgba(255,255,255,.82);font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;gap:16px}
+.topbar .certs{font-family:'Roboto Condensed',sans-serif;letter-spacing:.06em;text-transform:uppercase;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar .right{display:flex;gap:18px;align-items:center;white-space:nowrap}
+.topbar a:hover{color:#fff}
+
+header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line-soft);transition:box-shadow .2s}
+header.nav.scrolled{box-shadow:0 6px 24px rgba(14,23,38,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.brand{display:flex;flex-direction:column;line-height:1;letter-spacing:.02em}
+.brand .mark{font-family:'Archivo',sans-serif;font-weight:800;font-size:20px;color:var(--ink);letter-spacing:-.01em}
+.brand .sub{font-family:'Roboto Condensed',sans-serif;text-transform:uppercase;letter-spacing:.28em;font-size:9.5px;color:var(--muted);margin-top:3px}
+.navlinks{display:flex;gap:26px;align-items:center}
+.navlinks a{font-size:14.5px;font-weight:500;color:var(--body);transition:color .15s}
+.navlinks a:hover{color:var(--blue)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav-cta .link{font-size:14.5px;font-weight:600;color:var(--ink)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{width:24px;height:2px;background:var(--ink);border-radius:2px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;color:#fff;background:var(--blue-deep)}
+.hero .bg{position:absolute;inset:0;z-index:0}
+.hero .bg img{width:100%;height:100%;object-fit:cover;animation:zoom 22s ease-out forwards}
+@keyframes zoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero .veil{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(7,32,63,.78) 0%,rgba(10,26,51,.72) 55%,rgba(10,26,51,.92) 100%)}
+.hero .wrap{position:relative;z-index:2;text-align:center;padding-top:120px;padding-bottom:120px;max-width:960px}
+.hero h1{color:#fff;font-size:clamp(38px,6vw,70px);letter-spacing:-.03em;margin:18px auto 0;max-width:15ch}
+.hero p.lead{font-size:clamp(17px,2.2vw,21px);color:rgba(255,255,255,.82);margin:22px auto 0;max-width:60ch;line-height:1.55}
+.hero .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.hero .spec{margin:44px auto 0;display:inline-flex;flex-wrap:wrap;gap:0;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--pill);padding:8px 10px;backdrop-filter:blur(6px)}
+.hero .spec span{font-family:'Roboto Condensed',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:12.5px;color:rgba(255,255,255,.9);padding:6px 16px;position:relative}
+.hero .spec span+span::before{content:"";position:absolute;left:0;top:20%;height:60%;width:1px;background:rgba(255,255,255,.22)}
+
+/* ---------- section scaffolding ---------- */
+section{padding:104px 0}
+.sec-head{max-width:units;margin-bottom:52px}
+.sec-head h2{font-size:clamp(30px,4vw,46px);margin-top:12px}
+.sec-head p{color:var(--muted);font-size:18px;margin-top:16px;max-width:62ch}
+.center{text-align:center;margin-left:auto;margin-right:auto}
+.center p{margin-left:auto;margin-right:auto}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- cert strip ---------- */
+.certstrip{background:var(--surface);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:34px 0}
+.certstrip .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.certstrip .label{font-family:'Roboto Condensed',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:13px;color:var(--muted);font-weight:700;flex:0 0 auto;max-width:220px}
+.certstrip .badges{display:flex;gap:14px;flex-wrap:wrap;flex:1;justify-content:flex-end}
+.badge{display:inline-flex;flex-direction:column;align-items:flex-start;border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 18px;background:#fff}
+.badge b{font-family:'Archivo',sans-serif;font-weight:700;color:var(--ink);font-size:16px;letter-spacing:-.01em}
+.badge small{color:var(--muted);font-size:11.5px;font-family:'Roboto Condensed',sans-serif;letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+
+/* ---------- markets ---------- */
+.markets{background:var(--canvas)}
+.mgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.mcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:30px;transition:transform .2s,box-shadow .2s,border-color .2s;position:relative}
+.mcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:rgba(6,79,188,.35)}
+.mcard .num{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:15px;color:var(--blue);letter-spacing:.08em}
+.mcard h3{font-size:22px;margin-top:14px;font-weight:700}
+.mcard p{font-size:15px;color:var(--muted);margin-top:10px}
+.mcard .go{display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-weight:600;font-size:14px;color:var(--blue)}
+.mcard.lead{background:linear-gradient(160deg,var(--blue) 0%,var(--blue-ink) 100%);border-color:transparent}
+.mcard.lead .num{color:#9CC0F2}
+.mcard.lead h3{color:#fff}
+.mcard.lead p{color:rgba(255,255,255,.8)}
+.mcard.lead .go{color:#fff}
+
+/* ---------- capabilities tabs ---------- */
+.caps{background:var(--surface)}
+.tabbar{display:flex;gap:8px;flex-wrap:wrap;border:1px solid var(--line);background:var(--canvas);padding:8px;border-radius:var(--pill);width:fit-content;max-width:100%;margin:0 auto 44px}
+.tab{font-family:'Inter',sans-serif;font-weight:600;font-size:14.5px;color:var(--body);background:transparent;border:0;padding:11px 22px;border-radius:var(--pill);cursor:pointer;transition:all .18s;white-space:nowrap}
+.tab:hover{color:var(--blue)}
+.tab.active{background:var(--blue);color:#fff}
+.panel{display:none;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.panel.active{display:grid;animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.panel .txt h3{font-size:clamp(26px,3vw,36px)}
+.panel .txt p{margin-top:16px;color:var(--body);font-size:17px}
+.panel .txt ul{list-style:none;margin-top:22px;display:grid;gap:12px}
+.panel .txt li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;color:var(--body)}
+.panel .txt li::before{content:"";flex:0 0 auto;width:20px;height:20px;margin-top:2px;border-radius:50%;background:var(--tint);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23064FBC' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");background-repeat:no-repeat;background-position:center}
+.panel .media{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-md);aspect-ratio:4/3}
+.panel .media img{width:100%;height:100%;object-fit:cover}
+.panel .txt .go{display:inline-flex;align-items:center;gap:6px;margin-top:26px;font-weight:600;color:var(--blue)}
+
+/* ---------- scale band ---------- */
+.scale{background:var(--blue-deep);color:#fff;position:relative;overflow:hidden}
+.scale::after{content:"";position:absolute;inset:0;background:radial-gradient(900px 400px at 80% -10%,rgba(6,79,188,.45),transparent 60%);pointer-events:none}
+.scale .wrap{position:relative;z-index:1}
+.scale .sec-head h2{color:#fff}
+.scale .sec-head p{color:rgba(255,255,255,.72)}
+.statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:8px}
+.stat{border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:30px 28px;background:rgba(255,255,255,.03)}
+.stat .n{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:clamp(42px,5vw,60px);color:#fff;line-height:1;letter-spacing:-.01em}
+.stat .n small{font-size:.5em;color:#9CC0F2;font-weight:700}
+.stat .t{margin-top:12px;color:rgba(255,255,255,.78);font-size:15px}
+
+/* ---------- products ---------- */
+.products{background:var(--canvas)}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+.pcard:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.pcard .ph{aspect-ratio:16/11;overflow:hidden;background:var(--tint-2)}
+.pcard .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.pcard:hover .ph img{transform:scale(1.05)}
+.pcard .b{padding:24px 24px 26px}
+.pcard h3{font-size:20px;font-weight:700}
+.pcard p{font-size:14.5px;color:var(--muted);margin-top:8px}
+.pcard .go{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-weight:600;font-size:14px;color:var(--blue)}
+
+/* ---------- innovations ---------- */
+.innov{background:var(--surface)}
+.igrid{display:grid;grid-template-columns:1.15fr 1fr;gap:24px}
+.ihero{border-radius:var(--radius);overflow:hidden;position:relative;color:#fff;min-height:440px;display:flex;align-items:flex-end;background:var(--blue-ink)}
+.ihero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.ihero .c{position:relative;z-index:1;padding:38px}
+.ihero .tag{display:inline-block;font-family:'Roboto Condensed',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:700;background:var(--blue);color:#fff;padding:6px 14px;border-radius:var(--pill)}
+.ihero h3{color:#fff;font-size:30px;margin-top:16px}
+.ihero p{color:rgba(255,255,255,.82);margin-top:10px;max-width:42ch}
+.icol{display:grid;gap:20px;grid-template-rows:repeat(3,1fr)}
+.icard{border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;transition:border-color .2s,box-shadow .2s;background:#fff}
+.icard:hover{border-color:rgba(6,79,188,.35);box-shadow:var(--shadow-sm)}
+.icard h4{font-size:19px;font-weight:700}
+.icard p{font-size:14.5px;color:var(--muted);margin-top:6px}
+
+/* ---------- single source story ---------- */
+.story{background:var(--tint-2)}
+.story .igrid{grid-template-columns:1fr 1fr;align-items:center;gap:56px}
+.story .media{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-md);aspect-ratio:5/4}
+.story .media img{width:100%;height:100%;object-fit:cover}
+.story h2{font-size:clamp(28px,3.6vw,42px)}
+.story p.lead{margin-top:18px;font-size:18px;color:var(--body)}
+.story ul{list-style:none;margin-top:24px;display:grid;gap:14px}
+.story li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px}
+.story li b{color:var(--ink);font-family:'Archivo',sans-serif;font-weight:700}
+.story li::before{content:"";flex:0 0 auto;width:22px;height:22px;margin-top:1px;border-radius:50%;background:var(--blue);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");background-repeat:no-repeat;background-position:center}
+
+/* ---------- CTA band ---------- */
+.cta-band{background:linear-gradient(150deg,var(--blue) 0%,var(--blue-ink) 100%);color:#fff;text-align:center}
+.cta-band h2{color:#fff;font-size:clamp(30px,4vw,48px);max-width:20ch;margin:0 auto}
+.cta-band p{color:rgba(255,255,255,.82);margin:18px auto 0;max-width:56ch;font-size:18px}
+.cta-band .cta-row{margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ---------- footer ---------- */
+footer{background:var(--blue-ink);color:rgba(255,255,255,.66);padding:72px 0 34px}
+.fgrid{display:grid;grid-template-columns:1.6fr repeat(4,1fr);gap:40px}
+.fbrand .mark{font-family:'Archivo',sans-serif;font-weight:800;font-size:22px;color:#fff}
+.fbrand .sub{font-family:'Roboto Condensed',sans-serif;text-transform:uppercase;letter-spacing:.26em;font-size:10px;color:rgba(255,255,255,.5);margin-top:4px}
+.fbrand p{margin-top:18px;font-size:14px;max-width:34ch;color:rgba(255,255,255,.6)}
+.fbrand .certline{margin-top:18px;font-family:'Roboto Condensed',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:12px;color:rgba(255,255,255,.5)}
+.fcol h5{font-family:'Roboto Condensed',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:12px;color:#fff;font-weight:700;margin-bottom:16px}
+.fcol a{display:block;font-size:14px;padding:6px 0;color:rgba(255,255,255,.66);transition:color .15s}
+.fcol a:hover{color:#fff}
+.fbot{border-top:1px solid rgba(255,255,255,.12);margin-top:52px;padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.5)}
+.fbot .legal{display:flex;gap:20px;flex-wrap:wrap}
+
+/* ---------- responsive ---------- */
+@media(max-width:960px){
+  .navlinks{display:none}
+  .nav-cta .link{display:none}
+  .burger{display:flex}
+  .mgrid,.pgrid,.statgrid{grid-template-columns:repeat(2,1fr)}
+  .panel,.panel.active{grid-template-columns:1fr}
+  .igrid,.story .igrid{grid-template-columns:1fr}
+  .icol{grid-template-rows:none}
+  .fgrid{grid-template-columns:1fr 1fr}
+  section{padding:76px 0}
+  .certstrip .badges{justify-content:flex-start}
+}
+@media(max-width:560px){
+  body{font-size:16px}
+  .mgrid,.pgrid,.statgrid,.fgrid{grid-template-columns:1fr}
+  .hero .wrap{padding-top:84px;padding-bottom:88px}
+  .topbar .certs{display:none}
+  .tabbar{width:100%;justify-content:flex-start;overflow-x:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- top bar -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="certs">cGMP &nbsp;·&nbsp; ISO 9001:2015 &nbsp;·&nbsp; G7 Master &nbsp;·&nbsp; SGS&amp;Co &nbsp;·&nbsp; 100% in-line vision inspection</div>
+    <div class="right">
+      <a href="#">Fort Worth, TX</a>
+      <a href="#contact">Contact Sales</a>
+    </div>
+  </div>
+</div>
+
+<!-- nav -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="mark">PLATINUM PRESS</span>
+      <span class="sub">Pharmaceutical Packaging</span>
+    </a>
+    <nav class="navlinks">
+      <a href="#products">Products</a>
+      <a href="#markets">Markets</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#quality">Quality &amp; Compliance</a>
+      <a href="#innovations">Innovations</a>
+      <a href="#story">Company</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="link" href="#capabilities">View Capabilities</a>
+      <a class="btn btn-primary" href="#contact">Contact Sales</a>
+      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- hero -->
+<section class="hero" id="top" style="padding:0">
+  <div class="bg"><img src="images/hero-press.jpg" alt="Platinum Press printing press in operation"></div>
+  <div class="veil"></div>
+  <div class="wrap">
+    <span class="eyebrow on-dark">Pharmaceutical Packaging · Single Source</span>
+    <h1>A trusted pharmaceutical packaging partner for labels, cartons and literature.</h1>
+    <p class="lead">From concept and design to production and warehousing, Platinum Press delivers packaging built on quality and compliance, so the brands that trust patients to their products can trust their packaging to us.</p>
+    <div class="cta-row">
+      <a class="btn btn-white" href="#contact">Contact Sales</a>
+      <a class="btn btn-ghost on-dark" href="#capabilities">View Capabilities</a>
+    </div>
+    <div class="spec">
+      <span>cGMP</span><span>ISO 9001</span><span>G7 Master</span><span>SGS&amp;Co</span><span>100% Vision Inspection</span>
+    </div>
+  </div>
+</section>
+
+<!-- cert strip -->
+<div class="certstrip" id="quality">
+  <div class="wrap">
+    <div class="label">Certified for pharmaceutical-grade packaging</div>
+    <div class="badges">
+      <div class="badge"><b>cGMP</b><small>Current GMP</small></div>
+      <div class="badge"><b>ISO 9001:2015</b><small>Quality System</small></div>
+      <div class="badge"><b>G7 Master</b><small>Color Accuracy</small></div>
+      <div class="badge"><b>SGS&amp;Co</b><small>Certified</small></div>
+      <div class="badge"><b>100%</b><small>In-line Inspection</small></div>
+    </div>
+  </div>
+</div>
+
+<!-- markets -->
+<section class="markets" id="markets">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Markets We Serve</span>
+      <h2>Packaging engineered for regulated industries.</h2>
+      <p>Six markets, one standard of quality. Whatever you make, we build the packaging that keeps it compliant, protected and on shelf.</p>
+    </div>
+    <div class="mgrid">
+      <a class="mcard lead reveal" href="#contact">
+        <span class="num">01</span>
+        <h3>Pharma / Prescription</h3>
+        <p>Serialized labels, folding cartons and patient literature for Rx brands, backed by DSCSA expertise.</p>
+        <span class="go">Explore &rarr;</span>
+      </a>
+      <a class="mcard reveal" href="#contact">
+        <span class="num">02</span>
+        <h3>Medical Device</h3>
+        <p>Precision packaging and inserts that protect device integrity and hold up to audit.</p>
+        <span class="go">Explore &rarr;</span>
+      </a>
+      <a class="mcard reveal" href="#contact">
+        <span class="num">03</span>
+        <h3>OTC / Consumer Health</h3>
+        <p>Retail-ready cartons and labels that move fast without cutting a compliance corner.</p>
+        <span class="go">Explore &rarr;</span>
+      </a>
+      <a class="mcard reveal" href="#contact">
+        <span class="num">04</span>
+        <h3>Wellness &amp; Natural Health</h3>
+        <p>Premium shelf presence for supplement and natural health brands, made responsibly.</p>
+        <span class="go">Explore &rarr;</span>
+      </a>
+      <a class="mcard reveal" href="#contact">
+        <span class="num">05</span>
+        <h3>Animal &amp; Pet Health</h3>
+        <p>Regulatory-ready packaging for veterinary pharma, supplements and pet care.</p>
+        <span class="go">Explore &rarr;</span>
+      </a>
+      <a class="mcard reveal" href="#contact">
+        <span class="num">06</span>
+        <h3>Personal Care / Cosmetic</h3>
+        <p>High-impact print and finishing that makes personal care brands look their best.</p>
+        <span class="go">Explore &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- capabilities -->
+<section class="caps" id="capabilities">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Capabilities</span>
+      <h2>Every step under one roof.</h2>
+      <p>Printing, finishing, serialization, warehousing and value-added services, run in-house and inspected 100%. One partner, one point of accountability.</p>
+    </div>
+
+    <div class="tabbar reveal" role="tablist">
+      <button class="tab active" data-tab="print">Printing</button>
+      <button class="tab" data-tab="finish">Finishing</button>
+      <button class="tab" data-tab="serial">Serialization &amp; DSCSA</button>
+      <button class="tab" data-tab="ware">Warehousing &amp; Fulfillment</button>
+      <button class="tab" data-tab="value">Value-Added Services</button>
+    </div>
+
+    <div class="panel active" data-panel="print">
+      <div class="txt">
+        <h3>Printing built for pharmaceutical accuracy.</h3>
+        <p>Two Koenig &amp; Bauer Rapida offset presses, the same class of press used to print the world's currency, plus flexo and VOC and PFAS-free digital. Color held to G7 Master, every sheet verified.</p>
+        <ul><li>Offset, flexo and digital under one roof</li><li>G7 Master color across every run</li><li>VOC and PFAS-free digital printing</li><li>10-color, braille and cold foil capable</li></ul>
+        <a class="go" href="#contact">Talk to a printing expert &rarr;</a>
+      </div>
+      <div class="media"><img src="images/pharma-line.jpg" alt="Pharmaceutical printing line"></div>
+    </div>
+
+    <div class="panel" data-panel="finish">
+      <div class="txt">
+        <h3>Finishing that adds security and shelf appeal.</h3>
+        <p>Cold foil, embossing, laser ablation and specialty coatings, applied in line and checked against spec so the finish is as controlled as the print.</p>
+        <ul><li>Cold foil and multi-level embossing</li><li>Laser ablation for tamper-evidence</li><li>Spot UV, soft-touch and protective coatings</li><li>Braille and tactile compliance features</li></ul>
+        <a class="go" href="#contact">Explore finishing options &rarr;</a>
+      </div>
+      <div class="media"><img src="images/inspection.jpg" alt="Finishing and inspection"></div>
+    </div>
+
+    <div class="panel" data-panel="serial">
+      <div class="txt">
+        <h3>Serialization and DSCSA, handled by specialists.</h3>
+        <p>Unit-level coding, aggregation and reporting through EasyCode and CodeShield, verified by 100% in-line vision so every code that leaves is a code that scans.</p>
+        <ul><li>DSCSA-ready serialization and aggregation</li><li>EasyCode traceability and reporting</li><li>CodeShield anti-counterfeiting</li><li>100% in-line vision verification</li></ul>
+        <a class="go" href="#contact">Plan your serialization &rarr;</a>
+      </div>
+      <div class="media"><img src="images/cleanroom.jpg" alt="Controlled serialization environment"></div>
+    </div>
+
+    <div class="panel" data-panel="ware">
+      <div class="txt">
+        <h3>Warehousing and fulfillment that ships on time.</h3>
+        <p>Climate-controlled, cGMP-compliant storage with serialized inventory and 2-day ship to 90% of the US, so your supply chain stays as reliable as your packaging.</p>
+        <ul><li>cGMP-compliant, climate-controlled storage</li><li>Serialized inventory and real-time reporting</li><li>Kitting, pick-and-pack and just-in-time delivery</li><li>2-day ship to 90% of the US</li></ul>
+        <a class="go" href="#contact">Discuss fulfillment &rarr;</a>
+      </div>
+      <div class="media"><img src="images/facility.jpg" alt="Platinum Press facility"></div>
+    </div>
+
+    <div class="panel" data-panel="value">
+      <div class="txt">
+        <h3>Value-added services from concept to delivery.</h3>
+        <p>Custom design and artwork, contract packaging and assembly, kitting and prototyping. The extra steps that turn a supplier into a single-source partner.</p>
+        <ul><li>Custom design and prepress artwork</li><li>Contract packaging and assembly</li><li>Kitting and fulfillment</li><li>Rapid prototyping and samples</li></ul>
+        <a class="go" href="#contact">Scope a project &rarr;</a>
+      </div>
+      <div class="media"><img src="images/cleanroom.jpg" alt="Value-added services"></div>
+    </div>
+  </div>
+</section>
+
+<!-- scale band -->
+<section class="scale">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow on-dark">The Scale Behind the Quality</span>
+      <h2>Bigger than you would guess. Nimble by design.</h2>
+      <p>Privately held and centrally located, with the capacity of a national supplier and the attention of a partner who answers the phone.</p>
+    </div>
+    <div class="statgrid">
+      <div class="stat reveal"><div class="n">100<small>+</small></div><div class="t">Pharma and healthcare clients served</div></div>
+      <div class="stat reveal"><div class="n">2</div><div class="t">US production and warehousing facilities</div></div>
+      <div class="stat reveal"><div class="n">2</div><div class="t">Koenig &amp; Bauer Rapida offset presses</div></div>
+      <div class="stat reveal"><div class="n">$15<small>M</small></div><div class="t">Headquarters expansion in capacity</div></div>
+      <div class="stat reveal"><div class="n">3-4<small>wk</small></div><div class="t">Average lead time on new programs</div></div>
+      <div class="stat reveal"><div class="n">90<small>%</small></div><div class="t">Of the US reached in 2-day ship</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- products -->
+<section class="products" id="products">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Products</span>
+      <h2>A complete packaging line, from label to lidding.</h2>
+      <p>Everything a regulated brand needs, produced to the same standard and inspected 100%.</p>
+    </div>
+    <div class="pgrid">
+      <a class="pcard reveal" href="#contact"><div class="ph"><img src="images/prod-labels.png" alt="Pharmaceutical labels"></div><div class="b"><h3>Labels</h3><p>Pressure-sensitive, extended-content and booklet labels, serialization-ready.</p><span class="go">Explore &rarr;</span></div></a>
+      <a class="pcard reveal" href="#contact"><div class="ph"><img src="images/prod-cartons.jpg" alt="Folding cartons"></div><div class="b"><h3>Folding Cartons</h3><p>Precision cartons including the patented combination carton and secondary blister.</p><span class="go">Explore &rarr;</span></div></a>
+      <a class="pcard reveal" href="#contact"><div class="ph"><img src="images/prod-literature.jpg" alt="Literature, inserts and outserts"></div><div class="b"><h3>Literature, Inserts &amp; Outserts</h3><p>High-volume, cGMP-compliant patient and physician literature.</p><span class="go">Explore &rarr;</span></div></a>
+      <a class="pcard reveal" href="#contact"><div class="ph"><img src="images/prod-lidding.png" alt="Foil lidding"></div><div class="b"><h3>Foil Lidding</h3><p>Barrier lidding for blister, cup and tray formats, tamper-evident and printable.</p><span class="go">Explore &rarr;</span></div></a>
+      <a class="pcard reveal" href="#contact"><div class="ph"><img src="images/prod-flexible.jpg" alt="Flexible packaging"></div><div class="b"><h3>Flexible Packaging</h3><p>Pouches, sachets and lidding films engineered for product safety.</p><span class="go">Explore &rarr;</span></div></a>
+      <a class="pcard reveal" href="#contact"><div class="ph"><img src="images/prod-security.jpg" alt="Security products"></div><div class="b"><h3>Security Products</h3><p>Anti-counterfeiting, tamper-evidence and source tagging for brand protection.</p><span class="go">Explore &rarr;</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- innovations -->
+<section class="innov" id="innovations">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Innovations</span>
+      <h2>Proprietary advantages the public giants do not have.</h2>
+      <p>Patented and purpose-built technologies that protect product, brand and patient.</p>
+    </div>
+    <div class="igrid">
+      <a class="ihero reveal" href="#contact">
+        <img src="images/prod-combination.png" alt="Patented combination carton">
+        <div class="c">
+          <span class="tag">Patented</span>
+          <h3>Combination Carton</h3>
+          <p>A folding carton with an integrated secondary blister, combining two components into one secure, efficient unit.</p>
+        </div>
+      </a>
+      <div class="icol">
+        <a class="icard reveal" href="#contact"><h4>EasyCode</h4><p>Serialization built for DSCSA compliance and full unit-level traceability.</p></a>
+        <a class="icard reveal" href="#contact"><h4>CodeShield</h4><p>Anti-counterfeiting and anti-diversion protection with overt and covert features.</p></a>
+        <a class="icard reveal" href="#contact"><h4>Flatsert</h4><p>High-density patient literature in a space-saving flat format for automated lines.</p></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- single-source story -->
+<section class="story" id="story">
+  <div class="wrap">
+    <div class="igrid">
+      <div class="media reveal"><img src="images/facility.jpg" alt="Platinum Press facility floor"></div>
+      <div class="reveal">
+        <span class="eyebrow">Why Platinum Press</span>
+        <h2>One partner, from concept to warehousing.</h2>
+        <p class="lead">We are privately held, and we treat that as an advantage. No layers, no faceless bureaucracy, just senior attention on every job and direct accountability for quality.</p>
+        <ul>
+          <li><span><b>Single source.</b> Design, print, finishing, serialization and fulfillment under one roof.</span></li>
+          <li><span><b>Senior attention.</b> The people who own the outcome are the people you talk to.</span></li>
+          <li><span><b>Quality first.</b> 100% in-line vision inspection on every program, no exceptions.</span></li>
+          <li><span><b>Made in the US.</b> Fort Worth based, centrally located, 2-day ship to most of the country.</span></li>
+        </ul>
+        <a class="btn btn-primary" href="#contact" style="margin-top:30px">Contact Sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA band -->
+<section class="cta-band" id="contact">
+  <div class="wrap">
+    <span class="eyebrow on-dark">Let's Build It Together</span>
+    <h2>Let's talk about your packaging program.</h2>
+    <p>Tell us what you make and where it needs to go. You will reach a real expert team, not a generic form.</p>
+    <div class="cta-row">
+      <a class="btn btn-white" href="#">Contact Sales</a>
+      <a class="btn btn-ghost on-dark" href="#capabilities">View Capabilities</a>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <div class="mark">PLATINUM PRESS</div>
+        <div class="sub">Pharmaceutical Packaging</div>
+        <p>Single-source printed packaging for the pharmaceutical, healthcare and consumer health sectors. Fort Worth, TX.</p>
+        <div class="certline">cGMP · ISO 9001:2015 · G7 Master · SGS&amp;Co</div>
+      </div>
+      <div class="fcol"><h5>Products</h5><a href="#products">Labels</a><a href="#products">Folding Cartons</a><a href="#products">Literature &amp; Inserts</a><a href="#products">Foil Lidding</a><a href="#products">Flexible Packaging</a><a href="#products">Security Products</a></div>
+      <div class="fcol"><h5>Markets</h5><a href="#markets">Pharma / Prescription</a><a href="#markets">Medical Device</a><a href="#markets">OTC / Consumer Health</a><a href="#markets">Wellness &amp; Natural Health</a><a href="#markets">Animal &amp; Pet Health</a><a href="#markets">Personal Care</a></div>
+      <div class="fcol"><h5>Capabilities</h5><a href="#capabilities">Printing</a><a href="#capabilities">Finishing</a><a href="#capabilities">Serialization &amp; DSCSA</a><a href="#capabilities">Warehousing</a><a href="#capabilities">Value-Added Services</a></div>
+      <div class="fcol"><h5>Company</h5><a href="#story">About / Our Story</a><a href="#innovations">Innovations</a><a href="#quality">Quality &amp; Compliance</a><a href="#">Insights</a><a href="#contact">Contact Sales</a></div>
+    </div>
+    <div class="fbot">
+      <div>© 2026 Platinum Press, Inc. All rights reserved.</div>
+      <div class="legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Accessibility</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// sticky nav shadow
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>8),{passive:true});
+
+// scroll reveal
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// capabilities tabs
+const tabs=document.querySelectorAll('.tab'),panels=document.querySelectorAll('.panel');
+tabs.forEach(t=>t.addEventListener('click',()=>{
+  tabs.forEach(x=>x.classList.remove('active'));
+  panels.forEach(p=>p.classList.remove('active'));
+  t.classList.add('active');
+  document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+}));
+</script>
+</body>
+</html>
