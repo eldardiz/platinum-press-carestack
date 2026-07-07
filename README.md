@@ -7,6 +7,14 @@ Sections (matching the reference order): announcement topbar → dark nav → sp
 
 **Placeholders to note before showing a client:** marquee "CLIENT ONE…EIGHT" tiles are generic stand-ins (no real client logos yet); quotes are attributed to PP's own teams (no invented client testimonials); phone number `(817) 555-0100` is a placeholder; the "Industry Guide" report is a stand-in concept. View at `http://127.0.0.1:8080/v2.html` when the local server is running.
 
+## Subpage templates (added 2026-07-07)
+Three template exemplars cloned from CareStack's subpage structures, matching the 3-core-template client deliverable. Same design system as v2, all-original PP copy, fully interlinked with v2.html:
+- **`pharma.html`** — Market template (Pharma / Prescription): breadcrumb hero + video-quote card, why-accordion, dark stat banner, products rail with link-list cards, split deep-dive, services tabs, stakeholder section, ice CTA card, FAQ with sticky topics.
+- **`labels.html`** — Product/Capability detail template (Labels): prev/next sibling sub-nav, sticky intro with link-rich paragraphs, 3 alternating image + checklist blocks, dark mini-CTA, dark quote band with video slot.
+- **`about.html`** — Content/Company template (About / Our Story): dark hero + facility photo, ice stats band ($15M / 2 / 100+ / 2-Day), two-column story, 2x2 link cards, big CTA, FAQ.
+
+These three templates power the full sitemap: Market template → all 6 market pages; detail template → all products + capability children; content template → About, Quality, News, Careers.
+
 ## V1 — carestack-inspired (`index.html`)
 
 A standalone homepage design exploration for **Platinum Press**, cloning the layout and feel of **carestack.com** (enterprise / premium / clean), reskinned with Platinum Press's own palette and imagery.

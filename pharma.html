@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pharma / Prescription Packaging | Platinum Press</title>
+<meta name="description" content="Serialized, DSCSA-ready labels, folding cartons and literature for prescription brands. cGMP, ISO 9001, G7 and SGS&Co certified with 100% in-line vision inspection.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0A1A33; --navy-2:#07203F; --black:#0A0D14; --card-dark:#0C1524;
+  --blue:#064FBC; --blue-h:#0A3F96; --ice:#BFD9FF; --ice-2:#9CC0F2;
+  --cream:#F3F5F8; --cream-2:#EEF1F6; --tileline:rgba(14,23,38,.08);
+  --ink:#131A26; --body:#3A4150; --muted:#5D6675; --eyebrow:#5B6472;
+  --line:#E4E6EB; --white:#fff;
+  --r:20px; --rs:12px; --rb:7px; --wrap:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Geist','Inter',system-ui,sans-serif;color:var(--body);background:#fff;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+h1,h2,h3,h4{font-weight:400;color:var(--ink);line-height:1.1;letter-spacing:-.2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:16px;letter-spacing:.8px;text-transform:uppercase;color:var(--eyebrow);font-weight:400}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;font-size:16px;font-weight:500;padding:12px 24px;border-radius:var(--rb);border:1px solid transparent;cursor:pointer;transition:background .15s ease-out,border-color .15s,color .15s;white-space:nowrap}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-h)}
+.btn-outline{background:#fff;border-color:#D7DAE0;color:var(--ink)}
+.btn-outline:hover{border-color:var(--ink)}
+.btn-outline-dark{background:transparent;border-color:rgba(255,255,255,.28);color:#fff}
+.btn-outline-dark:hover{border-color:#fff}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-dark:hover{background:var(--navy-2)}
+.arrow{display:inline-block;transform:translateY(-1px)}
+section{position:relative}
+.sect{padding:88px 0}
+.sect-head h2{font-size:40px;line-height:1.12;margin-top:14px;max-width:26ch}
+
+/* topbar + nav (shared) */
+.topbar{background:var(--navy);color:rgba(255,255,255,.85);font-size:13.5px}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:46px;gap:16px}
+.topbar .pill{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:5px 14px;background:rgba(255,255,255,.05)}
+.topbar .pill .dot{width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--ice),var(--blue))}
+.topbar .pill b{font-weight:500;color:#fff}
+.topbar .pill .sep{color:rgba(255,255,255,.4)}
+.topbar .pill .cta{color:var(--ice)}
+.topbar .r{display:flex;align-items:center;gap:22px;white-space:nowrap}
+.topbar .r a:hover{color:#fff}
+.nav{position:sticky;top:0;z-index:100;background:var(--navy);transition:background .25s,box-shadow .25s;color:#fff}
+.nav.scrolled{background:#fff;color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;height:75px;gap:26px}
+.logo{font-weight:600;font-size:19px;letter-spacing:.5px;white-space:nowrap}
+.logo span{font-weight:400;opacity:.75}
+.nav .links{display:flex;align-items:center;gap:26px;font-size:16px;flex:1;margin-left:14px}
+.nav .links a{display:inline-flex;align-items:center;gap:5px;opacity:.92}
+.nav .links a:hover{opacity:1}
+.nav .links .chev{font-size:10px;opacity:.7;transform:translateY(1px)}
+.nav .innov{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(90deg,#DCEAFF,#BFD9FF);color:var(--navy);padding:7px 14px;border-radius:var(--rb);font-weight:500}
+.nav .cta{display:flex;align-items:center;gap:12px}
+.nav .btn-outline{background:transparent;border-color:rgba(255,255,255,.3);color:#fff}
+.nav.scrolled .btn-outline{background:#fff;border-color:#D7DAE0;color:var(--ink)}
+.burger{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
+.burger span{width:22px;height:2px;background:currentColor;border-radius:2px}
+
+/* hero */
+.mhero{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:26px 0 96px}
+.bcrumb{display:flex;align-items:center;gap:10px;font-size:14.5px;color:rgba(255,255,255,.65);padding:14px 0 40px}
+.bcrumb .home{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border:1px solid rgba(255,255,255,.22);border-radius:7px}
+.bcrumb a:hover{color:#fff}
+.bcrumb b{color:#fff;font-weight:500}
+.mhero .grid{display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:center}
+.mhero .eyebrow{color:var(--ice);font-size:14px;font-weight:500}
+.mhero h1{color:#fff;font-size:46px;line-height:1.1;margin-top:16px;max-width:16ch}
+.mhero p{color:rgba(255,255,255,.75);font-size:17.5px;margin-top:20px;max-width:48ch}
+.mhero p b{color:#fff;font-weight:500}
+.mhero .more{display:inline-block;color:#fff;text-decoration:underline;margin-top:12px;font-size:15.5px}
+.mhero .btn{margin-top:30px}
+.vcard{position:relative;border-radius:var(--r);overflow:hidden;height:550px;background:var(--card-dark);transform:rotate(.8deg);box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.vcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.9}
+.vcard .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,13,26,.1) 30%,rgba(7,13,26,.9) 80%)}
+.vcard .play{position:absolute;right:22px;top:22px;display:inline-flex;align-items:center;gap:9px;background:rgba(10,13,20,.7);border:1px solid rgba(255,255,255,.2);color:#fff;padding:10px 20px;border-radius:999px;font-size:15px}
+.playtri{width:0;height:0;border-left:8px solid #fff;border-top:5px solid transparent;border-bottom:5px solid transparent}
+.vcard .mark{position:absolute;left:24px;top:24px;color:#fff;font-size:13px;letter-spacing:1.6px}
+.vcard .c{position:absolute;left:24px;right:24px;bottom:22px;color:#fff}
+.vcard .c .q{font-size:19px;font-weight:500;line-height:1.4}
+.vcard .c .div{height:1px;background:rgba(255,255,255,.25);margin:14px 0 10px}
+.vcard .c b{font-weight:500;font-size:15px;display:block}
+.vcard .c span{color:rgba(255,255,255,.6);font-size:13.5px}
+
+/* why accordion */
+.why .grid{display:grid;grid-template-columns:400px 1fr;gap:92px;margin-top:56px;align-items:start}
+.acc .item{border-bottom:1px solid var(--line);padding:15px 0;cursor:pointer}
+.acc .item .row{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.acc .item .t{font-size:17px;color:var(--ink)}
+.acc .item .n{font-size:13px;color:var(--muted)}
+.acc .item.active{padding:6px 0 22px;border-bottom:0}
+.acc .item.active .t{font-size:20px;font-weight:500}
+.acc .item .d,.acc .item .lm,.acc .item .bar{display:none}
+.acc .item.active .d{display:block;color:var(--muted);font-size:15.5px;margin-top:10px;max-width:38ch}
+.acc .item.active .lm{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-weight:500;margin-top:16px;font-size:15.5px}
+.acc .item.active .bar{display:block;height:3px;background:var(--line);margin-top:20px;border-radius:2px;overflow:hidden}
+.acc .item.active .bar i{display:block;height:100%;width:28%;background:var(--ink)}
+.why .media{border-radius:var(--r);overflow:hidden;min-height:520px;position:relative}
+.why .media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* stat banner */
+.statbanner{background:var(--black);border-radius:var(--r);overflow:hidden;display:grid;grid-template-columns:310px 240px 1fr;gap:0;color:#fff}
+.statbanner .ph{overflow:hidden}
+.statbanner .ph img{width:100%;height:100%;object-fit:cover;min-height:370px}
+.statbanner .tiles{display:grid;grid-template-rows:1fr 1fr;gap:14px;padding:14px}
+.statbanner .tile{background:rgba(255,255,255,.06);border-radius:12px;padding:22px;display:flex;flex-direction:column;justify-content:center}
+.statbanner .tile .n{font-size:40px;color:rgba(255,255,255,.85);line-height:1}
+.statbanner .tile .t{color:rgba(255,255,255,.6);font-size:14.5px;margin-top:10px}
+.statbanner .c{padding:44px 48px;display:flex;flex-direction:column;justify-content:center}
+.statbanner .who{font-size:15px;color:rgba(255,255,255,.6)}
+.statbanner .who b{color:var(--ice);font-weight:500}
+.statbanner h3{color:#fff;font-size:29px;line-height:1.25;margin-top:22px;max-width:24ch}
+.statbanner .btns{display:flex;gap:14px;margin-top:30px}
+
+/* products rail (fcards) */
+.caps{padding:20px 0 96px}
+.caps .grid{display:grid;grid-template-columns:330px 1fr;gap:22px;align-items:start}
+.rail{position:sticky;top:105px;padding-top:26px}
+.rail .item{display:flex;align-items:center;gap:14px;padding:10px 0 10px 14px;border-left:2px solid var(--line);color:var(--body);font-size:16.5px;cursor:pointer}
+.rail .item.active{border-left-color:var(--ink);color:var(--ink);font-weight:500}
+.rail .sep{height:1px;background:var(--line);margin:34px 0 26px;width:88%}
+.rail p{color:var(--muted);font-size:15.5px;max-width:30ch}
+.rail .btn{margin-top:22px}
+.fcards{display:grid;gap:56px}
+.fcard{border-radius:var(--r);overflow:hidden;border:1px solid var(--tileline)}
+.fcard .top{position:relative;background:linear-gradient(135deg,var(--cream) 0%,#E7EDF6 100%);min-height:360px;padding:32px;display:flex}
+.fcard .top h3{align-self:flex-end;font-size:32px;color:var(--ink);position:relative;z-index:2}
+.fcard .top .ph{position:absolute;right:0;top:0;bottom:0;width:56%;overflow:hidden}
+.fcard .top .ph img{width:100%;height:100%;object-fit:cover}
+.fcard .top .ph::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--cream) 0%,rgba(243,245,248,0) 30%);z-index:1}
+.fcard .body{background:var(--card-dark);padding:22px 40px 30px;display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+.fcard .body a{display:flex;align-items:center;justify-content:space-between;gap:14px;color:#fff;font-size:16.5px;padding:19px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.fcard .body a:hover{color:var(--ice)}
+
+/* split deep-dive */
+.deep{border-radius:var(--r);overflow:hidden;display:grid;grid-template-columns:460px 1fr}
+.deep .dark{background:var(--navy);color:#fff;padding:48px}
+.deep .dark .num{font-size:26px;color:rgba(255,255,255,.4)}
+.deep .dark h3{color:#fff;font-size:30px;margin-top:10px;max-width:14ch}
+.deep .dark h4{color:rgba(255,255,255,.45);font-size:26px;font-weight:400;margin-top:44px}
+.deep .dark p{color:rgba(255,255,255,.65);font-size:15.5px;margin-top:16px;max-width:34ch}
+.deep .dark .subnav{margin-top:34px}
+.deep .dark .subnav a{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.85);font-size:16px}
+.deep .dark .subnav a.on{color:var(--ice);border-bottom-color:var(--ice)}
+.deep .dark .btn{margin-top:34px}
+.deep .light{background:linear-gradient(160deg,#fff 0%,var(--cream) 100%);padding:48px;position:relative;overflow:hidden}
+.deep .light .check{display:grid;gap:26px;max-width:52ch}
+.deep .light .ck{display:grid;gap:8px}
+.deep .light .ck .h{display:flex;align-items:center;gap:11px;font-weight:600;color:var(--ink);font-size:17px}
+.deep .light .ck .h::before{content:"";width:20px;height:20px;border-radius:50%;background:var(--blue);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");background-repeat:no-repeat;background-position:center;flex:0 0 auto}
+.deep .light .ck p{color:var(--muted);font-size:15.5px;padding-left:31px}
+
+/* services tabs */
+.svc .tabbar{display:flex;gap:6px;background:#fff;border:1px solid var(--line);border-radius:999px;width:fit-content;max-width:100%;margin:0 auto 44px;padding:7px;overflow-x:auto}
+.svc .tab{border:0;background:transparent;font-family:inherit;font-size:15.5px;color:var(--body);padding:11px 22px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.svc .tab.active{background:var(--navy);color:#fff}
+.svc .panel{display:none;background:#fff;border:1px solid var(--tileline);border-radius:var(--r);padding:24px;grid-template-columns:1fr 1.15fr;gap:44px;align-items:center}
+.svc .panel.active{display:grid;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.svc .panel .txt{padding:24px}
+.svc .panel .txt svg{width:40px;height:40px;stroke:var(--ink);fill:none;stroke-width:1.5}
+.svc .panel .txt h3{font-size:29px;margin-top:110px;max-width:16ch}
+.svc .panel .txt p{color:var(--muted);font-size:15.5px;margin-top:14px;max-width:40ch}
+.svc .panel .txt .btn{margin-top:24px}
+.svc .panel .media{border-radius:14px;overflow:hidden;min-height:440px;position:relative}
+.svc .panel .media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* stakeholders (dark) */
+.stake{background:var(--black);color:#fff}
+.stake .grid{display:grid;grid-template-columns:1fr 460px;gap:80px;align-items:start;margin-top:10px}
+.stake .rows{display:grid;gap:14px}
+.stake .rowitem{padding:26px 26px;border-radius:14px}
+.stake .rowitem.hl{background:rgba(255,255,255,.07);position:relative}
+.stake .rowitem.hl::after{content:"";position:absolute;right:-9px;top:38px;width:18px;height:18px;background:rgba(255,255,255,.07);transform:rotate(45deg)}
+.stake .rowitem .eb{font-size:12.5px;letter-spacing:1.4px;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.stake .rowitem h3{color:#fff;font-size:25px;margin-top:8px;font-weight:500}
+.stake .rowitem.dim h3{color:rgba(255,255,255,.55)}
+.stake .rowitem p{color:rgba(255,255,255,.6);font-size:15px;margin-top:8px;max-width:52ch}
+.stake .side{display:grid;gap:16px}
+.stake .side .tiles{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stake .side .tile{border-radius:14px;overflow:hidden;height:220px;background:var(--cream-2)}
+.stake .side .tile img{width:100%;height:100%;object-fit:cover}
+.stake .qcard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:28px}
+.stake .qcard .who{font-size:14.5px}
+.stake .qcard .who b{color:var(--ice);font-weight:500}
+.stake .qcard .who span{color:rgba(255,255,255,.55)}
+.stake .qcard p{color:rgba(255,255,255,.85);font-weight:500;font-size:17.5px;line-height:1.5;margin-top:14px}
+
+/* ice CTA card */
+.icecta{background:var(--ice);border-radius:var(--r);padding:44px 48px;display:flex;align-items:center;justify-content:space-between;gap:32px;color:var(--navy)}
+.icecta h3{color:var(--navy);font-size:26px;font-weight:600}
+.icecta p{color:rgba(10,26,51,.75);margin-top:10px;max-width:52ch;font-size:16px}
+
+/* FAQ */
+.faq .grid{display:grid;grid-template-columns:330px 1fr;gap:64px;margin-top:52px;align-items:start}
+.faq .topics{position:sticky;top:105px}
+.faq .topics .t{display:flex;gap:12px;padding:11px 0 11px 14px;border-left:2px solid var(--line);color:var(--body);font-size:16px;cursor:pointer}
+.faq .topics .t.active{border-left-color:var(--ink);color:var(--ink);font-weight:500}
+.faq .topics .t .n{color:var(--muted);font-size:14px}
+.faq .more{margin-top:44px;display:flex;gap:14px;align-items:center;color:var(--muted);font-size:15px}
+.faq .more .qm{width:38px;height:38px;border-radius:10px;background:var(--cream-2);display:flex;align-items:center;justify-content:center;font-weight:600;color:var(--ink)}
+.faq .more a{color:var(--blue);font-weight:500}
+.qa .item{border-bottom:1px solid var(--line)}
+.qa .item .q{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 8px;cursor:pointer;font-weight:500;color:var(--ink);font-size:17.5px}
+.qa .item .q .pm{font-size:22px;color:var(--muted);font-weight:400}
+.qa .item .a{display:none;padding:0 8px 24px;color:var(--body);font-size:16px;max-width:88ch}
+.qa .item.open{background:var(--cream);border-radius:12px;border-bottom-color:transparent}
+.qa .item.open .q{padding-left:20px;padding-right:20px}
+.qa .item.open .a{display:block;padding-left:20px;padding-right:20px}
+
+/* big cta + footer */
+.bigcta{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%);padding:110px 0;text-align:center}
+.bigcta h2{color:var(--ice);font-size:60px;line-height:1.06;max-width:18ch;margin:0 auto}
+.bigcta p{color:rgba(255,255,255,.65);font-size:17.5px;margin:26px auto 0;max-width:60ch}
+.bigcta .btn{margin-top:36px}
+footer{background:#F4F5F7;padding:84px 0 40px;color:var(--body)}
+.fcols{display:grid;grid-template-columns:repeat(5,1fr);gap:36px}
+.fcols h5{font-size:16.5px;color:var(--ink);font-weight:600;margin-bottom:20px}
+.fcols a{display:block;font-size:15px;color:var(--body);padding:7px 0}
+.fcols a:hover{color:var(--ink)}
+.fbottom{border-top:1px solid var(--line);margin-top:56px;padding-top:32px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.fbottom .logo{color:var(--ink)}
+.fbottom .copy{font-size:14.5px;color:var(--muted)}
+.fbottom .legal{display:flex;gap:10px;align-items:center;font-size:14.5px;color:var(--muted)}
+.fbottom .social{display:flex;gap:18px;color:#8B929D;font-size:15px;font-weight:600}
+
+@media(max-width:1080px){
+  .nav .links{display:none}
+  .burger{display:flex}
+  .mhero .grid,.why .grid,.caps .grid,.stake .grid,.faq .grid{grid-template-columns:1fr}
+  .rail,.faq .topics{position:static}
+  .statbanner{grid-template-columns:1fr}
+  .statbanner .tiles{grid-template-rows:none;grid-template-columns:1fr 1fr}
+  .deep{grid-template-columns:1fr}
+  .svc .panel,.svc .panel.active{grid-template-columns:1fr}
+  .icecta,.minicta{flex-direction:column;align-items:flex-start}
+  .bigcta h2{font-size:42px}
+  .fcols{grid-template-columns:1fr 1fr}
+  .vcard{transform:none;height:440px}
+  .mhero h1{font-size:36px}
+  .sect-head h2{font-size:32px}
+  .fcard .body{grid-template-columns:1fr;padding:14px 24px 20px}
+}
+@media(max-width:640px){
+  .topbar .r{display:none}
+  .fcols{grid-template-columns:1fr}
+  .stake .side .tiles{grid-template-columns:1fr}
+  .bigcta h2{font-size:32px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="pill"><span class="dot"></span><b>$15M HQ Expansion, Now Complete</b><span class="sep">·</span><span>Fort Worth, TX</span><span class="sep">·</span><a class="cta" href="about.html">Read the News ›</a></span>
+    <span class="r">
+      <a href="v2.html#contact">✆ (817) 555-0100</a>
+      <a href="v2.html#contact">Support</a>
+      <a href="v2.html#stories">Insights</a>
+      <a href="about.html">Careers</a>
+      <a href="about.html">Company</a>
+      <a href="#">Client Login</a>
+      <span>🇺🇸</span>
+    </span>
+  </div>
+</div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="v2.html">PLATINUM<span>PRESS</span></a>
+    <nav class="links">
+      <a href="labels.html">Products <span class="chev">▼</span></a>
+      <a href="v2.html#capabilities">Capabilities <span class="chev">▼</span></a>
+      <a href="pharma.html">Markets <span class="chev">▼</span></a>
+      <a href="about.html">Company <span class="chev">▼</span></a>
+      <a href="v2.html#comply">Quality &amp; Compliance</a>
+      <a class="innov" href="v2.html#innovations">✦ Innovations</a>
+    </nav>
+    <div class="cta">
+      <a class="btn btn-outline" href="v2.html#stories">Our Work</a>
+      <a class="btn btn-blue" href="v2.html#contact">Contact Sales</a>
+      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- hero -->
+<section class="mhero">
+  <div class="wrap">
+    <div class="bcrumb">
+      <a class="home" href="v2.html">⌂</a><span>›</span>
+      <a href="v2.html#markets">Markets</a><span>›</span>
+      <b>Pharma / Prescription</b>
+    </div>
+    <div class="grid">
+      <div>
+        <div class="eyebrow">Pharma / Prescription</div>
+        <h1>Serialized Packaging for Prescription Brands</h1>
+        <p>Platinum Press is the single-source packaging partner for Rx brands because it covers the <b>entire regulated supply chain</b>: serialized labels, folding cartons and patient literature, printed in cGMP facilities, verified by <b>100% in-line vision inspection</b> and shipped audit-ready.</p>
+        <a class="more" href="#why">See More</a>
+        <br>
+        <a class="btn btn-blue" href="v2.html#contact">Contact Sales</a>
+      </div>
+      <div class="vcard">
+        <img src="images/pharma-line.jpg" alt="Pharmaceutical packaging line">
+        <span class="mark">PLATINUM PRESS</span>
+        <span class="play"><span class="playtri"></span> Play</span>
+        <div class="c">
+          <div class="q">"Serialized programs leave our floor aggregated, documented and audit-ready."</div>
+          <div class="div"></div>
+          <b>Serialization Team</b>
+          <span>EasyCode and DSCSA Programs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- why accordion -->
+<section class="sect why" id="why">
+  <div class="wrap">
+    <div class="eyebrow">Why Rx Brands Choose Platinum Press</div>
+    <div class="sect-head" style="margin-top:0"><h2>Everything a Prescription Brand Needs Under One Roof</h2></div>
+    <div class="grid">
+      <div class="acc" id="acc">
+        <div class="item active" data-img="images/pharma-line.jpg">
+          <div class="row"><span class="t">DSCSA-Ready Serialization</span><span class="n">01</span></div>
+          <div class="d">Unit-level coding, aggregation and reporting through EasyCode, verified on every unit.</div>
+          <a class="lm" href="v2.html#capabilities">Learn More <span class="arrow">→</span></a>
+          <div class="bar"><i></i></div>
+        </div>
+        <div class="item" data-img="images/inspection.jpg"><div class="row"><span class="t">100% In-Line Vision Inspection</span><span class="n">02</span></div>
+          <div class="d">Every unit is camera-verified before it ships. Zero-defect programs, documented.</div>
+          <a class="lm" href="v2.html#comply">Learn More <span class="arrow">→</span></a><div class="bar"><i></i></div></div>
+        <div class="item" data-img="images/cleanroom.jpg"><div class="row"><span class="t">cGMP and ISO 9001 Facilities</span><span class="n">03</span></div>
+          <div class="d">Two certified US facilities with controlled environments built for regulated work.</div>
+          <a class="lm" href="v2.html#comply">Learn More <span class="arrow">→</span></a><div class="bar"><i></i></div></div>
+        <div class="item" data-img="images/prod-security.jpg"><div class="row"><span class="t">Anti-Counterfeiting Built In</span><span class="n">04</span></div>
+          <div class="d">CodeShield and Source Tags protect product and patients across the supply chain.</div>
+          <a class="lm" href="v2.html#innovations">Learn More <span class="arrow">→</span></a><div class="bar"><i></i></div></div>
+        <div class="item" data-img="images/facility.jpg"><div class="row"><span class="t">Audit-Ready Documentation</span><span class="n">05</span></div>
+          <div class="d">Batch records, inspection logs and serialization reports, ready when your auditor asks.</div>
+          <a class="lm" href="v2.html#comply">Learn More <span class="arrow">→</span></a><div class="bar"><i></i></div></div>
+        <div class="item" data-img="images/hero-press.jpg"><div class="row"><span class="t">3-4 Week Lead Times</span><span class="n">06</span></div>
+          <div class="d">National capacity with 2-day shipping to 90% of the US, without compliance shortcuts.</div>
+          <a class="lm" href="about.html">Learn More <span class="arrow">→</span></a><div class="bar"><i></i></div></div>
+      </div>
+      <div class="media"><img id="accimg" src="images/pharma-line.jpg" alt="Why Platinum Press for pharma"></div>
+    </div>
+  </div>
+</section>
+
+<!-- stat banner -->
+<section style="padding:10px 0 88px">
+  <div class="wrap">
+    <div class="statbanner">
+      <div class="ph"><img src="images/inspection.jpg" alt="In-line inspection"></div>
+      <div class="tiles">
+        <div class="tile"><div class="n">100%</div><div class="t">Of units verified by in-line vision inspection</div></div>
+        <div class="tile"><div class="n">2-Day</div><div class="t">Shipping to 90% of the United States</div></div>
+      </div>
+      <div class="c">
+        <div class="who"><b>Quality Systems</b> | Platinum Press</div>
+        <h3>How serialized Rx programs ship inspected, aggregated and audit-ready from day one.</h3>
+        <div class="btns">
+          <a class="btn btn-outline-dark" href="v2.html#stories">See Our Work ⧉</a>
+          <a class="btn btn-blue" href="v2.html#contact">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- products for pharma -->
+<section class="caps" id="products">
+  <div class="wrap">
+    <div style="max-width:760px;margin-bottom:40px">
+      <div class="eyebrow">Products</div>
+      <div class="sect-head" style="margin-top:0"><h2>Packed with the Right Products for Rx</h2></div>
+    </div>
+    <div class="grid">
+      <aside class="rail" id="rail">
+        <div class="item active" data-t="p-labels">Labels</div>
+        <div class="item" data-t="p-cartons">Folding Cartons</div>
+        <div class="item" data-t="p-lit">Literature, Inserts &amp; Outserts</div>
+        <div class="item" data-t="p-sec">Security Products</div>
+        <div class="sep"></div>
+        <p>Every format an Rx brand needs, produced to one standard and inspected 100%.</p>
+        <a class="btn btn-blue" href="v2.html#contact">Contact Sales</a>
+      </aside>
+      <div class="fcards">
+        <div class="fcard" id="p-labels">
+          <div class="top"><h3>Labels</h3><div class="ph"><img src="images/prod-labels.png" alt="Pharmaceutical labels"></div></div>
+          <div class="body">
+            <a href="labels.html">Pressure-Sensitive Labels <span>→</span></a>
+            <a href="labels.html">Extended Content Labels <span>→</span></a>
+            <a href="labels.html">Booklet Labels <span>→</span></a>
+            <a href="labels.html">Serialization-Ready Labels <span>→</span></a>
+            <a href="labels.html">Braille and Tactile <span>→</span></a>
+            <a href="labels.html">Cold Foil and 10-Color <span>→</span></a>
+          </div>
+        </div>
+        <div class="fcard" id="p-cartons">
+          <div class="top"><h3>Folding Cartons</h3><div class="ph"><img src="images/prod-cartons.jpg" alt="Folding cartons"></div></div>
+          <div class="body">
+            <a href="v2.html#innovations">Patented Combination Carton <span>→</span></a>
+            <a href="v2.html#success">Secondary Blister <span>→</span></a>
+            <a href="v2.html#success">Tamper-Evident Designs <span>→</span></a>
+            <a href="v2.html#success">Serialization-Ready Cartons <span>→</span></a>
+          </div>
+        </div>
+        <div class="fcard" id="p-lit">
+          <div class="top"><h3>Literature, Inserts &amp; Outserts</h3><div class="ph"><img src="images/prod-literature.jpg" alt="Pharmaceutical literature"></div></div>
+          <div class="body">
+            <a href="v2.html#success">Folded Inserts <span>→</span></a>
+            <a href="v2.html#success">Glued and Nested Outserts <span>→</span></a>
+            <a href="v2.html#innovations">Flatsert High-Density Format <span>→</span></a>
+            <a href="v2.html#success">Multi-Language Support <span>→</span></a>
+          </div>
+        </div>
+        <div class="fcard" id="p-sec">
+          <div class="top"><h3>Security Products</h3><div class="ph"><img src="images/prod-security.jpg" alt="Security packaging"></div></div>
+          <div class="body">
+            <a href="v2.html#innovations">CodeShield Anti-Counterfeiting <span>→</span></a>
+            <a href="v2.html#innovations">EasyCode Serialization <span>→</span></a>
+            <a href="v2.html#innovations">Source Tags <span>→</span></a>
+            <a href="v2.html#success">Overt and Covert Features <span>→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- split deep-dive -->
+<section style="padding:0 0 88px">
+  <div class="wrap">
+    <div class="deep">
+      <div class="dark">
+        <div class="num">01</div>
+        <h3>One Partner From Concept to Warehousing</h3>
+        <div class="num" style="margin-top:44px">02</div>
+        <h3 style="font-size:26px;color:rgba(255,255,255,.85)">Serialization Backed by Reporting</h3>
+        <p>Track every unit, aggregate every case and hand your auditor the records they ask for, from one accountable partner.</p>
+        <div class="subnav">
+          <a class="on" href="v2.html#capabilities">A Unified View of Your Program <span>01</span></a>
+          <a href="v2.html#comply">Optimize for Compliance <span>02</span></a>
+        </div>
+        <a class="btn btn-blue" href="v2.html#contact">Contact Sales</a>
+      </div>
+      <div class="light">
+        <div class="check">
+          <div class="ck"><div class="h">Comprehensive Serialization</div><p>Unit-level coding, aggregation and DSCSA reporting through EasyCode, integrated with your supply chain partners.</p></div>
+          <div class="ck"><div class="h">Consolidated Documentation</div><p>Batch records, inspection logs and serialization reports consolidated into a single audit-ready package.</p></div>
+          <div class="ck"><div class="h">Real-Time Verification</div><p>100% in-line vision inspection verifies every code on every unit as it runs, not on a sample.</p></div>
+          <div class="ck"><div class="h">Anti-Diversion Protection</div><p>CodeShield and Source Tags add overt and covert protection to every serialized program.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- services tabs -->
+<section class="svc sect" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="tabbar">
+      <button class="tab active" data-p="s1">Program Kickoff</button>
+      <button class="tab" data-p="s2">Custom Design</button>
+      <button class="tab" data-p="s3">Contract Packaging</button>
+      <button class="tab" data-p="s4">Program Management</button>
+    </div>
+    <div class="panel active" id="s1">
+      <div class="txt">
+        <svg viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12M9 21v-8h6v8M3 21h18"/></svg>
+        <h3>Rx Requirements Are Unique. We Understand.</h3>
+        <p>Every prescription program starts with a technical review: substrates, serialization scope, regulatory requirements and timelines, mapped before the first proof.</p>
+        <a class="btn btn-blue" href="v2.html#contact">Contact Sales</a>
+      </div>
+      <div class="media"><img src="images/cleanroom.jpg" alt="Program kickoff"></div>
+    </div>
+    <div class="panel" id="s2">
+      <div class="txt">
+        <svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 1 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4L14 12l-2-2z"/></svg>
+        <h3>Custom Design and Prepress, In-House</h3>
+        <p>Artwork, dielines and proofing handled by the same team that prints the job, held to G7 Master color on every run.</p>
+        <a class="btn btn-blue" href="v2.html#contact">Contact Sales</a>
+      </div>
+      <div class="media"><img src="images/hero-press.jpg" alt="Custom design"></div>
+    </div>
+    <div class="panel" id="s3">
+      <div class="txt">
+        <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        <h3>Contract Packaging and Assembly</h3>
+        <p>Kitting, assembly and cGMP-compliant handling in climate-controlled facilities, with serialized inventory throughout.</p>
+        <a class="btn btn-blue" href="v2.html#contact">Contact Sales</a>
+      </div>
+      <div class="media"><img src="images/facility.jpg" alt="Contract packaging"></div>
+    </div>
+    <div class="panel" id="s4">
+      <div class="txt">
+        <svg viewBox="0 0 24 24"><path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM8.5 14L7 22l5-3 5 3-1.5-8"/></svg>
+        <h3>A Team That Owns the Outcome</h3>
+        <p>Dedicated program management coordinates proofs, timelines and logistics, with senior attention on every job.</p>
+        <a class="btn btn-blue" href="v2.html#contact">Contact Sales</a>
+      </div>
+      <div class="media"><img src="images/pharma-line.jpg" alt="Program management"></div>
+    </div>
+  </div>
+</section>
+
+<!-- stakeholders -->
+<section class="stake sect">
+  <div class="wrap">
+    <div class="eyebrow" style="color:rgba(255,255,255,.55)">Built for Every Stakeholder</div>
+    <div class="grid">
+      <div class="rows">
+        <div class="rowitem hl">
+          <div class="eb">Procurement</div>
+          <h3>One Supplier, One Point of Accountability</h3>
+          <p>Consolidate labels, cartons, literature and fulfillment into one partner with 3-4 week lead times.</p>
+        </div>
+        <div class="rowitem dim">
+          <div class="eb">Quality &amp; Regulatory</div>
+          <h3>Documentation That Survives an Audit</h3>
+        </div>
+        <div class="rowitem dim">
+          <div class="eb">Brand &amp; Packaging</div>
+          <h3>Craft That Holds G7 Master Color</h3>
+        </div>
+      </div>
+      <div class="side">
+        <div class="tiles">
+          <div class="tile" style="display:flex;align-items:center;justify-content:center;background:var(--cream-2)"><span style="font-family:'Geist';font-weight:600;letter-spacing:1px;color:#7A828E">PLATINUM PRESS</span></div>
+          <div class="tile"><img src="images/cleanroom.jpg" alt="Cleanroom"></div>
+        </div>
+        <div class="qcard">
+          <div class="who"><b>Quality Systems</b> <span>| Platinum Press</span></div>
+          <p>"Every serialized unit that leaves our floor carries its own inspection record. That is what audit-ready means to us."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ice cta -->
+<section style="padding:88px 0 0">
+  <div class="wrap">
+    <div class="icecta">
+      <div>
+        <h3>Switching Packaging Suppliers for an Rx Program?</h3>
+        <p>Platinum Press onboards prescription programs with a documented transfer plan, so serialization, artwork and compliance never skip a beat.</p>
+      </div>
+      <a class="btn btn-dark" href="v2.html#contact">Contact Sales</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq sect">
+  <div class="wrap">
+    <div class="eyebrow">FAQ</div>
+    <div class="sect-head" style="margin-top:0"><h2>Prescription Packaging, Answered</h2></div>
+    <div class="grid">
+      <div class="topics">
+        <div class="t active"><span class="n">01</span> Serialization &amp; DSCSA</div>
+        <div class="t"><span class="n">02</span> Quality &amp; Inspection</div>
+        <div class="t"><span class="n">03</span> Lead Times &amp; Logistics</div>
+        <div class="t"><span class="n">04</span> Certifications</div>
+        <div class="t"><span class="n">05</span> Getting Started</div>
+        <div class="more">
+          <div class="qm">?</div>
+          <div>More questions?<br>Contact us at <a href="v2.html#contact">Contact Sales</a></div>
+        </div>
+      </div>
+      <div class="qa">
+        <div class="item open">
+          <div class="q">How does Platinum Press support DSCSA serialization? <span class="pm">−</span></div>
+          <div class="a">EasyCode handles unit-level coding, aggregation and reporting, and 100% in-line vision inspection verifies every code as it runs. Programs ship with the documentation your trading partners and auditors expect.</div>
+        </div>
+        <div class="item">
+          <div class="q">What does 100% in-line vision inspection actually mean? <span class="pm">+</span></div>
+          <div class="a">Every unit, not a sample, passes camera verification on the line. Defects are rejected automatically and the inspection record stays with the batch.</div>
+        </div>
+        <div class="item">
+          <div class="q">How fast can a new Rx program launch? <span class="pm">+</span></div>
+          <div class="a">New programs average 3-4 week lead times after artwork approval, with 2-day shipping coverage to 90% of the United States from our centrally located facilities.</div>
+        </div>
+        <div class="item">
+          <div class="q">Which certifications does Platinum Press hold? <span class="pm">+</span></div>
+          <div class="a">Our facilities operate under cGMP and hold ISO 9001:2015, G7 Master and SGS&amp;Co certifications. Certificates are available on request through Contact Sales.</div>
+        </div>
+        <div class="item">
+          <div class="q">Can Platinum Press take over an existing program mid-cycle? <span class="pm">+</span></div>
+          <div class="a">Yes. Transfers follow a documented onboarding plan covering artwork, serialization scope and inventory, so continuity of supply is protected.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- big cta -->
+<section class="bigcta" id="contact">
+  <div class="wrap">
+    <h2>See Platinum Press in Action</h2>
+    <p>Tell us about your prescription program. You will reach a real packaging expert, not a generic inbox, within one business day.</p>
+    <a class="btn btn-blue" href="v2.html#contact">Contact Sales</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <h5>Products</h5>
+        <a href="labels.html">Labels</a><a href="v2.html#success">Folding Cartons</a><a href="v2.html#success">Literature, Inserts &amp; Outserts</a><a href="v2.html#success">Foil Lidding</a><a href="v2.html#success">Flexible Packaging</a><a href="v2.html#success">Security Products</a>
+      </div>
+      <div>
+        <h5>Capabilities</h5>
+        <a href="v2.html#capabilities">Printing</a><a href="v2.html#capabilities">Finishing</a><a href="v2.html#capabilities">Serialization &amp; DSCSA</a><a href="v2.html#capabilities">Warehousing &amp; Fulfillment</a><a href="v2.html#capabilities">Value-Added Services</a>
+      </div>
+      <div>
+        <h5>Markets</h5>
+        <a href="pharma.html">Pharma / Prescription</a><a href="v2.html#markets">Medical Device</a><a href="v2.html#markets">OTC / Consumer Health</a><a href="v2.html#markets">Wellness &amp; Natural Health</a><a href="v2.html#markets">Animal &amp; Pet Health</a><a href="v2.html#markets">Personal Care / Cosmetic</a>
+      </div>
+      <div>
+        <h5>Connect</h5>
+        <a href="v2.html#contact">Contact Sales</a><a href="v2.html#stories">Insights</a><a href="v2.html#stories">Case Studies</a><a href="about.html">News &amp; Press</a><a href="about.html">Careers</a>
+      </div>
+      <div>
+        <h5>About Us</h5>
+        <a href="about.html">Our Story</a><a href="v2.html#comply">Quality &amp; Compliance</a><a href="v2.html#comply">Certifications</a><a href="about.html">Leadership</a><a href="v2.html#contact">Contact</a>
+      </div>
+    </div>
+    <div class="fbottom">
+      <div>
+        <div class="logo" style="font-weight:600;font-size:19px">PLATINUM<span style="font-weight:400;opacity:.75">PRESS</span></div>
+        <div class="copy" style="margin-top:10px">© 2026 Platinum Press, Inc. All rights reserved.</div>
+      </div>
+      <div>
+        <div class="social"><a href="#">in</a><a href="#">yt</a><a href="#">f</a><a href="#">ig</a></div>
+        <div class="legal" style="margin-top:12px"><a href="#">Terms of use</a> · <a href="#">Privacy policy</a> · <a href="#">Accessibility</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>560)},{passive:true});
+
+// why accordion
+const accimg=document.getElementById('accimg');
+document.querySelectorAll('#acc .item').forEach(it=>{
+  it.addEventListener('click',()=>{
+    document.querySelectorAll('#acc .item').forEach(x=>x.classList.remove('active'));
+    it.classList.add('active');
+    accimg.src=it.dataset.img;
+  });
+});
+
+// products rail scroll-spy + click
+const railItems=document.querySelectorAll('#rail .item');
+railItems.forEach(it=>it.addEventListener('click',()=>{
+  document.getElementById(it.dataset.t).scrollIntoView({behavior:'smooth',block:'center'});
+}));
+const spy=new IntersectionObserver(es=>{es.forEach(e=>{
+  if(e.isIntersecting){railItems.forEach(x=>x.classList.toggle('active',x.dataset.t===e.target.id));}
+});},{rootMargin:'-40% 0px -50% 0px'});
+document.querySelectorAll('.fcard').forEach(c=>spy.observe(c));
+
+// services tabs
+const tabs=document.querySelectorAll('.svc .tab'),panels=document.querySelectorAll('.svc .panel');
+tabs.forEach(t=>t.addEventListener('click',()=>{
+  tabs.forEach(x=>x.classList.remove('active'));
+  panels.forEach(p=>p.classList.remove('active'));
+  t.classList.add('active');
+  document.getElementById(t.dataset.p).classList.add('active');
+}));
+
+// FAQ accordion
+document.querySelectorAll('.qa .item .q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const it=q.parentElement;
+    const wasOpen=it.classList.contains('open');
+    document.querySelectorAll('.qa .item').forEach(x=>{x.classList.remove('open');x.querySelector('.pm').textContent='+';});
+    if(!wasOpen){it.classList.add('open');q.querySelector('.pm').textContent='−';}
+  });
+});
+</script>
+</body>
+</html>

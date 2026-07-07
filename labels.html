@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pharmaceutical Labels | Platinum Press</title>
+<meta name="description" content="Pharmaceutical label printing: pressure-sensitive, extended content and booklet labels with 10-color print, braille, cold foil and serialization-ready formats. cGMP and ISO 9001 certified.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0A1A33; --navy-2:#07203F; --black:#0A0D14; --card-dark:#0C1524;
+  --blue:#064FBC; --blue-h:#0A3F96; --ice:#BFD9FF; --ice-2:#9CC0F2;
+  --cream:#F3F5F8; --cream-2:#EEF1F6; --tileline:rgba(14,23,38,.08);
+  --ink:#131A26; --body:#3A4150; --muted:#5D6675; --eyebrow:#5B6472;
+  --line:#E4E6EB; --white:#fff;
+  --r:20px; --rs:12px; --rb:7px; --wrap:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Geist','Inter',system-ui,sans-serif;color:var(--body);background:#fff;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+h1,h2,h3,h4{font-weight:400;color:var(--ink);line-height:1.1;letter-spacing:-.2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:16px;letter-spacing:.8px;text-transform:uppercase;color:var(--eyebrow);font-weight:400}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;font-size:16px;font-weight:500;padding:12px 24px;border-radius:var(--rb);border:1px solid transparent;cursor:pointer;transition:background .15s ease-out,border-color .15s,color .15s;white-space:nowrap}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-h)}
+.btn-outline{background:#fff;border-color:#D7DAE0;color:var(--ink)}
+.btn-outline:hover{border-color:var(--ink)}
+.btn-outline-dark{background:transparent;border-color:rgba(255,255,255,.28);color:#fff}
+.btn-outline-dark:hover{border-color:#fff}
+.arrow{display:inline-block;transform:translateY(-1px)}
+
+/* topbar + nav (shared) */
+.topbar{background:var(--navy);color:rgba(255,255,255,.85);font-size:13.5px}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:46px;gap:16px}
+.topbar .pill{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:5px 14px;background:rgba(255,255,255,.05)}
+.topbar .pill .dot{width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--ice),var(--blue))}
+.topbar .pill b{font-weight:500;color:#fff}
+.topbar .pill .sep{color:rgba(255,255,255,.4)}
+.topbar .pill .cta{color:var(--ice)}
+.topbar .r{display:flex;align-items:center;gap:22px;white-space:nowrap}
+.topbar .r a:hover{color:#fff}
+.nav{position:sticky;top:0;z-index:100;background:#fff;color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;height:75px;gap:26px}
+.logo{font-weight:600;font-size:19px;letter-spacing:.5px;white-space:nowrap}
+.logo span{font-weight:400;opacity:.75}
+.nav .links{display:flex;align-items:center;gap:26px;font-size:16px;flex:1;margin-left:14px}
+.nav .links a{display:inline-flex;align-items:center;gap:5px;opacity:.92}
+.nav .links a:hover{opacity:1;color:var(--blue)}
+.nav .links .chev{font-size:10px;opacity:.7;transform:translateY(1px)}
+.nav .innov{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(90deg,#DCEAFF,#BFD9FF);color:var(--navy);padding:7px 14px;border-radius:var(--rb);font-weight:500}
+.nav .cta{display:flex;align-items:center;gap:12px}
+.burger{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
+.burger span{width:22px;height:2px;background:currentColor;border-radius:2px}
+
+/* prev/next subnav */
+.subnav{background:var(--cream);border-bottom:1px solid var(--line)}
+.subnav .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:16px}
+.subnav a{display:flex;flex-direction:column;gap:2px;font-size:16px;color:var(--ink)}
+.subnav a small{font-size:13px;color:var(--muted)}
+.subnav a span{display:inline-flex;align-items:center;gap:8px;font-weight:500}
+.subnav .next{text-align:right}
+
+/* intro */
+.intro{padding:96px 0}
+.intro .grid{display:grid;grid-template-columns:460px 1fr;gap:96px;align-items:start}
+.intro .left{position:sticky;top:120px}
+.intro h1{font-size:50px;line-height:1.08;margin-top:16px;max-width:12ch}
+.intro .btn{margin-top:34px}
+.intro .right p{font-size:17px;color:var(--body);line-height:1.65;margin-bottom:22px}
+.intro .right b{color:var(--ink);font-weight:600}
+.intro .right a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.intro .right a:hover{color:var(--blue)}
+
+/* alternating feature blocks */
+.fblock{background:var(--cream);padding:52px 0}
+.fblock.alt{background:#fff}
+.fblock .grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
+.fblock .media{border-radius:var(--r);overflow:hidden;background:linear-gradient(160deg,#DCE7F5 0%,#EEF1F6 100%);min-height:560px;position:relative}
+.fblock .media img{position:absolute;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);object-fit:cover;border-radius:12px;box-shadow:0 24px 60px rgba(14,23,38,.18)}
+.fblock h3{font-size:30px;margin-bottom:12px}
+.fblock .list .item{padding:18px 0;border-bottom:1px solid var(--line)}
+.fblock .list .item:last-child{border-bottom:0}
+.fblock .list .h{display:flex;align-items:center;gap:11px;font-weight:600;color:var(--ink);font-size:17px}
+.fblock .list .h::before{content:"";width:20px;height:20px;border-radius:50%;background:var(--blue);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");background-repeat:no-repeat;background-position:center;flex:0 0 auto}
+.fblock .list p{color:var(--muted);font-size:15.5px;margin-top:7px;padding-left:31px;max-width:56ch}
+
+/* dark mini cta */
+.minicta{background:var(--navy);border-radius:var(--r);padding:44px 48px;display:flex;align-items:center;justify-content:space-between;gap:32px;color:#fff}
+.minicta h3{color:#fff;font-size:26px;font-weight:500}
+.minicta p{color:rgba(255,255,255,.65);margin-top:10px;max-width:52ch;font-size:16px}
+
+/* dark quote band */
+.quoteband{background:var(--black);color:#fff;padding:96px 0}
+.quoteband .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:center}
+.quoteband h2{color:#fff;font-size:38px;max-width:16ch}
+.quoteband .sub{color:rgba(255,255,255,.6);font-size:16.5px;margin-top:18px;max-width:44ch}
+.quoteband .div{height:1px;background:rgba(255,255,255,.18);margin:30px 0 24px;max-width:500px}
+.quoteband .who{font-size:15px}
+.quoteband .who b{color:var(--ice);font-weight:500}
+.quoteband .who span{color:rgba(255,255,255,.55)}
+.quoteband .q{color:#fff;font-weight:500;font-size:20px;line-height:1.45;margin-top:16px;max-width:40ch}
+.quoteband .btns{display:flex;gap:14px;margin-top:30px}
+.quoteband .media{position:relative;border-radius:var(--r);overflow:hidden;height:480px;background:var(--card-dark)}
+.quoteband .media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.9}
+.quoteband .watch{position:absolute;inset:0;margin:auto;width:200px;height:46px;display:flex;align-items:center;justify-content:center;gap:9px;background:rgba(10,13,20,.72);color:#fff;border-radius:999px;font-size:15.5px;backdrop-filter:blur(4px)}
+.playtri{width:0;height:0;border-left:8px solid #fff;border-top:5px solid transparent;border-bottom:5px solid transparent}
+
+/* footer */
+footer{background:#F4F5F7;padding:84px 0 40px;color:var(--body)}
+.fcols{display:grid;grid-template-columns:repeat(5,1fr);gap:36px}
+.fcols h5{font-size:16.5px;color:var(--ink);font-weight:600;margin-bottom:20px}
+.fcols a{display:block;font-size:15px;color:var(--body);padding:7px 0}
+.fcols a:hover{color:var(--ink)}
+.fbottom{border-top:1px solid var(--line);margin-top:56px;padding-top:32px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.fbottom .copy{font-size:14.5px;color:var(--muted)}
+.fbottom .legal{display:flex;gap:10px;align-items:center;font-size:14.5px;color:var(--muted)}
+.fbottom .social{display:flex;gap:18px;color:#8B929D;font-size:15px;font-weight:600}
+
+@media(max-width:1080px){
+  .nav .links{display:none}
+  .burger{display:flex}
+  .intro .grid,.fblock .grid,.quoteband .grid{grid-template-columns:1fr}
+  .intro .left{position:static}
+  .intro h1{font-size:38px}
+  .fblock .media{min-height:380px}
+  .minicta{flex-direction:column;align-items:flex-start}
+  .fcols{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .topbar .r{display:none}
+  .fcols{grid-template-columns:1fr}
+  .subnav a small{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="pill"><span class="dot"></span><b>$15M HQ Expansion, Now Complete</b><span class="sep">·</span><span>Fort Worth, TX</span><span class="sep">·</span><a class="cta" href="about.html">Read the News ›</a></span>
+    <span class="r">
+      <a href="v2.html#contact">✆ (817) 555-0100</a>
+      <a href="v2.html#contact">Support</a>
+      <a href="v2.html#stories">Insights</a>
+      <a href="about.html">Careers</a>
+      <a href="about.html">Company</a>
+      <a href="#">Client Login</a>
+      <span>🇺🇸</span>
+    </span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="v2.html">PLATINUM<span>PRESS</span></a>
+    <nav class="links">
+      <a href="labels.html">Products <span class="chev">▼</span></a>
+      <a href="v2.html#capabilities">Capabilities <span class="chev">▼</span></a>
+      <a href="pharma.html">Markets <span class="chev">▼</span></a>
+      <a href="about.html">Company <span class="chev">▼</span></a>
+      <a href="v2.html#comply">Quality &amp; Compliance</a>
+      <a class="innov" href="v2.html#innovations">✦ Innovations</a>
+    </nav>
+    <div class="cta">
+      <a class="btn btn-outline" href="v2.html#stories">Our Work</a>
+      <a class="btn btn-blue" href="v2.html#contact">Contact Sales</a>
+      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- prev / next -->
+<div class="subnav">
+  <div class="wrap">
+    <a href="v2.html#success"><small>Prev</small><span>← Security Products</span></a>
+    <a class="next" href="v2.html#success"><small>Next</small><span>Folding Cartons →</span></a>
+  </div>
+</div>
+
+<!-- intro -->
+<section class="intro">
+  <div class="wrap grid">
+    <div class="left">
+      <div class="eyebrow">Labels</div>
+      <h1>Pharmaceutical Label Printing</h1>
+      <a class="btn btn-blue" href="v2.html#contact">Contact Sales</a>
+    </div>
+    <div class="right">
+      <p>Platinum Press produces pharmaceutical labels built for regulated products: <b>pressure-sensitive, extended content and booklet formats</b> engineered to carry more information, survive the supply chain and stay compliant. Every label runs in cGMP facilities and passes <b>100% in-line vision inspection</b> before it ships, so what reaches your line is what your quality team approved.</p>
+      <p>Print options go as deep as your brand needs: <b>10-color capability, braille and tactile features, cold foil</b> and specialty finishes, all held to <a href="v2.html#capabilities">G7 Master color</a> run after run. For products with sustainability mandates, our <b>VOC and PFAS-free digital printing</b> covers short runs and versioning without compromising compliance.</p>
+      <p>Labels are where serialization lives. Platinum Press labels arrive <b>serialization-ready</b>, with <a href="v2.html#innovations">EasyCode</a> unit-level coding and <a href="v2.html#innovations">CodeShield</a> anti-counterfeiting available in the same pass, backed by aggregation and DSCSA reporting from our <a href="v2.html#capabilities">Serialization team</a>.</p>
+      <p>For the ultimate single-source program, pair labels with <a href="v2.html#success">folding cartons</a>, <a href="v2.html#success">literature and inserts</a> and <a href="v2.html#capabilities">warehousing and fulfillment</a>, one partner from <a href="about.html">concept to delivery</a>. Serving <a href="pharma.html">prescription brands</a>, medical device, OTC and consumer health.</p>
+    </div>
+  </div>
+</section>
+
+<!-- feature blocks -->
+<section class="fblock">
+  <div class="wrap grid">
+    <div class="media"><img src="images/prod-labels.png" alt="Pressure-sensitive pharmaceutical labels"></div>
+    <div>
+      <h3>Pressure-Sensitive &amp; Booklet Labels</h3>
+      <div class="list">
+        <div class="item"><div class="h">Extended Content Labels</div><p>Multi-layer constructions that carry regulatory text, dosing and multi-language content in one label.</p></div>
+        <div class="item"><div class="h">Booklet Labels</div><p>Bound mini-booklets applied as labels, for products whose information will not fit a panel.</p></div>
+        <div class="item"><div class="h">Application-Ready Converting</div><p>Die-cut, slit and wound to match your application equipment, verified before shipment.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fblock alt">
+  <div class="wrap grid">
+    <div>
+      <h3>Security &amp; Serialization</h3>
+      <div class="list">
+        <div class="item"><div class="h">Serialization-Ready</div><p>Unit-level variable data printed and verified in line, with EasyCode aggregation and DSCSA reporting behind it.</p></div>
+        <div class="item"><div class="h">Tamper Evidence</div><p>Void patterns, destructible stocks and closure seals that make interference visible instantly.</p></div>
+        <div class="item"><div class="h">CodeShield Protection</div><p>Overt and covert anti-counterfeiting features integrated directly into the label print.</p></div>
+      </div>
+    </div>
+    <div class="media"><img src="images/prod-security.jpg" alt="Security label features"></div>
+  </div>
+</section>
+
+<section class="fblock">
+  <div class="wrap grid">
+    <div class="media"><img src="images/inspection.jpg" alt="Label inspection"></div>
+    <div>
+      <h3>Print, Finish &amp; Verify</h3>
+      <div class="list">
+        <div class="item"><div class="h">10-Color Print with G7 Master Color</div><p>Brand color held to measurable standards on every run, on two Koenig and Bauer Rapida presses.</p></div>
+        <div class="item"><div class="h">Braille, Tactile &amp; Cold Foil</div><p>Accessibility features and premium finishes applied in line, not as a second operation.</p></div>
+        <div class="item"><div class="h">100% In-Line Vision Inspection</div><p>Every label camera-verified against the approved artwork, with the inspection record kept with the batch.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- mini cta -->
+<section style="padding:72px 0">
+  <div class="wrap">
+    <div class="minicta">
+      <div>
+        <h3>Ready to Spec Your Label Program?</h3>
+        <p>Send us your dieline, substrate needs and serialization scope. A label specialist will map the program, from proof to fulfillment.</p>
+      </div>
+      <a class="btn btn-blue" href="v2.html#contact">Contact Sales</a>
+    </div>
+  </div>
+</section>
+
+<!-- dark quote band -->
+<section class="quoteband">
+  <div class="wrap grid">
+    <div>
+      <h2>Why Regulated Brands Print Labels with Platinum Press</h2>
+      <p class="sub">Serialization, security and shelf appeal in one pass, from a privately held partner with senior attention on every job.</p>
+      <div class="div"></div>
+      <div class="who"><b>Label Production</b> <span>| Platinum Press</span></div>
+      <p class="q">"A label is the last thing a patient reads before they trust the product. We inspect every single one."</p>
+      <div class="btns">
+        <a class="btn btn-blue" href="v2.html#contact">Contact Sales</a>
+        <a class="btn btn-outline-dark" href="pharma.html">Learn More</a>
+      </div>
+    </div>
+    <div class="media">
+      <img src="images/hero-press.jpg" alt="Label press at Platinum Press">
+      <span class="watch"><span class="playtri"></span> Watch Overview</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <h5>Products</h5>
+        <a href="labels.html">Labels</a><a href="v2.html#success">Folding Cartons</a><a href="v2.html#success">Literature, Inserts &amp; Outserts</a><a href="v2.html#success">Foil Lidding</a><a href="v2.html#success">Flexible Packaging</a><a href="v2.html#success">Security Products</a>
+      </div>
+      <div>
+        <h5>Capabilities</h5>
+        <a href="v2.html#capabilities">Printing</a><a href="v2.html#capabilities">Finishing</a><a href="v2.html#capabilities">Serialization &amp; DSCSA</a><a href="v2.html#capabilities">Warehousing &amp; Fulfillment</a><a href="v2.html#capabilities">Value-Added Services</a>
+      </div>
+      <div>
+        <h5>Markets</h5>
+        <a href="pharma.html">Pharma / Prescription</a><a href="v2.html#markets">Medical Device</a><a href="v2.html#markets">OTC / Consumer Health</a><a href="v2.html#markets">Wellness &amp; Natural Health</a><a href="v2.html#markets">Animal &amp; Pet Health</a><a href="v2.html#markets">Personal Care / Cosmetic</a>
+      </div>
+      <div>
+        <h5>Connect</h5>
+        <a href="v2.html#contact">Contact Sales</a><a href="v2.html#stories">Insights</a><a href="v2.html#stories">Case Studies</a><a href="about.html">News &amp; Press</a><a href="about.html">Careers</a>
+      </div>
+      <div>
+        <h5>About Us</h5>
+        <a href="about.html">Our Story</a><a href="v2.html#comply">Quality &amp; Compliance</a><a href="v2.html#comply">Certifications</a><a href="about.html">Leadership</a><a href="v2.html#contact">Contact</a>
+      </div>
+    </div>
+    <div class="fbottom">
+      <div>
+        <div style="font-weight:600;font-size:19px;color:var(--ink)">PLATINUM<span style="font-weight:400;opacity:.75">PRESS</span></div>
+        <div class="copy" style="margin-top:10px">© 2026 Platinum Press, Inc. All rights reserved.</div>
+      </div>
+      <div>
+        <div class="social"><a href="#">in</a><a href="#">yt</a><a href="#">f</a><a href="#">ig</a></div>
+        <div class="legal" style="margin-top:12px"><a href="#">Terms of use</a> · <a href="#">Privacy policy</a> · <a href="#">Accessibility</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
