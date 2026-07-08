@@ -24,6 +24,14 @@ Four more template exemplars, same rules (CareStack structure, all-original PP c
 
 **Additional placeholders in these pages:** trust-band logo tiles are generic; quotes remain PP-team attributed (Quality Systems, Serialization Team, Press Operations); article dates/read-times on insights.html are stand-ins; the contact form does not submit anywhere (front-end thank-you state only).
 
+## Third wave (added 2026-07-08) — mapping complete
+The last three unbuilt rows of the CareStack template mapping. Every template family now has a PP exemplar:
+- **`products.html`** — Products &amp; Capabilities hub (from carestack.com/dental-software/features): breadcrumb hero with photo collage + floating stat chips, sticky icon rail with scroll-spy, six stacked family cards (light image header + dark 2-col variant link list, Patented/New badges), dark "Beyond the Formats" services band, capability tile grid, FAQ accordion, big CTA. This hub layout also powers the future Capabilities hub. Nav "Products" now lands here site-wide.
+- **`work.html`** — Our Work / Case Studies index (from carestack.com/dental-software/case-studies), under the Platinum Insights sub-brand: dark hero with three overlapping tinted stat cards, two-column case list (8 program stories), masonry quote wall, compact footer. Nav "Our Work" button now lands here site-wide.
+- **`case-study.html`** — Case Study detail (from a CareStack customer-story page): split hero (dark text left, full-bleed image right), long-form body with sticky Contents TOC (scroll-spy), author chip and share rail, pull-quote bands, figure with caption, certification badge strip, navy outcome stat tiles, PDF download form (front-end only), related tag chips.
+
+**Placeholders in these pages:** case studies are anonymized program stories ("national Rx brand" style descriptors, no invented client names or logos); hero stat cards on work.html carry generic CLIENT ONE/TWO/THREE marks; all case-list entries currently link to the single case-study.html exemplar; dates/read-times are stand-ins; the download form does not submit anywhere.
+
 ## V1 — carestack-inspired (`index.html`)
 
 A standalone homepage design exploration for **Platinum Press**, cloning the layout and feel of **carestack.com** (enterprise / premium / clean), reskinned with Platinum Press's own palette and imagery.

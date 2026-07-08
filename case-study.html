@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case Study: Consolidating Five Vendors Into One Serialized Program | Platinum Press</title>
+<meta name="description" content="How a national prescription brand consolidated five packaging vendors into one serialized, DSCSA-ready program with Platinum Press: challenges, rollout and outcomes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0A1A33; --navy-2:#07203F; --black:#101216; --panel:#181B21;
+  --blue:#064FBC; --blue-h:#0A3F96; --ice:#BFD9FF; --ice-2:#9CC0F2;
+  --cream:#F3F5F8; --cream-2:#EEF1F6; --tileline:rgba(14,23,38,.08);
+  --ink:#131A26; --body:#3A4150; --muted:#5D6675;
+  --line:#E4E6EB; --r:16px; --rb:8px; --wrap:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Geist','Inter',system-ui,sans-serif;color:var(--body);background:#fff;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+h1,h2,h3,h4{color:var(--ink);line-height:1.15;letter-spacing:-.2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;font-size:15.5px;font-weight:500;padding:11px 22px;border-radius:var(--rb);border:1px solid transparent;cursor:pointer;transition:background .15s,border-color .15s;white-space:nowrap}
+.btn-accent{background:linear-gradient(90deg,#2E6FD3,#064FBC);color:#fff}
+.btn-accent:hover{background:var(--blue-h)}
+
+/* sub-brand dark nav */
+.snav{position:sticky;top:0;z-index:100;background:var(--black);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+.snav .wrap{display:flex;align-items:center;height:88px;gap:30px}
+.subbrand{line-height:1.02;font-weight:700;font-size:20px;letter-spacing:.2px;color:#fff}
+.subbrand small{display:block;font-size:11px;letter-spacing:2px;font-weight:500;color:rgba(255,255,255,.7)}
+.subbrand b{color:var(--ice)}
+.snav .links{display:flex;align-items:center;gap:28px;font-size:15.5px;color:rgba(255,255,255,.75);flex:1;justify-content:center}
+.snav .links a:hover{color:#fff}
+.snav .links a.on{color:#fff;font-weight:600}
+.snav .right{display:flex;align-items:center;gap:14px}
+.backlink{font-size:13.5px;color:rgba(255,255,255,.55)}
+.backlink:hover{color:#fff}
+
+/* split hero */
+.chero{background:var(--black);color:#fff}
+.chero .grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.chero .txt{padding:56px 60px 72px 0}
+.crumb{font-size:12px;letter-spacing:1.4px;color:rgba(255,255,255,.5);text-transform:uppercase;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.crumb b{color:rgba(255,255,255,.75);font-weight:500}
+.chero .cat{font-size:13.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--ice);font-weight:600;margin-top:64px}
+.chero h1{color:#fff;font-size:42px;font-weight:700;margin-top:18px;max-width:20ch}
+.chero .meta{color:rgba(255,255,255,.6);font-size:15px;margin-top:22px;display:flex;gap:12px;align-items:center}
+.chero .ph{position:relative;min-height:560px}
+.chero .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.chero .ph .tint{position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,26,51,.45),rgba(6,79,188,.2))}
+.chero .ph .mk{position:absolute;left:40px;bottom:36px;color:#fff;font-size:14px;letter-spacing:2px;font-weight:600;background:rgba(10,13,20,.55);padding:10px 16px;border-radius:8px}
+
+/* body layout */
+.cbody{padding:80px 0 40px}
+.cbody .grid{display:grid;grid-template-columns:1fr 410px;gap:96px;align-items:start}
+.article p{margin-top:22px;max-width:66ch}
+.article p a{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+.article h2{font-size:32px;font-weight:700;margin-top:64px;scroll-margin-top:120px}
+.article h3{font-size:22px;font-weight:700;margin-top:40px}
+.pull{background:var(--cream);border-radius:var(--r);padding:40px 44px;margin-top:40px}
+.pull .qm{font-size:44px;line-height:.5;color:#C9CED6;font-weight:700}
+.pull p{font-size:21px;color:var(--ink);font-weight:600;line-height:1.45;margin-top:18px;max-width:40ch}
+.pull .who{margin-top:18px;font-size:15px;color:var(--muted)}
+.pull .who b{color:var(--ink);font-weight:600;display:block}
+.figure{border-radius:var(--r);overflow:hidden;margin-top:40px;border:1px solid var(--tileline)}
+.figure img{width:100%;height:380px;object-fit:cover}
+.figure figcaption{font-size:14px;color:var(--muted);padding:14px 20px;background:var(--cream)}
+.badgestrip{background:var(--cream);border-radius:var(--r);margin-top:40px;padding:40px;display:flex;justify-content:space-around;flex-wrap:wrap;gap:26px}
+.badgestrip .b{text-align:center}
+.badgestrip .circ{width:74px;height:74px;border-radius:50%;border:2px solid var(--navy);color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;margin:0 auto}
+.badgestrip .b span{display:block;font-size:13.5px;color:var(--muted);margin-top:10px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.stat{background:var(--navy);border-radius:var(--r);padding:30px 26px;color:#fff}
+.stat b{display:block;font-size:40px;font-weight:700;color:var(--ice)}
+.stat span{font-size:14.5px;color:rgba(255,255,255,.7);display:block;margin-top:8px}
+
+/* sticky side rail */
+.side{position:sticky;top:120px}
+.toc{background:var(--cream);border-radius:var(--r);padding:30px 34px}
+.toc h4{font-size:17px;font-weight:700;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.toc a{display:block;font-size:15.5px;color:var(--body);padding:9px 0}
+.toc a.on{color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:4px}
+.toc a:hover{color:var(--ink)}
+.author{display:flex;align-items:center;gap:14px;margin-top:34px}
+.author .av{width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--ice);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.author b{font-size:16px;color:var(--ink);font-weight:600}
+.share{margin-top:30px}
+.share .lbl{font-size:12px;letter-spacing:1.4px;color:var(--muted);text-transform:uppercase}
+.share .icons{display:flex;gap:16px;margin-top:12px}
+.share .icons a{width:36px;height:36px;border-radius:8px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;font-size:13px}
+.share .icons a:hover{color:var(--ink);border-color:var(--ink)}
+
+/* download form */
+.dl{margin-top:72px;background:var(--cream);border-radius:var(--r);padding:48px 52px}
+.dl h2{font-size:28px;font-weight:700;max-width:26ch}
+.dl p{color:var(--muted);margin-top:12px;max-width:60ch}
+.dl form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}
+.dl input{font-family:inherit;font-size:15.5px;padding:14px 18px;border-radius:var(--rb);border:1px solid #D7DAE0;background:#fff;color:var(--ink)}
+.dl input.full{grid-column:1/-1}
+.dl button{grid-column:1/-1;background:var(--ink);color:#fff;border:0;border-radius:var(--rb);padding:16px;font-family:inherit;font-size:16px;font-weight:600;cursor:pointer}
+.dl button:hover{background:#000}
+
+/* tags */
+.tags{padding:40px 0 96px}
+.tags h4{font-size:18px;font-weight:700}
+.tags .chips{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
+.tags .chips a{background:var(--cream);border-radius:10px;padding:11px 20px;font-size:15px;color:var(--body)}
+.tags .chips a:hover{color:var(--ink);background:var(--cream-2)}
+
+/* footer */
+footer{background:var(--black);color:rgba(255,255,255,.6);padding:48px 0}
+footer .row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a:hover{color:#fff}
+footer .links{display:flex;gap:24px;font-size:14.5px}
+
+@media(max-width:1080px){
+  .snav .links{display:none}
+  .chero .grid,.cbody .grid{grid-template-columns:1fr}
+  .chero .txt{padding:56px 0}
+  .chero .ph{min-height:340px}
+  .side{position:static}
+  .chero h1{font-size:32px}
+  .stats{grid-template-columns:1fr}
+  .dl form{grid-template-columns:1fr}
+  .dl{padding:34px 26px}
+}
+</style>
+</head>
+<body>
+
+<!-- sub-brand nav -->
+<nav class="snav">
+  <div class="wrap">
+    <a class="subbrand" href="insights.html"><small>PLATINUM</small>IN<b>SIGHTS</b></a>
+    <div class="links">
+      <a href="insights.html#latest">Topics ▾</a>
+      <a class="on" href="work.html">Case Studies</a>
+      <a href="insights.html#guides">Guides</a>
+      <a href="insights.html#articles">Articles</a>
+      <a href="insights.html#guides">Downloads</a>
+      <a href="about.html#news">Press</a>
+    </div>
+    <div class="right">
+      <a class="btn btn-accent" href="insights.html#guides">Compliance Guide 2026</a>
+      <a class="backlink" href="v2.html">← platinumpress.com</a>
+    </div>
+  </div>
+</nav>
+
+<!-- split hero -->
+<section class="chero">
+  <div class="wrap grid">
+    <div class="txt">
+      <div class="crumb"><a href="insights.html"><b>Home</b></a> → <a href="work.html"><b>Case Study</b></a> → <span>Five Vendors One Program</span></div>
+      <div class="cat">Serialization and Vendor Consolidation</div>
+      <h1>Consolidating Five Vendors Into One Serialized Program</h1>
+      <div class="meta">May 2026 <span>·</span> 9 min read</div>
+    </div>
+    <div class="ph"><img src="images/pharma-line.jpg" alt="Serialized pharmaceutical packaging line"><div class="tint"></div><span class="mk">NATIONAL RX BRAND</span></div>
+  </div>
+</section>
+
+<!-- body -->
+<section class="cbody">
+  <div class="wrap grid">
+    <article class="article">
+      <h2 id="s1">Overview</h2>
+      <p>A national prescription brand was sourcing its packaging from five suppliers: one for <a href="labels.html">labels</a>, one for cartons, one for <a href="products.html#f-lit">inserts and outserts</a>, one for serialization services and one for warehousing. Each vendor held its own spec, ran its own quality system and produced its own documentation.</p>
+      <p>Over eighteen months, the brand consolidated the entire program with Platinum Press. This case study covers what the fragmented program cost them, how the transition was phased and what the consolidated program looks like today.</p>
+
+      <h2 id="s2">The Program Before Consolidation</h2>
+      <p>On paper, five specialists looked like five kinds of expertise. In practice, the seams between vendors were where the risk lived.</p>
+      <h3>Five Vendors, Five Specs</h3>
+      <p>Each supplier held a slightly different version of the artwork and dieline. Color targets drifted between the label stock and the carton board because no single party owned the brand standard across formats.</p>
+      <h3>No Single Audit Trail</h3>
+      <p>When an auditor asked for batch documentation, the quality team assembled records from five systems with five formats. Preparing for a routine audit took the better part of two weeks.</p>
+      <h3>Serialization at the Seams</h3>
+      <p>Unit-level codes were applied by one vendor and verified by another. Aggregation errors surfaced only at the packager, where a rejected lot meant restarting the chain across three companies.</p>
+
+      <div class="pull">
+        <div class="qm">"</div>
+        <p>The risk was never inside any one vendor. It was in the handoffs between them. Consolidation removes the handoffs.</p>
+        <div class="who"><b>Quality Systems</b>Platinum Press, Fort Worth TX</div>
+      </div>
+
+      <h2 id="s3">Why Platinum Press</h2>
+      <p>The brand's selection committee vetted <a href="quality.html">compliance first</a>: cGMP operations, ISO 9001:2015, G7 Master color and SGS&amp;Co certification, verified by 100% in-line vision inspection. The deciding factor was that every format they were buying, labels, cartons, literature, lidding and security features, runs under one roof and one quality system at Platinum Press.</p>
+      <div class="figure">
+        <img src="images/facility.jpg" alt="Platinum Press Fort Worth facility">
+        <figcaption>The Fort Worth headquarters after the $15M expansion: presses, finishing, serialization and cGMP warehousing on one campus.</figcaption>
+      </div>
+
+      <h2 id="s4">The Phased Rollout</h2>
+      <p>Nothing was switched off until its replacement was validated. The transition ran in three phases: labels first, cartons and literature second, serialization and warehousing last.</p>
+      <p>Each phase followed the same pattern: spec re-qualification, proof approval, a parallel production run against the incumbent, then cutover. The brand's launch calendar never moved.</p>
+      <div class="pull">
+        <div class="qm">"</div>
+        <p>A parallel run before every cutover meant the client never had to trust a promise. They compared finished goods side by side.</p>
+        <div class="who"><b>Press Operations</b>Two K&amp;B Rapida Presses</div>
+      </div>
+
+      <h2 id="s5">Serialization, Rebuilt in Line</h2>
+      <p>With <a href="innovations.html#easycode">EasyCode</a>, unit-level coding, aggregation and DSCSA reporting moved onto the same line that prints and finishes the packaging. Every serialized code is camera-verified by 100% in-line inspection, so a bad code is rejected in the plant, not discovered at the packager.</p>
+      <div class="badgestrip">
+        <div class="b"><span class="circ">cGMP</span><span>Compliant Operations</span></div>
+        <div class="b"><span class="circ">ISO</span><span>9001:2015 Certified</span></div>
+        <div class="b"><span class="circ">G7</span><span>Master Qualification</span></div>
+        <div class="b"><span class="circ">SGS</span><span>SGS&amp;Co Audited</span></div>
+      </div>
+
+      <h2 id="s6">Outcomes</h2>
+      <p>Twelve months after full cutover, the program's numbers tell the story better than any pitch could.</p>
+      <div class="stats">
+        <div class="stat"><b>5→1</b><span>Vendors consolidated into a single accountable partner</span></div>
+        <div class="stat"><b>100%</b><span>Units camera-verified in line, including every serialized code</span></div>
+        <div class="stat"><b>2 Days</b><span>Audit preparation, down from two weeks of multi-vendor assembly</span></div>
+      </div>
+      <p>Lead times settled at 3 to 4 weeks from approved artwork, with finished goods shipping from cGMP warehousing to 90% of the US in two days.</p>
+
+      <h2 id="s7">What It Means for Your Program</h2>
+      <p>If your packaging program spans multiple vendors, the consolidation playbook is repeatable: vet the quality system first, phase the transition format by format and never cut over without a parallel run. <a href="contact.html">Talk to a packaging expert</a> about what that looks like for your product.</p>
+
+      <!-- download form -->
+      <div class="dl">
+        <h2>Get the PDF Version of This Case Study</h2>
+        <p>The full write-up including the phased rollout plan and the audit documentation checklist, in a format you can share with your team.</p>
+        <form onsubmit="event.preventDefault();this.innerHTML='<p style=&quot;font-size:17px;color:#131A26&quot;><b>Sent.</b> Check your inbox for the download link.</p>'">
+          <input type="text" placeholder="First Name*" required>
+          <input type="text" placeholder="Last Name*" required>
+          <input type="email" placeholder="Work Email*" required>
+          <input type="text" placeholder="Company*" required>
+          <button type="submit">Download Now</button>
+        </form>
+      </div>
+    </article>
+
+    <!-- sticky rail -->
+    <aside class="side">
+      <div class="toc" id="toc">
+        <h4>Contents</h4>
+        <a href="#s1" class="on">1. Overview</a>
+        <a href="#s2">2. The Program Before Consolidation</a>
+        <a href="#s3">3. Why Platinum Press</a>
+        <a href="#s4">4. The Phased Rollout</a>
+        <a href="#s5">5. Serialization, Rebuilt in Line</a>
+        <a href="#s6">6. Outcomes</a>
+        <a href="#s7">7. What It Means for Your Program</a>
+      </div>
+      <div class="author"><span class="av">PP</span><b>Serialization Team</b></div>
+      <div class="share">
+        <div class="lbl">Share This Post</div>
+        <div class="icons"><a href="#">in</a><a href="#">f</a><a href="#">x</a></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- tags -->
+<section class="tags">
+  <div class="wrap">
+    <h4>Related Tags</h4>
+    <div class="chips">
+      <a href="pharma.html">Serialization &amp; DSCSA</a>
+      <a href="quality.html">Quality &amp; Compliance</a>
+      <a href="products.html">Vendor Consolidation</a>
+      <a href="labels.html">Labels</a>
+      <a href="innovations.html#easycode">EasyCode</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap row">
+    <div>
+      <span style="color:#fff;font-weight:700">PLATINUM IN<span style="color:var(--ice)">SIGHTS</span></span>
+      <span style="margin-left:14px;font-size:14px">by Platinum Press · Fort Worth, TX</span>
+    </div>
+    <div class="links">
+      <a href="v2.html">platinumpress.com</a>
+      <a href="work.html">Case Studies</a>
+      <a href="quality.html">Quality &amp; Compliance</a>
+      <a href="contact.html">Contact Sales</a>
+    </div>
+    <div style="font-size:13.5px">© 2026 Platinum Press, Inc.</div>
+  </div>
+</footer>
+
+<script>
+// TOC scroll-spy
+const tocLinks=document.querySelectorAll('#toc a');
+const spy=new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(e.isIntersecting){
+      tocLinks.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));
+    }
+  });
+},{rootMargin:'-15% 0px -70% 0px'});
+document.querySelectorAll('.article h2[id]').forEach(h=>spy.observe(h));
+</script>
+</body>
+</html>
