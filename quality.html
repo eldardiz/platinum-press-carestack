@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quality &amp; Compliance | Platinum Press</title>
+<meta name="description" content="cGMP operations, ISO 9001:2015, G7 Master and SGS&Co certifications, 100% in-line vision inspection and sustainable production. The compliance stack pharmaceutical buyers vet first.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0A1A33; --navy-2:#07203F; --black:#0A0D14; --card-dark:#0C1524;
+  --blue:#064FBC; --blue-h:#0A3F96; --ice:#BFD9FF; --ice-2:#9CC0F2;
+  --cream:#F3F5F8; --cream-2:#EEF1F6; --tileline:rgba(14,23,38,.08);
+  --ink:#131A26; --body:#3A4150; --muted:#5D6675; --eyebrow:#5B6472;
+  --line:#E4E6EB; --r:20px; --rs:12px; --rb:7px; --wrap:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Geist','Inter',system-ui,sans-serif;color:var(--body);background:#fff;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+h1,h2,h3,h4{font-weight:400;color:var(--ink);line-height:1.1;letter-spacing:-.2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:16px;letter-spacing:.8px;text-transform:uppercase;color:var(--eyebrow);font-weight:400}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;font-size:16px;font-weight:500;padding:12px 24px;border-radius:var(--rb);border:1px solid transparent;cursor:pointer;transition:background .15s ease-out,border-color .15s,color .15s;white-space:nowrap}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-h)}
+.btn-outline{background:#fff;border-color:#D7DAE0;color:var(--ink)}
+.btn-outline:hover{border-color:var(--ink)}
+.btn-outline-dark{background:transparent;border-color:rgba(255,255,255,.28);color:#fff}
+.btn-outline-dark:hover{border-color:#fff}
+.arrow{display:inline-block;transform:translateY(-1px)}
+.sect{padding:88px 0}
+.sect-head h2{font-size:40px;line-height:1.12;margin-top:14px;max-width:26ch}
+
+/* topbar + nav */
+.topbar{background:var(--navy);color:rgba(255,255,255,.85);font-size:13.5px}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:46px;gap:16px}
+.topbar .pill{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:5px 14px;background:rgba(255,255,255,.05)}
+.topbar .pill .dot{width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--ice),var(--blue))}
+.topbar .pill b{font-weight:500;color:#fff}
+.topbar .pill .sep{color:rgba(255,255,255,.4)}
+.topbar .pill .cta{color:var(--ice)}
+.topbar .r{display:flex;align-items:center;gap:22px;white-space:nowrap}
+.topbar .r a:hover{color:#fff}
+.nav{position:sticky;top:0;z-index:100;background:var(--navy);transition:background .25s,box-shadow .25s;color:#fff}
+.nav.scrolled{background:#fff;color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;height:75px;gap:26px}
+.logo{font-weight:600;font-size:19px;letter-spacing:.5px;white-space:nowrap}
+.logo span{font-weight:400;opacity:.75}
+.nav .links{display:flex;align-items:center;gap:26px;font-size:16px;flex:1;margin-left:14px}
+.nav .links a{display:inline-flex;align-items:center;gap:5px;opacity:.92}
+.nav .links a:hover{opacity:1}
+.nav .links .chev{font-size:10px;opacity:.7;transform:translateY(1px)}
+.nav .innov{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(90deg,#DCEAFF,#BFD9FF);color:var(--navy);padding:7px 14px;border-radius:var(--rb);font-weight:500}
+.nav .cta{display:flex;align-items:center;gap:12px}
+.nav .btn-outline{background:transparent;border-color:rgba(255,255,255,.3);color:#fff}
+.nav.scrolled .btn-outline{background:#fff;border-color:#D7DAE0;color:var(--ink)}
+.burger{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
+.burger span{width:22px;height:2px;background:currentColor;border-radius:2px}
+
+/* hero */
+.qhero{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:88px 0 96px}
+.qhero .grid{display:grid;grid-template-columns:1fr 1.05fr;gap:80px;align-items:center}
+.qhero .eyebrow{color:var(--ice);font-size:14px;font-weight:500}
+.qhero h1{color:#fff;font-size:48px;line-height:1.1;margin-top:16px;max-width:16ch}
+.qhero p{color:rgba(255,255,255,.75);font-size:17.5px;margin-top:20px;max-width:46ch}
+.qhero p b{color:#fff;font-weight:500}
+.qhero .btns{display:flex;gap:14px;margin-top:32px}
+.qhero .media{border-radius:var(--r);overflow:hidden;height:460px;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.qhero .media img{width:100%;height:100%;object-fit:cover}
+
+/* centered statement */
+.statement{padding:96px 0 64px;text-align:center}
+.statement h2{font-size:42px;max-width:28ch;margin:16px auto 0}
+
+/* proof carousel */
+.strip-wrap{position:relative;margin-top:12px;padding-bottom:88px}
+.strip{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px}
+.strip::-webkit-scrollbar{display:none}
+.scard{position:relative;flex:0 0 320px;height:560px;border-radius:var(--r);overflow:hidden;scroll-snap-align:start;background:var(--navy)}
+.scard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.scard .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,13,26,0) 30%,rgba(7,13,26,.88) 78%)}
+.scard .c{position:absolute;left:22px;right:22px;bottom:20px;color:#fff}
+.scard .c .q{font-size:16.5px;font-weight:500;line-height:1.4}
+.scard .c .div{height:1px;background:rgba(255,255,255,.25);margin:14px 0 10px}
+.scard .c b{font-weight:500;font-size:15px;display:block}
+.scard .c span{color:rgba(255,255,255,.6);font-size:13.5px}
+.scard .mark{position:absolute;left:22px;top:22px;color:#fff;font-size:13px;letter-spacing:1.6px;opacity:.9}
+.snav{position:absolute;top:42%;width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid var(--line);box-shadow:0 6px 20px rgba(14,23,38,.15);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:5;font-size:17px;color:var(--ink)}
+.snav.prev{left:-14px}.snav.next{right:-14px}
+
+/* pillars: sticky rail + cards */
+.caps{padding:20px 0 96px;background:var(--cream)}
+.caps .inner{display:grid;grid-template-columns:330px 1fr;gap:22px;align-items:start;padding-top:64px}
+.rail{position:sticky;top:105px}
+.rail .item{display:flex;align-items:center;gap:14px;padding:10px 0 10px 14px;border-left:2px solid var(--line);color:var(--body);font-size:16.5px;cursor:pointer}
+.rail .item.active{border-left-color:var(--ink);color:var(--ink);font-weight:500}
+.rail .sep{height:1px;background:var(--line);margin:34px 0 26px;width:88%}
+.rail p{color:var(--muted);font-size:15.5px;max-width:30ch}
+.rail .btn{margin-top:22px}
+.fcards{display:grid;gap:56px}
+.fcard{border-radius:var(--r);overflow:hidden;border:1px solid var(--tileline)}
+.fcard .top{position:relative;background:linear-gradient(135deg,#fff 0%,#E7EDF6 100%);min-height:360px;padding:32px;display:flex}
+.fcard .top h3{align-self:flex-end;font-size:32px;color:var(--ink);position:relative;z-index:2}
+.fcard .top .ph{position:absolute;right:0;top:0;bottom:0;width:56%;overflow:hidden}
+.fcard .top .ph img{width:100%;height:100%;object-fit:cover}
+.fcard .top .ph::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,0) 30%);z-index:1}
+.fcard .body{background:var(--card-dark);padding:22px 40px 30px;display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+.fcard .body a{display:flex;align-items:center;justify-content:space-between;gap:14px;color:#fff;font-size:16.5px;padding:19px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.fcard .body a:hover{color:var(--ice)}
+
+/* compliance stack accordion */
+.why .grid{display:grid;grid-template-columns:400px 1fr;gap:92px;margin-top:56px;align-items:start}
+.acc .item{border-bottom:1px solid var(--line);padding:15px 0;cursor:pointer}
+.acc .item .row{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.acc .item .t{font-size:17px;color:var(--ink)}
+.acc .item .n{font-size:13px;color:var(--muted)}
+.acc .item.active{padding:6px 0 22px;border-bottom:0}
+.acc .item.active .t{font-size:20px;font-weight:500}
+.acc .item .d,.acc .item .lm,.acc .item .bar{display:none}
+.acc .item.active .d{display:block;color:var(--muted);font-size:15.5px;margin-top:10px;max-width:38ch}
+.acc .item.active .lm{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-weight:500;margin-top:16px;font-size:15.5px}
+.acc .item.active .bar{display:block;height:3px;background:var(--line);margin-top:20px;border-radius:2px;overflow:hidden}
+.acc .item.active .bar i{display:block;height:100%;width:28%;background:var(--ink)}
+.why .media{border-radius:var(--r);overflow:hidden;min-height:520px;position:relative}
+.why .media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* trust band */
+.trust{padding:88px 0;text-align:center}
+.trust .marks{display:flex;justify-content:center;gap:8px;font-size:24px;color:var(--blue);letter-spacing:4px}
+.trust h2{font-size:32px;margin-top:16px}
+.trust p{color:var(--muted);max-width:60ch;margin:14px auto 0}
+.trust .logos{display:flex;justify-content:center;gap:56px;flex-wrap:wrap;margin-top:44px;opacity:.75}
+.trust .logos span{display:inline-flex;align-items:center;gap:9px;color:#9AA1AB;font-size:17px;font-weight:600;letter-spacing:1px}
+.trust .logos .mk{width:18px;height:18px;border-radius:4px;background:#C4C9D1}
+
+/* big cta + footer */
+.bigcta{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%);padding:110px 0;text-align:center}
+.bigcta h2{color:var(--ice);font-size:60px;line-height:1.06;max-width:18ch;margin:0 auto}
+.bigcta p{color:rgba(255,255,255,.65);font-size:17.5px;margin:26px auto 0;max-width:60ch}
+.bigcta .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:36px}
+footer{background:#F4F5F7;padding:84px 0 40px;color:var(--body)}
+.fcols{display:grid;grid-template-columns:repeat(5,1fr);gap:36px}
+.fcols h5{font-size:16.5px;color:var(--ink);font-weight:600;margin-bottom:20px}
+.fcols a{display:block;font-size:15px;color:var(--body);padding:7px 0}
+.fcols a:hover{color:var(--ink)}
+.fbottom{border-top:1px solid var(--line);margin-top:56px;padding-top:32px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.fbottom .copy{font-size:14.5px;color:var(--muted)}
+.fbottom .legal{display:flex;gap:10px;align-items:center;font-size:14.5px;color:var(--muted)}
+.fbottom .social{display:flex;gap:18px;color:#8B929D;font-size:15px;font-weight:600}
+
+@media(max-width:1080px){
+  .nav .links{display:none}
+  .burger{display:flex}
+  .qhero .grid,.caps .inner,.why .grid{grid-template-columns:1fr}
+  .rail{position:static}
+  .qhero h1{font-size:36px}
+  .statement h2{font-size:32px}
+  .bigcta h2{font-size:42px}
+  .fcols{grid-template-columns:1fr 1fr}
+  .fcard .body{grid-template-columns:1fr;padding:14px 24px 20px}
+}
+@media(max-width:640px){
+  .topbar .r{display:none}
+  .fcols{grid-template-columns:1fr}
+  .bigcta h2{font-size:32px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="pill"><span class="dot"></span><b>$15M HQ Expansion, Now Complete</b><span class="sep">·</span><span>Fort Worth, TX</span><span class="sep">·</span><a class="cta" href="about.html#news">Read the News ›</a></span>
+    <span class="r">
+      <a href="contact.html">✆ (817) 555-0100</a>
+      <a href="contact.html">Support</a>
+      <a href="insights.html">Insights</a>
+      <a href="about.html">Careers</a>
+      <a href="about.html">Company</a>
+      <a href="#">Client Login</a>
+      <span>🇺🇸</span>
+    </span>
+  </div>
+</div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="v2.html">PLATINUM<span>PRESS</span></a>
+    <nav class="links">
+      <a href="labels.html">Products <span class="chev">▼</span></a>
+      <a href="v2.html#capabilities">Capabilities <span class="chev">▼</span></a>
+      <a href="pharma.html">Markets <span class="chev">▼</span></a>
+      <a href="about.html">Company <span class="chev">▼</span></a>
+      <a href="quality.html">Quality &amp; Compliance</a>
+      <a class="innov" href="innovations.html">✦ Innovations</a>
+    </nav>
+    <div class="cta">
+      <a class="btn btn-outline" href="v2.html#stories">Our Work</a>
+      <a class="btn btn-blue" href="contact.html">Contact Sales</a>
+      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- hero -->
+<section class="qhero">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow">Quality &amp; Compliance</div>
+      <h1>Quality You Can Audit. Compliance You Can Prove.</h1>
+      <p>Pharmaceutical buyers vet compliance first, so we put it first: <b>cGMP operations, ISO 9001:2015, G7 Master and SGS&amp;Co certifications</b>, verified by <b>100% in-line vision inspection</b> and documented on every program.</p>
+      <div class="btns">
+        <a class="btn btn-blue" href="contact.html">Contact Sales</a>
+        <a class="btn btn-outline-dark" href="#pillars">View Certifications</a>
+      </div>
+    </div>
+    <div class="media"><img src="images/inspection.jpg" alt="In-line vision inspection at Platinum Press"></div>
+  </div>
+</section>
+
+<!-- centered statement -->
+<section class="statement">
+  <div class="wrap">
+    <div class="eyebrow">Why Regulated Buyers Trust Platinum Press</div>
+    <h2>Certified, Inspected and Documented at Every Step of Every Program.</h2>
+  </div>
+</section>
+
+<!-- proof carousel -->
+<section>
+  <div class="wrap strip-wrap">
+    <button class="snav prev" id="sprev">←</button>
+    <div class="strip" id="strip">
+      <div class="scard"><img src="images/inspection.jpg" alt="Inspection"><div class="shade"></div><div class="mark">100% INSPECTION</div>
+        <div class="c"><div class="q">"Every unit is camera-verified before it ships. Not a sample. Every unit."</div><div class="div"></div><b>Quality Systems</b><span>Zero-Defect Programs</span></div></div>
+      <div class="scard"><img src="images/cleanroom.jpg" alt="Cleanroom"><div class="shade"></div><div class="mark">cGMP</div>
+        <div class="c"><div class="q">"Controlled environments, controlled processes, controlled outcomes."</div><div class="div"></div><b>Facilities</b><span>Two Certified US Sites</span></div></div>
+      <div class="scard"><img src="images/hero-press.jpg" alt="Press"><div class="shade"></div><div class="mark">G7 MASTER</div>
+        <div class="c"><div class="q">"Brand color held to measurable standards, run after run."</div><div class="div"></div><b>Press Operations</b><span>Two K&amp;B Rapida Presses</span></div></div>
+      <div class="scard"><img src="images/pharma-line.jpg" alt="Serialization"><div class="shade"></div><div class="mark">DSCSA</div>
+        <div class="c"><div class="q">"Serialized programs leave aggregated, reported and audit-ready."</div><div class="div"></div><b>Serialization Team</b><span>EasyCode Programs</span></div></div>
+      <div class="scard"><img src="images/prod-security.jpg" alt="Security"><div class="shade"></div><div class="mark">SGS&amp;CO</div>
+        <div class="c"><div class="q">"Third-party audited, year after year, because trust needs receipts."</div><div class="div"></div><b>Compliance</b><span>Annual Audits</span></div></div>
+      <div class="scard"><img src="images/facility.jpg" alt="Sustainability"><div class="shade"></div><div class="mark">SUSTAINABLE</div>
+        <div class="c"><div class="q">"VOC and PFAS-free digital printing, without compliance shortcuts."</div><div class="div"></div><b>Production</b><span>Responsible Operations</span></div></div>
+    </div>
+    <button class="snav next" id="snext">→</button>
+  </div>
+</section>
+
+<!-- three pillars -->
+<section class="caps" id="pillars">
+  <div class="wrap">
+    <div style="max-width:760px;padding-top:64px">
+      <div class="eyebrow">The Three Pillars</div>
+      <div class="sect-head" style="margin-top:0"><h2>Certifications, Inspection and Sustainability, In Depth</h2></div>
+    </div>
+    <div class="inner" style="padding-top:44px">
+      <aside class="rail" id="rail">
+        <div class="item active" data-t="q-certs">Certifications</div>
+        <div class="item" data-t="q-inspect">100% In-Line Inspection</div>
+        <div class="item" data-t="q-sustain">Sustainability</div>
+        <div class="sep"></div>
+        <p>Certificates and audit documentation are available to qualified buyers on request.</p>
+        <a class="btn btn-blue" href="contact.html">Contact Sales</a>
+      </aside>
+      <div class="fcards">
+        <div class="fcard" id="q-certs">
+          <div class="top"><h3>Certifications</h3><div class="ph"><img src="images/cleanroom.jpg" alt="Certified facilities"></div></div>
+          <div class="body">
+            <a href="contact.html">cGMP Compliant Operations <span>→</span></a>
+            <a href="contact.html">ISO 9001:2015 Quality System <span>→</span></a>
+            <a href="contact.html">G7 Master Color Qualification <span>→</span></a>
+            <a href="contact.html">SGS&amp;Co Certification <span>→</span></a>
+            <a href="contact.html">FDA-Ready Documentation <span>→</span></a>
+            <a href="contact.html">Request Certificate PDFs <span>→</span></a>
+          </div>
+        </div>
+        <div class="fcard" id="q-inspect">
+          <div class="top"><h3>100% In-Line Inspection</h3><div class="ph"><img src="images/inspection.jpg" alt="Vision inspection"></div></div>
+          <div class="body">
+            <a href="contact.html">Camera Verification on Every Unit <span>→</span></a>
+            <a href="contact.html">Automatic Defect Rejection <span>→</span></a>
+            <a href="labels.html">Serialized Code Verification <span>→</span></a>
+            <a href="contact.html">Batch-Level Inspection Records <span>→</span></a>
+            <a href="contact.html">Zero-Defect Program Design <span>→</span></a>
+            <a href="pharma.html">Audit-Ready Reporting <span>→</span></a>
+          </div>
+        </div>
+        <div class="fcard" id="q-sustain">
+          <div class="top"><h3>Sustainability</h3><div class="ph"><img src="images/facility.jpg" alt="Responsible production"></div></div>
+          <div class="body">
+            <a href="v2.html#capabilities">VOC-Free Digital Printing <span>→</span></a>
+            <a href="v2.html#capabilities">PFAS-Free Processes <span>→</span></a>
+            <a href="contact.html">Responsible Substrate Sourcing <span>→</span></a>
+            <a href="contact.html">Waste Reduction Programs <span>→</span></a>
+            <a href="about.html">Efficient US-Based Logistics <span>→</span></a>
+            <a href="contact.html">Sustainability Documentation <span>→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- compliance stack accordion -->
+<section class="sect why">
+  <div class="wrap">
+    <div class="eyebrow">The Compliance Stack</div>
+    <div class="sect-head" style="margin-top:0"><h2>Six Layers of Proof Behind Every Program</h2></div>
+    <div class="grid">
+      <div class="acc" id="acc">
+        <div class="item active" data-img="images/cleanroom.jpg">
+          <div class="row"><span class="t">cGMP Operations</span><span class="n">01</span></div>
+          <div class="d">Current Good Manufacturing Practice across both US facilities, from intake to shipment.</div>
+          <a class="lm" href="contact.html">Learn More <span class="arrow">→</span></a>
+          <div class="bar"><i></i></div>
+        </div>
+        <div class="item" data-img="images/facility.jpg"><div class="row"><span class="t">ISO 9001:2015 QMS</span><span class="n">02</span></div>
+          <div class="d">A certified quality management system governing every process and every program.</div>
+          <a class="lm" href="contact.html">Learn More <span class="arrow">→</span></a><div class="bar"><i></i></div></div>
+        <div class="item" data-img="images/hero-press.jpg"><div class="row"><span class="t">G7 Master Color</span><span class="n">03</span></div>
+          <div class="d">Measurable, repeatable brand color on two Koenig and Bauer Rapida presses.</div>
+          <a class="lm" href="v2.html#capabilities">Learn More <span class="arrow">→</span></a><div class="bar"><i></i></div></div>
+        <div class="item" data-img="images/prod-security.jpg"><div class="row"><span class="t">SGS&amp;Co Audits</span><span class="n">04</span></div>
+          <div class="d">Independent third-party certification, renewed and audited annually.</div>
+          <a class="lm" href="contact.html">Learn More <span class="arrow">→</span></a><div class="bar"><i></i></div></div>
+        <div class="item" data-img="images/pharma-line.jpg"><div class="row"><span class="t">DSCSA Serialization</span><span class="n">05</span></div>
+          <div class="d">Unit-level coding, aggregation and reporting through EasyCode, verified 100% in line.</div>
+          <a class="lm" href="pharma.html">Learn More <span class="arrow">→</span></a><div class="bar"><i></i></div></div>
+        <div class="item" data-img="images/inspection.jpg"><div class="row"><span class="t">Audit-Ready Documentation</span><span class="n">06</span></div>
+          <div class="d">Batch records, inspection logs and serialization reports, ready when your auditor asks.</div>
+          <a class="lm" href="contact.html">Learn More <span class="arrow">→</span></a><div class="bar"><i></i></div></div>
+      </div>
+      <div class="media"><img id="accimg" src="images/cleanroom.jpg" alt="Compliance stack"></div>
+    </div>
+  </div>
+</section>
+
+<!-- trust band -->
+<section class="trust">
+  <div class="wrap">
+    <div class="marks">★★★★★</div>
+    <h2>Trusted by 100+ Pharma &amp; Healthcare Brands</h2>
+    <p>Platinum Press supplies regulated packaging with certified quality systems, world-class inspection and modern serialization technology.</p>
+    <div class="logos">
+      <span><span class="mk"></span>CLIENT ONE</span>
+      <span><span class="mk" style="border-radius:50%"></span>CLIENT TWO</span>
+      <span><span class="mk"></span>CLIENT THREE</span>
+      <span><span class="mk" style="border-radius:50%"></span>CLIENT FOUR</span>
+      <span><span class="mk"></span>CLIENT FIVE</span>
+      <span><span class="mk" style="border-radius:50%"></span>CLIENT SIX</span>
+    </div>
+  </div>
+</section>
+
+<!-- big cta -->
+<section class="bigcta">
+  <div class="wrap">
+    <h2>Put Our Compliance to the Test</h2>
+    <p>Request certificates, audit documentation or a facility walkthrough. A real quality expert will respond within one business day.</p>
+    <div class="btns">
+      <a class="btn btn-blue" href="contact.html">Contact Sales</a>
+      <a class="btn btn-outline-dark" href="about.html">About Platinum Press</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <h5>Products</h5>
+        <a href="labels.html">Labels</a><a href="v2.html#success">Folding Cartons</a><a href="v2.html#success">Literature, Inserts &amp; Outserts</a><a href="v2.html#success">Foil Lidding</a><a href="v2.html#success">Flexible Packaging</a><a href="v2.html#success">Security Products</a>
+      </div>
+      <div>
+        <h5>Capabilities</h5>
+        <a href="v2.html#capabilities">Printing</a><a href="v2.html#capabilities">Finishing</a><a href="v2.html#capabilities">Serialization &amp; DSCSA</a><a href="v2.html#capabilities">Warehousing &amp; Fulfillment</a><a href="v2.html#capabilities">Value-Added Services</a>
+      </div>
+      <div>
+        <h5>Markets</h5>
+        <a href="pharma.html">Pharma / Prescription</a><a href="v2.html#markets">Medical Device</a><a href="v2.html#markets">OTC / Consumer Health</a><a href="v2.html#markets">Wellness &amp; Natural Health</a><a href="v2.html#markets">Animal &amp; Pet Health</a><a href="v2.html#markets">Personal Care / Cosmetic</a>
+      </div>
+      <div>
+        <h5>Connect</h5>
+        <a href="contact.html">Contact Sales</a><a href="insights.html">Insights</a><a href="insights.html">Case Studies</a><a href="about.html#news">News &amp; Press</a><a href="about.html">Careers</a>
+      </div>
+      <div>
+        <h5>About Us</h5>
+        <a href="about.html">Our Story</a><a href="quality.html">Quality &amp; Compliance</a><a href="quality.html#pillars">Certifications</a><a href="about.html">Leadership</a><a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="fbottom">
+      <div>
+        <div style="font-weight:600;font-size:19px;color:var(--ink)">PLATINUM<span style="font-weight:400;opacity:.75">PRESS</span></div>
+        <div class="copy" style="margin-top:10px">© 2026 Platinum Press, Inc. All rights reserved.</div>
+      </div>
+      <div>
+        <div class="social"><a href="#">in</a><a href="#">yt</a><a href="#">f</a><a href="#">ig</a></div>
+        <div class="legal" style="margin-top:12px"><a href="#">Terms of use</a> · <a href="#">Privacy policy</a> · <a href="#">Accessibility</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+const hero=document.querySelector('.qhero');
+addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>hero.offsetHeight-120)},{passive:true});
+const strip=document.getElementById('strip');
+document.getElementById('sprev').onclick=()=>strip.scrollBy({left:-342,behavior:'smooth'});
+document.getElementById('snext').onclick=()=>strip.scrollBy({left:342,behavior:'smooth'});
+const railItems=document.querySelectorAll('#rail .item');
+railItems.forEach(it=>it.addEventListener('click',()=>{document.getElementById(it.dataset.t).scrollIntoView({behavior:'smooth',block:'center'});}));
+const spy=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){railItems.forEach(x=>x.classList.toggle('active',x.dataset.t===e.target.id));}});},{rootMargin:'-40% 0px -50% 0px'});
+document.querySelectorAll('.fcard').forEach(c=>spy.observe(c));
+const accimg=document.getElementById('accimg');
+document.querySelectorAll('#acc .item').forEach(it=>{
+  it.addEventListener('click',()=>{
+    document.querySelectorAll('#acc .item').forEach(x=>x.classList.remove('active'));
+    it.classList.add('active');
+    accimg.src=it.dataset.img;
+  });
+});
+</script>
+</body>
+</html>

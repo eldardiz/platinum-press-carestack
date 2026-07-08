@@ -15,6 +15,15 @@ Three template exemplars cloned from CareStack's subpage structures, matching th
 
 These three templates power the full sitemap: Market template → all 6 market pages; detail template → all products + capability children; content template → About, Quality, News, Careers.
 
+## Second wave (added 2026-07-08)
+Four more template exemplars, same rules (CareStack structure, all-original PP copy, PP imagery, shared design system), fully interlinked with all prior pages:
+- **`quality.html`** — Quality & Compliance template (from carestack.com/why-carestack): dark hero, centered statement, 6-card proof carousel, 3-pillar sticky rail (Certifications / 100% In-Line Inspection / Sustainability), 6-item compliance-stack accordion, trust band, big CTA. Anchor `#pillars` is the target for cross-links.
+- **`contact.html`** — Contact Sales template (from carestack.com/demo): centered H1 + info strip, scheduler-style booking card (navy info panel + request form with thank-you state), "What Happens Next" steps. This is the site-wide Contact Sales destination.
+- **`insights.html`** — Insights & Resources hub (from carestack.com/support/resources): dark "Platinum Insights" sub-brand with its own nav, Latest list + featured card, 3 gradient download cards, quote band, article + case-study grid, newsletter signup, compact footer.
+- **`innovations.html`** — Innovations spotlight (from carestack.com ai-suite page): all-dark orbit hero, sticky 5-tab strip with scroll-spy (Combination Carton / EasyCode / CodeShield / Flatsert / Source Tags), one deep-dive block per innovation with caption tiles, big CTA.
+
+**Additional placeholders in these pages:** trust-band logo tiles are generic; quotes remain PP-team attributed (Quality Systems, Serialization Team, Press Operations); article dates/read-times on insights.html are stand-ins; the contact form does not submit anywhere (front-end thank-you state only).
+
 ## V1 — carestack-inspired (`index.html`)
 
 A standalone homepage design exploration for **Platinum Press**, cloning the layout and feel of **carestack.com** (enterprise / premium / clean), reskinned with Platinum Press's own palette and imagery.
