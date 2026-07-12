@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Platinum Press Design System | Style Guide by Axamo</title>
+<meta name="description" content="The official Platinum Press design system: color palette, typography, buttons, components, imagery treatment, layout and voice. Prepared by Axamo.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============ Platinum Press tokens (the system being documented) ============ */
+:root{
+  --navy:#0A1A33; --navy-2:#07203F; --black:#0A0D14; --card-dark:#0C1524;
+  --sub-black:#101216; --panel:#181B21;
+  --blue:#064FBC; --blue-h:#0A3F96; --blue-g:#2E6FD3;
+  --ice:#BFD9FF; --ice-2:#9CC0F2; --ice-3:#DCEAFF;
+  --cream:#F3F5F8; --cream-2:#EEF1F6;
+  --ink:#131A26; --body:#3A4150; --muted:#5D6675; --eyebrow:#5B6472; --line:#E4E6EB;
+  --r:20px; --rs:12px; --rb:7px; --wrap:1160px;
+  /* Axamo document chrome */
+  --ax:#C84B30; --ax-dark:#161311;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Geist','Inter',system-ui,sans-serif;color:var(--body);background:#fff;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+h1,h2,h3,h4{color:var(--ink);line-height:1.12;letter-spacing:-.2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+code,.mono{font-family:'Geist Mono',ui-monospace,monospace;font-size:.85em}
+
+/* ============ Axamo document chrome ============ */
+.axbar{position:sticky;top:0;z-index:100;background:var(--ax-dark);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+.axbar .wrap{display:flex;align-items:center;height:60px;gap:18px}
+.axmark{font-weight:700;letter-spacing:2.5px;font-size:15px;color:var(--ax)}
+.axbar .x{color:rgba(255,255,255,.35);font-size:13px}
+.axbar .client{font-weight:600;font-size:14.5px;letter-spacing:.6px}
+.axbar .tag{margin-left:auto;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.axbar .tag b{color:#fff;font-weight:500}
+
+.cover{background:var(--ax-dark);color:#fff;padding:96px 0 110px;position:relative;overflow:hidden}
+.cover::after{content:"";position:absolute;right:-160px;top:-160px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(200,75,48,.35),rgba(200,75,48,0) 65%)}
+.cover .kicker{font-size:13px;letter-spacing:2.2px;text-transform:uppercase;color:var(--ax);font-weight:600}
+.cover h1{color:#fff;font-size:56px;font-weight:600;margin-top:18px;max-width:16ch;letter-spacing:-.5px}
+.cover p{color:rgba(255,255,255,.65);margin-top:20px;max-width:60ch;font-size:17.5px}
+.cover .meta{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap}
+.cover .meta div{font-size:14px;color:rgba(255,255,255,.5)}
+.cover .meta b{display:block;color:#fff;font-weight:500;font-size:15.5px;margin-top:4px}
+
+.tocbar{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:60px;z-index:90}
+.tocbar .wrap{display:flex;gap:26px;overflow-x:auto;height:56px;align-items:center;font-size:14.5px;color:var(--muted);white-space:nowrap;scrollbar-width:none}
+.tocbar .wrap::-webkit-scrollbar{display:none}
+.tocbar a:hover{color:var(--ink)}
+.tocbar a b{color:var(--ax);font-weight:600;margin-right:6px}
+
+section.sg{padding:88px 0 20px}
+.snum{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--ax);font-weight:600}
+.stitle{font-size:38px;font-weight:600;margin-top:12px}
+.sdesc{margin-top:14px;max-width:66ch;color:var(--muted)}
+.rule-note{background:var(--cream);border-left:3px solid var(--ax);border-radius:0 var(--rs) var(--rs) 0;padding:18px 22px;margin-top:26px;font-size:15.5px;max-width:760px}
+.rule-note b{color:var(--ink)}
+
+/* ============ swatches ============ */
+.pgroup{margin-top:44px}
+.pgroup h3{font-size:19px;font-weight:600}
+.pgroup .sub{font-size:14.5px;color:var(--muted);margin-top:4px}
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:16px;margin-top:18px}
+.sw{border:1px solid var(--line);border-radius:var(--rs);overflow:hidden;cursor:pointer;transition:transform .12s}
+.sw:hover{transform:translateY(-2px)}
+.sw .chip{height:96px;position:relative}
+.sw .chip span{position:absolute;left:14px;bottom:10px;font-size:12px;font-weight:500;letter-spacing:.4px}
+.sw .info{padding:12px 14px;background:#fff}
+.sw .info b{display:block;font-size:14.5px;color:var(--ink);font-weight:600}
+.sw .info .mono{display:block;color:var(--muted);margin-top:3px;font-size:12.5px}
+.sw .info .use{display:block;font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.45}
+.gradrow{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:18px}
+.grad{border:1px solid var(--line);border-radius:var(--rs);overflow:hidden}
+.grad .chip{height:84px}
+.grad .info{padding:12px 14px}
+.grad .info b{font-size:14.5px;color:var(--ink);font-weight:600;display:block}
+.grad .info .mono{color:var(--muted);font-size:12px;display:block;margin-top:3px}
+
+/* ============ typography ============ */
+.families{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+.fam{border:1px solid var(--line);border-radius:var(--r);padding:34px}
+.fam .big{font-size:64px;line-height:1;color:var(--ink)}
+.fam.inter .big{font-family:'Inter',sans-serif}
+.fam h3{font-size:18px;font-weight:600;margin-top:22px}
+.fam p{font-size:14.5px;color:var(--muted);margin-top:6px}
+.fam .weights{display:flex;gap:14px;margin-top:14px;flex-wrap:wrap;font-size:14px;color:var(--ink)}
+.fam .weights span{border:1px solid var(--line);border-radius:6px;padding:4px 10px}
+.typerow{display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:baseline;border-bottom:1px solid var(--line);padding:26px 0}
+.typerow .spec{font-size:13px;color:var(--muted);line-height:1.7}
+.typerow .spec b{display:block;color:var(--ink);font-size:14.5px;font-weight:600}
+.t-display{font-size:60px;font-weight:400;line-height:1.06;color:var(--ink);letter-spacing:-.2px}
+.t-h1{font-size:48px;font-weight:400;line-height:1.1;color:var(--ink);letter-spacing:-.2px}
+.t-h2{font-size:40px;font-weight:400;line-height:1.12;color:var(--ink);letter-spacing:-.2px}
+.t-h3{font-size:27px;font-weight:500;line-height:1.2;color:var(--ink)}
+.t-h4{font-size:20px;font-weight:500;line-height:1.3;color:var(--ink)}
+.t-body{font-size:17px;line-height:1.55;color:var(--body);max-width:60ch}
+.t-small{font-size:15px;line-height:1.5;color:var(--muted)}
+.t-eyebrow{font-size:16px;letter-spacing:.8px;text-transform:uppercase;color:var(--eyebrow)}
+.t-eyebrow-dark{font-size:14px;letter-spacing:.8px;text-transform:uppercase;color:var(--ice);font-weight:500;background:var(--navy);display:inline-block;padding:6px 12px;border-radius:6px}
+
+/* ============ buttons ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;font-size:16px;font-weight:500;padding:12px 24px;border-radius:var(--rb);border:1px solid transparent;cursor:pointer;transition:background .15s,border-color .15s;white-space:nowrap}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-h)}
+.btn-outline{background:#fff;border-color:#D7DAE0;color:var(--ink)}
+.btn-outline:hover{border-color:var(--ink)}
+.btn-outline-dark{background:transparent;border-color:rgba(255,255,255,.28);color:#fff}
+.btn-outline-dark:hover{border-color:#fff}
+.btn-accent{background:linear-gradient(90deg,var(--blue-g),var(--blue));color:#fff}
+.btn-ink{background:var(--ink);color:#fff;border:0}
+.btn-ink:hover{background:#000}
+.btnrow{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;margin-top:40px}
+.btncard{border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.btncard .stage{padding:38px;display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap}
+.btncard .stage.dark{background:linear-gradient(180deg,var(--navy),var(--navy-2))}
+.btncard .info{border-top:1px solid var(--line);padding:14px 18px;font-size:13.5px;color:var(--muted);line-height:1.6}
+.btncard .info b{color:var(--ink);font-size:14.5px;display:block;font-weight:600}
+
+/* ============ component specimens ============ */
+.compgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+.comp{border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.comp .stage{padding:34px;display:flex;align-items:center;justify-content:center;min-height:150px}
+.comp .stage.dark{background:var(--navy)}
+.comp .stage.darkest{background:var(--black)}
+.comp .stage.cream{background:var(--cream)}
+.comp .info{border-top:1px solid var(--line);padding:14px 18px;font-size:13.5px;color:var(--muted);line-height:1.6}
+.comp .info b{color:var(--ink);font-size:14.5px;display:block;font-weight:600}
+.comp.full{grid-column:1/-1}
+
+/* specimen pieces (verbatim from the PP system) */
+.sp-pill{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:5px 14px;background:rgba(255,255,255,.05);color:rgba(255,255,255,.85);font-size:13.5px}
+.sp-pill .dot{width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--ice),var(--blue))}
+.sp-pill b{font-weight:500;color:#fff}
+.sp-innov{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(90deg,var(--ice-3),var(--ice));color:var(--navy);padding:7px 14px;border-radius:var(--rb);font-weight:500;font-size:16px}
+.sp-badge{background:linear-gradient(90deg,var(--ice-3),var(--ice));color:var(--navy);font-size:11px;font-weight:600;letter-spacing:.6px;padding:3px 9px;border-radius:20px;text-transform:uppercase}
+.sp-tagchip{background:var(--cream);border-radius:10px;padding:11px 20px;font-size:15px;color:var(--body)}
+.sp-stat{background:var(--navy);border-radius:var(--r);padding:26px 24px;color:#fff;min-width:180px}
+.sp-stat b{display:block;font-size:38px;font-weight:700;color:var(--ice)}
+.sp-stat span{font-size:14px;color:rgba(255,255,255,.7);display:block;margin-top:6px}
+.sp-cmark{text-align:center}
+.sp-cmark .circ{width:64px;height:64px;border-radius:50%;border:2px solid var(--navy);color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;margin:0 auto}
+.sp-cmark span{display:block;font-size:13px;color:var(--muted);margin-top:8px}
+.sp-linklist{background:var(--card-dark);border-radius:var(--rs);padding:6px 26px;min-width:320px}
+.sp-linklist a{display:flex;align-items:center;justify-content:space-between;gap:14px;color:#fff;font-size:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.sp-linklist a:last-child{border-bottom:0}
+.sp-linklist a:hover{color:var(--ice)}
+.sp-acc{max-width:380px;width:100%}
+.sp-acc .item{border-bottom:1px solid var(--line);padding:14px 0}
+.sp-acc .row{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.sp-acc .t{font-size:17px;color:var(--ink)}
+.sp-acc .n{font-size:13px;color:var(--muted)}
+.sp-acc .item.active .t{font-size:19px;font-weight:500}
+.sp-acc .item.active .d{display:block;color:var(--muted);font-size:15px;margin-top:8px}
+.sp-acc .bar{height:3px;background:var(--line);margin-top:16px;border-radius:2px;overflow:hidden}
+.sp-acc .bar i{display:block;height:100%;width:28%;background:var(--ink)}
+.sp-input{font-family:inherit;font-size:15.5px;padding:14px 18px;border-radius:var(--rb);border:1px solid #D7DAE0;background:#fff;color:var(--ink);width:230px}
+.sp-input:focus{outline:2px solid var(--blue);outline-offset:1px}
+.sp-eyebrow-row{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.sp-quote{background:#fff;border-radius:16px;padding:28px;border:1px solid rgba(14,23,38,.08);max-width:340px}
+.sp-quote .qm{font-size:40px;line-height:.5;color:#C9CED6;font-weight:700}
+.sp-quote h4{font-size:19px;font-weight:700;margin-top:16px}
+.sp-quote p{color:var(--muted);font-size:14.5px;margin-top:10px}
+.sp-quote .who{display:flex;align-items:center;gap:11px;margin-top:18px}
+.sp-quote .av{width:38px;height:38px;border-radius:50%;background:var(--navy);color:var(--ice);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px}
+.sp-quote .who b{display:block;font-size:14px;color:var(--ink);font-weight:600}
+.sp-quote .who span{font-size:12.5px;color:var(--muted)}
+
+/* ============ imagery ============ */
+.imgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.imcard{border-radius:var(--rs);overflow:hidden;position:relative;height:210px}
+.imcard img{width:100%;height:100%;object-fit:cover}
+.imcard .tint{position:absolute;inset:0}
+.imcard .lbl{position:absolute;left:14px;bottom:12px;color:#fff;font-size:12px;letter-spacing:1.2px;font-weight:600;text-transform:uppercase;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.t-none{background:none}
+.t-navy{background:linear-gradient(160deg,rgba(10,26,51,.5),rgba(6,79,188,.25))}
+.t-shade{background:linear-gradient(180deg,rgba(7,13,26,0) 30%,rgba(7,13,26,.88) 78%)}
+
+/* ============ layout tokens ============ */
+.tokgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:16px;margin-top:40px}
+.tok{border:1px solid var(--line);border-radius:var(--rs);padding:22px}
+.tok b{display:block;font-size:15px;color:var(--ink);font-weight:600}
+.tok .mono{color:var(--muted);font-size:12.5px;display:block;margin-top:4px}
+.tok .demo{margin-top:16px;display:flex;gap:12px;align-items:flex-end}
+.rdemo{background:var(--cream);border:1px solid var(--line)}
+.shadow-card{box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.shadow-soft{box-shadow:0 10px 26px rgba(14,23,38,.1)}
+
+/* ============ voice table + a11y ============ */
+table.sgt{width:100%;border-collapse:collapse;margin-top:36px;font-size:15.5px}
+table.sgt th{text-align:left;font-size:13px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);font-weight:600;padding:12px 16px;border-bottom:2px solid var(--ink)}
+table.sgt td{padding:15px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+table.sgt td:first-child{color:var(--ink);font-weight:500;white-space:nowrap}
+.pairrow{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:16px;margin-top:40px}
+.pair{border-radius:var(--rs);padding:22px;font-size:15.5px}
+.pair b{display:block;font-size:19px;margin-bottom:6px}
+.pair .mono{font-size:12px;opacity:.75;display:block;margin-top:10px}
+
+/* ============ do / don't ============ */
+.dd{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+.ddcol{border-radius:var(--r);padding:30px;border:1px solid var(--line)}
+.ddcol h3{font-size:17px;font-weight:600;display:flex;align-items:center;gap:10px}
+.ddcol.do h3 span{color:#1D8348}
+.ddcol.dont h3 span{color:#C0392B}
+.ddcol ul{margin:16px 0 0 2px;list-style:none;display:grid;gap:11px;font-size:15.5px}
+.ddcol li{padding-left:22px;position:relative;color:var(--body)}
+.ddcol.do li::before{content:"✓";position:absolute;left:0;color:#1D8348;font-weight:700}
+.ddcol.dont li::before{content:"✕";position:absolute;left:0;color:#C0392B;font-weight:700}
+
+/* ============ axamo footer ============ */
+.axfoot{background:var(--ax-dark);color:rgba(255,255,255,.55);padding:56px 0;margin-top:110px}
+.axfoot .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.axfoot .axmark{font-size:14px}
+.axfoot .small{font-size:13.5px}
+
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(80px);background:var(--ink);color:#fff;font-size:14px;padding:10px 20px;border-radius:8px;transition:transform .25s;z-index:200}
+.toast.on{transform:translateX(-50%) translateY(0)}
+
+@media(max-width:960px){
+  .cover h1{font-size:38px}
+  .families,.compgrid,.dd{grid-template-columns:1fr}
+  .typerow{grid-template-columns:1fr;gap:10px}
+  .imgrid{grid-template-columns:1fr}
+  .stitle{font-size:30px}
+  .t-display{font-size:40px}.t-h1{font-size:34px}.t-h2{font-size:28px}
+}
+</style>
+</head>
+<body>
+
+<!-- Axamo chrome: top bar -->
+<div class="axbar">
+  <div class="wrap">
+    <span class="axmark">AXAMO</span>
+    <span class="x">×</span>
+    <span class="client">PLATINUM<span style="font-weight:400;opacity:.7">PRESS</span></span>
+    <span class="tag">Design System · <b>Style Guide v1.0</b></span>
+  </div>
+</div>
+
+<!-- cover -->
+<header class="cover">
+  <div class="wrap">
+    <div class="kicker">Brand &amp; Interface Guidelines</div>
+    <h1>The Platinum Press Design System</h1>
+    <p>Every rule needed to design and build Platinum Press digital products: color, typography, components, imagery, layout and voice. Derived from the approved design direction and locked for consistency across the full sitemap.</p>
+    <div class="meta">
+      <div>Prepared by<b>Axamo</b></div>
+      <div>Client<b>Platinum Press, Inc. · Fort Worth, TX</b></div>
+      <div>Version<b>1.0 · July 2026</b></div>
+      <div>Status<b>Working draft, pending brand pattern assets</b></div>
+    </div>
+  </div>
+</header>
+
+<!-- toc -->
+<nav class="tocbar">
+  <div class="wrap">
+    <a href="#foundation"><b>01</b>Foundation</a>
+    <a href="#color"><b>02</b>Color</a>
+    <a href="#type"><b>03</b>Typography</a>
+    <a href="#buttons"><b>04</b>Buttons</a>
+    <a href="#components"><b>05</b>Components</a>
+    <a href="#imagery"><b>06</b>Imagery</a>
+    <a href="#layout"><b>07</b>Layout &amp; Space</a>
+    <a href="#voice"><b>08</b>Voice &amp; Copy</a>
+    <a href="#a11y"><b>09</b>Accessibility</a>
+    <a href="#dd"><b>10</b>Do &amp; Don't</a>
+  </div>
+</nav>
+
+<!-- 01 foundation -->
+<section class="sg" id="foundation">
+  <div class="wrap">
+    <div class="snum">01 · Foundation</div>
+    <h2 class="stitle">Premium. Established. Trustworthy.</h2>
+    <p class="sdesc">Platinum Press competes with public giants and wins on quality, but loses on perception. Every design decision in this system exists to close that gap: the site must look as big, as certified and as capable as the company actually is. Compliance proof leads, scale follows, craft is visible everywhere.</p>
+    <div class="rule-note"><b>The one-line test:</b> if a layout, color or copy choice makes Platinum Press look smaller, cheaper or less certified than a public competitor, it is wrong, no matter how nice it looks.</div>
+    <div class="rule-note"><b>Logo:</b> the existing Platinum Press logo is off-limits for redesign. Until final logo files are delivered, all designs use the text lockup PLATINUM<span style="opacity:.6">PRESS</span> set in Geist 600, with PRESS at 75% opacity.</div>
+  </div>
+</section>
+
+<!-- 02 color -->
+<section class="sg" id="color">
+  <div class="wrap">
+    <div class="snum">02 · Color</div>
+    <h2 class="stitle">Palette</h2>
+    <p class="sdesc">A cool, pharmaceutical-grade palette: deep navy carries authority, one saturated blue carries every action, ice blue carries accents on dark. Neutrals stay cool and quiet so photography and proof points do the talking. Click any swatch to copy its hex value.</p>
+
+    <div class="pgroup">
+      <h3>Primary · Navy</h3>
+      <p class="sub">The brand's dark foundation. Hero bands, nav, stat tiles, big CTA sections.</p>
+      <div class="swatches">
+        <div class="sw" data-hex="#0A1A33"><div class="chip" style="background:#0A1A33"><span style="color:#fff">Aa</span></div><div class="info"><b>Navy</b><span class="mono">#0A1A33 · rgb(10 26 51) · --navy</span><span class="use">Primary dark surface: nav, heroes, footers on dark pages</span></div></div>
+        <div class="sw" data-hex="#07203F"><div class="chip" style="background:#07203F"><span style="color:#fff">Aa</span></div><div class="info"><b>Navy Deep</b><span class="mono">#07203F · rgb(7 32 63) · --navy-2</span><span class="use">Gradient partner: hero and CTA bands run navy to navy-deep</span></div></div>
+        <div class="sw" data-hex="#0C1524"><div class="chip" style="background:#0C1524"><span style="color:#fff">Aa</span></div><div class="info"><b>Card Dark</b><span class="mono">#0C1524 · rgb(12 21 36) · --card-dark</span><span class="use">Dark link-list panels inside light cards</span></div></div>
+        <div class="sw" data-hex="#0A0D14"><div class="chip" style="background:#0A0D14"><span style="color:#fff">Aa</span></div><div class="info"><b>Near Black</b><span class="mono">#0A0D14 · rgb(10 13 20) · --black</span><span class="use">Darkest sections: Innovations page, dark feature bands</span></div></div>
+      </div>
+    </div>
+
+    <div class="pgroup">
+      <h3>Action · Blue</h3>
+      <p class="sub">One blue owns every action. If it is clickable and primary, it is this blue.</p>
+      <div class="swatches">
+        <div class="sw" data-hex="#064FBC"><div class="chip" style="background:#064FBC"><span style="color:#fff">Aa</span></div><div class="info"><b>Action Blue</b><span class="mono">#064FBC · rgb(6 79 188) · --blue</span><span class="use">Primary buttons, links, active states, focus rings</span></div></div>
+        <div class="sw" data-hex="#0A3F96"><div class="chip" style="background:#0A3F96"><span style="color:#fff">Aa</span></div><div class="info"><b>Blue Hover</b><span class="mono">#0A3F96 · rgb(10 63 150) · --blue-h</span><span class="use">Hover and pressed state of Action Blue</span></div></div>
+        <div class="sw" data-hex="#2E6FD3"><div class="chip" style="background:#2E6FD3"><span style="color:#fff">Aa</span></div><div class="info"><b>Blue Bright</b><span class="mono">#2E6FD3 · rgb(46 111 211) · --blue-g</span><span class="use">Gradient start for the accent button, data accents</span></div></div>
+      </div>
+    </div>
+
+    <div class="pgroup">
+      <h3>Accent · Ice</h3>
+      <p class="sub">Ice blue is the accent voice on dark surfaces: headlines in CTA bands, eyebrows on dark heroes, link hovers on dark panels.</p>
+      <div class="swatches">
+        <div class="sw" data-hex="#BFD9FF"><div class="chip" style="background:#BFD9FF"><span style="color:#0A1A33">Aa</span></div><div class="info"><b>Ice</b><span class="mono">#BFD9FF · rgb(191 217 255) · --ice</span><span class="use">Accent text on navy, big CTA headlines, dark-surface hovers</span></div></div>
+        <div class="sw" data-hex="#9CC0F2"><div class="chip" style="background:#9CC0F2"><span style="color:#0A1A33">Aa</span></div><div class="info"><b>Ice Mid</b><span class="mono">#9CC0F2 · rgb(156 192 242) · --ice-2</span><span class="use">Secondary ice, muted accent text on dark</span></div></div>
+        <div class="sw" data-hex="#DCEAFF"><div class="chip" style="background:#DCEAFF"><span style="color:#0A1A33">Aa</span></div><div class="info"><b>Ice Light</b><span class="mono">#DCEAFF · rgb(220 234 255) · --ice-3</span><span class="use">Gradient start for the Innovations pill and badges</span></div></div>
+      </div>
+    </div>
+
+    <div class="pgroup">
+      <h3>Surfaces · Light</h3>
+      <p class="sub">Cool light greys separate white sections without visible borders.</p>
+      <div class="swatches">
+        <div class="sw" data-hex="#FFFFFF"><div class="chip" style="background:#fff;border-bottom:1px solid var(--line)"><span style="color:#131A26">Aa</span></div><div class="info"><b>White</b><span class="mono">#FFFFFF · rgb(255 255 255)</span><span class="use">Default page surface</span></div></div>
+        <div class="sw" data-hex="#F3F5F8"><div class="chip" style="background:#F3F5F8"><span style="color:#131A26">Aa</span></div><div class="info"><b>Cream</b><span class="mono">#F3F5F8 · rgb(243 245 248) · --cream</span><span class="use">Alternating section bands, cards on white, pull quotes</span></div></div>
+        <div class="sw" data-hex="#EEF1F6"><div class="chip" style="background:#EEF1F6"><span style="color:#131A26">Aa</span></div><div class="info"><b>Cream Deep</b><span class="mono">#EEF1F6 · rgb(238 241 246) · --cream-2</span><span class="use">Deeper light band, quote walls, hover fill on chips</span></div></div>
+        <div class="sw" data-hex="#E4E6EB"><div class="chip" style="background:#E4E6EB"><span style="color:#131A26">Aa</span></div><div class="info"><b>Line</b><span class="mono">#E4E6EB · rgb(228 230 235) · --line</span><span class="use">Borders, dividers, table rules</span></div></div>
+      </div>
+    </div>
+
+    <div class="pgroup">
+      <h3>Text</h3>
+      <p class="sub">Three steps of text color on light surfaces. Never use pure black.</p>
+      <div class="swatches">
+        <div class="sw" data-hex="#131A26"><div class="chip" style="background:#131A26"><span style="color:#fff">Aa</span></div><div class="info"><b>Ink</b><span class="mono">#131A26 · rgb(19 26 38) · --ink</span><span class="use">Headings, emphasized copy, dark buttons</span></div></div>
+        <div class="sw" data-hex="#3A4150"><div class="chip" style="background:#3A4150"><span style="color:#fff">Aa</span></div><div class="info"><b>Body</b><span class="mono">#3A4150 · rgb(58 65 80) · --body</span><span class="use">Default body copy on light surfaces</span></div></div>
+        <div class="sw" data-hex="#5D6675"><div class="chip" style="background:#5D6675"><span style="color:#fff">Aa</span></div><div class="info"><b>Muted</b><span class="mono">#5D6675 · rgb(93 102 117) · --muted</span><span class="use">Captions, metadata, supporting text</span></div></div>
+        <div class="sw" data-hex="#5B6472"><div class="chip" style="background:#5B6472"><span style="color:#fff">Aa</span></div><div class="info"><b>Eyebrow</b><span class="mono">#5B6472 · rgb(91 100 114) · --eyebrow</span><span class="use">Uppercase eyebrows on light surfaces only</span></div></div>
+      </div>
+    </div>
+
+    <div class="pgroup">
+      <h3>Gradients</h3>
+      <p class="sub">Three sanctioned gradients. Do not invent new ones.</p>
+      <div class="gradrow">
+        <div class="grad"><div class="chip" style="background:linear-gradient(180deg,#0A1A33,#07203F)"></div><div class="info"><b>Hero / CTA Band</b><span class="mono">180deg · #0A1A33 → #07203F</span></div></div>
+        <div class="grad"><div class="chip" style="background:linear-gradient(90deg,#2E6FD3,#064FBC)"></div><div class="info"><b>Accent Button</b><span class="mono">90deg · #2E6FD3 → #064FBC</span></div></div>
+        <div class="grad"><div class="chip" style="background:linear-gradient(90deg,#DCEAFF,#BFD9FF)"></div><div class="info"><b>Innovations Pill / Badges</b><span class="mono">90deg · #DCEAFF → #BFD9FF</span></div></div>
+      </div>
+    </div>
+
+    <div class="rule-note"><b>Ratio rule:</b> a typical page is roughly 60% white and cream, 30% navy and near-black, 10% action blue and ice. Blue is precious: it marks actions and key data, never decoration.</div>
+  </div>
+</section>
+
+<!-- 03 typography -->
+<section class="sg" id="type">
+  <div class="wrap">
+    <div class="snum">03 · Typography</div>
+    <h2 class="stitle">Type System</h2>
+    <p class="sdesc">Geist carries the entire interface, headings and UI alike, at regular weight for display sizes. That light-weight, large-size treatment is what makes the system feel enterprise rather than promotional. Inter supports long-form body and acts as the fallback.</p>
+
+    <div class="families">
+      <div class="fam">
+        <div class="big">Geist</div>
+        <h3>Primary · Headings &amp; UI</h3>
+        <p>Display sizes run at weight 400. Buttons, labels and small UI run 500 to 600. Available free via Google Fonts and Vercel.</p>
+        <div class="weights"><span style="font-weight:400">400 Regular</span><span style="font-weight:500">500 Medium</span><span style="font-weight:600">600 Semibold</span><span style="font-weight:700">700 Bold</span></div>
+      </div>
+      <div class="fam inter">
+        <div class="big">Inter</div>
+        <h3>Supporting · Long-form &amp; Fallback</h3>
+        <p>Used for dense long-form reading (articles, case studies) and as the system fallback in the font stack.</p>
+        <div class="weights"><span style="font-weight:400">400 Regular</span><span style="font-weight:500">500 Medium</span><span style="font-weight:600">600 Semibold</span></div>
+      </div>
+    </div>
+
+    <div style="margin-top:30px">
+      <div class="typerow">
+        <div class="spec"><b>Display</b>60px · 400 · 1.06<br>letter-spacing -0.2px<br>Big CTA bands, set in Ice on navy</div>
+        <div class="t-display">Put Our Compliance to the Test</div>
+      </div>
+      <div class="typerow">
+        <div class="spec"><b>Heading 1</b>48 to 52px · 400 · 1.08<br>Page heroes, max width 15 to 16ch</div>
+        <div class="t-h1">Quality You Can Audit.</div>
+      </div>
+      <div class="typerow">
+        <div class="spec"><b>Heading 2</b>40 to 42px · 400 · 1.12<br>Section titles, max width 24 to 28ch</div>
+        <div class="t-h2">Six Product Families. One Certified Partner.</div>
+      </div>
+      <div class="typerow">
+        <div class="spec"><b>Heading 3</b>24 to 32px · 500 · 1.2<br>Card titles, sub-sections</div>
+        <div class="t-h3">100% In-Line Inspection</div>
+      </div>
+      <div class="typerow">
+        <div class="spec"><b>Heading 4</b>19 to 21px · 500 · 1.3<br>List titles, small cards</div>
+        <div class="t-h4">Serialized Carton Programs</div>
+      </div>
+      <div class="typerow">
+        <div class="spec"><b>Body</b>17px · 400 · 1.55<br>Default paragraph, max width 60ch</div>
+        <div class="t-body">Every format below runs through the same cGMP facilities, the same G7-calibrated presses and the same 100% in-line vision inspection, so consolidating vendors never means compromising a spec.</div>
+      </div>
+      <div class="typerow">
+        <div class="spec"><b>Small / Meta</b>13.5 to 15.5px · 400<br>Captions, dates, metadata</div>
+        <div class="t-small">May 2026 · 9 min read · Fort Worth, TX</div>
+      </div>
+      <div class="typerow">
+        <div class="spec"><b>Eyebrow · Light</b>16px · 400 · uppercase<br>+0.8px tracking, --eyebrow color</div>
+        <div class="t-eyebrow">Why Regulated Buyers Trust Platinum Press</div>
+      </div>
+      <div class="typerow">
+        <div class="spec"><b>Eyebrow · Dark</b>14px · 500 · uppercase<br>+0.8px tracking, Ice on navy</div>
+        <div><span class="t-eyebrow-dark">Quality &amp; Compliance</span></div>
+      </div>
+    </div>
+    <div class="rule-note"><b>Weight discipline:</b> the bigger the text, the lighter it runs. Display and H1/H2 stay at 400. Never bold a hero headline; scale communicates hierarchy, not weight.</div>
+  </div>
+</section>
+
+<!-- 04 buttons -->
+<section class="sg" id="buttons">
+  <div class="wrap">
+    <div class="snum">04 · Buttons</div>
+    <h2 class="stitle">Buttons &amp; Actions</h2>
+    <p class="sdesc">Five button styles cover the whole product. All share the same anatomy: 12px vertical and 24px horizontal padding, 7px radius, Geist 500 at 16px, 150ms ease-out transitions. Contact Sales is always the highest-priority button in any view.</p>
+    <div class="btnrow">
+      <div class="btncard">
+        <div class="stage"><button class="btn btn-blue">Contact Sales</button></div>
+        <div class="info"><b>Primary · Blue</b>The action button. Background #064FBC, hover #0A3F96. One primary button per section.</div>
+      </div>
+      <div class="btncard">
+        <div class="stage"><button class="btn btn-outline">View Capabilities</button></div>
+        <div class="info"><b>Secondary · Outline</b>On light surfaces. White fill, #D7DAE0 border, Ink text. Hover darkens border to Ink.</div>
+      </div>
+      <div class="btncard">
+        <div class="stage dark"><button class="btn btn-outline-dark">Explore the Families</button></div>
+        <div class="info"><b>Secondary · Outline Dark</b>On navy and dark surfaces. Transparent fill, white 28% border, white text. Hover: solid white border.</div>
+      </div>
+      <div class="btncard">
+        <div class="stage darkest" style="background:var(--sub-black)"><button class="btn btn-accent">Compliance Guide 2026</button></div>
+        <div class="info"><b>Accent · Gradient</b>Platinum Insights sub-brand only. Gradient #2E6FD3 to #064FBC, 8px radius.</div>
+      </div>
+      <div class="btncard">
+        <div class="stage cream"><button class="btn btn-ink">Download Now</button></div>
+        <div class="info"><b>Form Submit · Ink</b>Full-width inside forms and download cards. Ink fill, hover pure black.</div>
+      </div>
+      <div class="btncard">
+        <div class="stage"><a class="btn btn-blue" style="pointer-events:none">Contact Sales</a>&nbsp;<a style="color:var(--blue);font-weight:500;font-size:16px">Learn More <span style="display:inline-block">→</span></a></div>
+        <div class="info"><b>Text Link · Arrow</b>Inline navigation. Action Blue or Ink 500, always with a trailing arrow, never underlined in UI (underline reserved for article body links).</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 components -->
+<section class="sg" id="components">
+  <div class="wrap">
+    <div class="snum">05 · Components</div>
+    <h2 class="stitle">Core Components</h2>
+    <p class="sdesc">The recurring pieces of the interface, shown in their exact production styling. Components live on either the light system (white and cream) or the dark system (navy and near-black); never mix the two inside one component.</p>
+
+    <div class="compgrid">
+      <div class="comp">
+        <div class="stage dark"><span class="sp-pill"><span class="dot"></span><b>$15M HQ Expansion, Now Complete</b><span style="color:rgba(255,255,255,.4)">·</span><span>Fort Worth, TX</span><span style="color:var(--ice)">Read the News ›</span></span></div>
+        <div class="info"><b>Announcement Pill</b>Topbar element. 8px radius, white 18% border, 5% white fill, gradient dot, Ice link.</div>
+      </div>
+      <div class="comp">
+        <div class="stage"><span class="sp-innov">✦ Innovations</span></div>
+        <div class="info"><b>Innovations Pill</b>The one nav item allowed color: ice gradient fill, navy text, ✦ spark. Marks patented and proprietary content.</div>
+      </div>
+      <div class="comp">
+        <div class="stage" style="gap:12px"><span class="sp-badge">Patented</span><span class="sp-badge">New</span><span class="sp-badge">Proprietary</span></div>
+        <div class="info"><b>Feature Badges</b>Ice gradient, navy text, 11px 600 uppercase, 20px radius. Attach to link-list rows and card titles.</div>
+      </div>
+      <div class="comp">
+        <div class="stage" style="gap:12px;flex-wrap:wrap"><span class="sp-tagchip">Serialization &amp; DSCSA</span><span class="sp-tagchip">Labels</span><span class="sp-tagchip">EasyCode</span></div>
+        <div class="info"><b>Tag Chips</b>Cream fill, 10px radius, Body text. Related-content tags on articles and case studies.</div>
+      </div>
+      <div class="comp">
+        <div class="stage darkest"><div class="sp-linklist"><a>Pressure-Sensitive Labels <span>→</span></a><a>Extended Content Labels <span>→</span></a><a>Braille &amp; Tactile Labels <span>→</span></a></div></div>
+        <div class="info"><b>Dark Link List</b>Card-dark panel, white 16px rows, 14% white dividers, arrow right. Hover turns row Ice. The signature pattern of hub and market pages.</div>
+      </div>
+      <div class="comp">
+        <div class="stage"><div class="sp-acc"><div class="item active"><div class="row"><span class="t">cGMP Operations</span><span class="n">01</span></div><div class="d">Current Good Manufacturing Practice across both US facilities.</div><div class="bar"><i></i></div></div><div class="item"><div class="row"><span class="t">ISO 9001:2015 QMS</span><span class="n">02</span></div></div><div class="item"><div class="row"><span class="t">G7 Master Color</span><span class="n">03</span></div></div></div></div>
+        <div class="info"><b>Numbered Accordion</b>Open item grows to 19 to 20px 500 with description and progress bar; siblings collapse to a titled row with index number.</div>
+      </div>
+      <div class="comp">
+        <div class="stage cream" style="gap:16px;flex-wrap:wrap"><div class="sp-stat"><b>100%</b><span>Units camera-verified in line</span></div><div class="sp-stat"><b>2 Days</b><span>Shipping to 90% of the US</span></div></div>
+        <div class="info"><b>Stat Tiles</b>Navy fill, 20px radius, Ice number at 38 to 40px 700, white 70% label. Proof numbers only, never decoration.</div>
+      </div>
+      <div class="comp">
+        <div class="stage" style="gap:26px"><div class="sp-cmark"><div class="circ">cGMP</div><span>cGMP</span></div><div class="sp-cmark"><div class="circ">ISO</div><span>ISO 9001:2015</span></div><div class="sp-cmark"><div class="circ">G7</div><span>G7 Master</span></div><div class="sp-cmark"><div class="circ">SGS</div><span>SGS&amp;Co</span></div></div>
+        <div class="info"><b>Certification Marks</b>64px circle, 2px navy ring, navy 700 abbreviation, muted caption. Always shown as the full set of four.</div>
+      </div>
+      <div class="comp">
+        <div class="stage cream"><div class="sp-quote"><div class="qm">"</div><h4>One audit trail instead of five</h4><p>When a program consolidates with us, the client keeps a single spec owner and a single point of accountability.</p><div class="who"><span class="av">PP</span><div><b>Quality Systems</b><span>Platinum Press, Fort Worth TX</span></div></div></div></div>
+        <div class="info"><b>Quote Card</b>White on cream, 16px radius, grey quote glyph, bold pull-quote as title. Attribution: navy avatar circle with Ice initials. Team-attributed until real client quotes are approved.</div>
+      </div>
+      <div class="comp">
+        <div class="stage" style="gap:14px;flex-wrap:wrap"><input class="sp-input" placeholder="Work Email*"><button class="btn btn-ink">Download Now</button></div>
+        <div class="info"><b>Form Fields</b>White fill, #D7DAE0 border, 7px radius, 14px 18px padding. Focus: 2px Action Blue outline. Labels via placeholder with asterisk for required.</div>
+      </div>
+    </div>
+    <div class="rule-note"><b>Two navigation states:</b> the main nav starts navy with white links on every page, and swaps to white with Ink links after scrolling past the hero. Both states keep the ice Innovations pill and the blue Contact Sales button unchanged.</div>
+  </div>
+</section>
+
+<!-- 06 imagery -->
+<section class="sg" id="imagery">
+  <div class="wrap">
+    <div class="snum">06 · Imagery</div>
+    <h2 class="stitle">Photography &amp; Treatment</h2>
+    <p class="sdesc">Only real Platinum Press photography: presses, cleanrooms, inspection lines, facilities and finished packaging. No stock, no renders, no generic lab imagery. Craft shots outnumber outcome shots. Three sanctioned treatments cover every use.</p>
+    <div class="imgrid">
+      <div class="imcard"><img src="images/hero-press.jpg" alt="Press, untreated"><div class="tint t-none"></div><div class="lbl">01 · Clean</div></div>
+      <div class="imcard"><img src="images/pharma-line.jpg" alt="Line with navy-blue tint"><div class="tint t-navy"></div><div class="lbl">02 · Navy-Blue Tint</div></div>
+      <div class="imcard"><img src="images/cleanroom.jpg" alt="Cleanroom with bottom shade"><div class="tint t-shade"></div><div class="lbl">03 · Bottom Shade</div></div>
+    </div>
+    <table class="sgt">
+      <tr><th>Treatment</th><th>Recipe</th><th>Use</th></tr>
+      <tr><td>01 · Clean</td><td><code>none</code></td><td>Hero media cards, figure images, card headers where the photo is the content</td></tr>
+      <tr><td>02 · Navy-Blue Tint</td><td><code>linear-gradient(160deg, rgba(10,26,51,.5), rgba(6,79,188,.25))</code></td><td>Thumbnails and tiles that sit next to text, case study cards, hero stat cards</td></tr>
+      <tr><td>03 · Bottom Shade</td><td><code>linear-gradient(180deg, transparent 30%, rgba(7,13,26,.88) 78%)</code></td><td>Cards with text overlaid on the photo (proof carousel, story cards)</td></tr>
+    </table>
+    <div class="rule-note"><b>Radius rule:</b> standalone images always sit inside a rounded container: 20px for large media, 12 to 14px for tiles. Hero media additionally carries the deep shadow <code>0 30px 80px rgba(0,0,0,.35)</code>.</div>
+  </div>
+</section>
+
+<!-- 07 layout -->
+<section class="sg" id="layout">
+  <div class="wrap">
+    <div class="snum">07 · Layout &amp; Space</div>
+    <h2 class="stitle">Grid, Radii, Rhythm</h2>
+    <p class="sdesc">A 1240px container, generous section padding and three radii keep every page calm and consistent. Sections alternate white, cream and navy to create rhythm without decorative dividers.</p>
+    <div class="tokgrid">
+      <div class="tok"><b>Container</b><span class="mono">max-width 1240px · 24px gutters</span><div class="demo"><div style="height:34px;flex:1;border-radius:6px;background:linear-gradient(90deg,var(--cream) 0 2%,var(--ice-3) 2% 98%,var(--cream) 98%)"></div></div></div>
+      <div class="tok"><b>Section Padding</b><span class="mono">88px standard · 110px feature/CTA</span><div class="demo"><div style="width:100%;border-radius:6px;background:var(--cream);padding:22px 0;text-align:center;font-size:12.5px;color:var(--muted)">88 to 110px above and below</div></div></div>
+      <div class="tok"><b>Radius · Large</b><span class="mono">20px · --r · cards, media, panels</span><div class="demo"><div class="rdemo" style="width:82px;height:54px;border-radius:20px"></div></div></div>
+      <div class="tok"><b>Radius · Small</b><span class="mono">12px · --rs · tiles, inner cards</span><div class="demo"><div class="rdemo" style="width:82px;height:54px;border-radius:12px"></div></div></div>
+      <div class="tok"><b>Radius · Button</b><span class="mono">7px · --rb · buttons, inputs, pills</span><div class="demo"><div class="rdemo" style="width:82px;height:40px;border-radius:7px"></div></div></div>
+      <div class="tok"><b>Shadow · Hero Media</b><span class="mono">0 30px 80px rgba(0,0,0,.35)</span><div class="demo"><div class="rdemo shadow-card" style="width:82px;height:54px;border-radius:12px;background:#fff"></div></div></div>
+      <div class="tok"><b>Shadow · Soft Tile</b><span class="mono">0 10px 26px rgba(14,23,38,.1)</span><div class="demo"><div class="rdemo shadow-soft" style="width:82px;height:54px;border-radius:12px;background:#fff"></div></div></div>
+      <div class="tok"><b>Card Grid Gap</b><span class="mono">16 to 22px · rails use 330px + 1fr</span><div class="demo"><div class="rdemo" style="width:38px;height:44px;border-radius:8px"></div><div class="rdemo" style="width:38px;height:44px;border-radius:8px"></div><div class="rdemo" style="width:38px;height:44px;border-radius:8px"></div></div></div>
+    </div>
+    <div class="rule-note"><b>Signature layout:</b> hub and detail pages use the sticky rail pattern: a 330px left rail (sticky at 105px, scroll-spy active states) beside stacked full-width cards. Reuse it before inventing a new layout.</div>
+  </div>
+</section>
+
+<!-- 08 voice -->
+<section class="sg" id="voice">
+  <div class="wrap">
+    <div class="snum">08 · Voice &amp; Copy</div>
+    <h2 class="stitle">How Platinum Press Speaks</h2>
+    <p class="sdesc">Proof-led, calm, specific. Every claim carries a number, a certification or a named process. The reader is a procurement, quality or brand professional who is paid to be skeptical.</p>
+    <table class="sgt">
+      <tr><th>Rule</th><th>Detail</th></tr>
+      <tr><td>Five-second message</td><td>"A trusted pharmaceutical packaging partner for labels, cartons and literature, with quality and compliance." Every hero is a variation of this.</td></tr>
+      <tr><td>Primary CTA</td><td><b>Contact Sales</b>, everywhere, repeated at CareStack frequency: nav, section CTAs, big CTA band, footer. "Get a Quote" is demoted.</td></tr>
+      <tr><td>Proof over adjectives</td><td>Write "100% in-line vision inspection", not "exceptional quality". The sanctioned proof points: cGMP, ISO 9001:2015, G7 Master, SGS&amp;Co, 100% inspection, $15M expansion, 2 facilities, two K&amp;B Rapida presses, 100+ brands, 3 to 4 week lead, 2-day shipping to 90% of the US.</td></tr>
+      <tr><td>No em dashes</td><td>Never use em dashes in site copy: headlines, body, CTAs, meta, alt text. Use commas, periods, parentheses or restructure the sentence.</td></tr>
+      <tr><td>Sentence-style headlines</td><td>Headlines read as statements with periods: "Quality You Can Audit. Compliance You Can Prove." Title Case, full stops allowed.</td></tr>
+      <tr><td>Attribution policy</td><td>Until real client quotes are cleared, quotes attribute to Platinum Press teams (Quality Systems, Serialization Team, Press Operations). Never invent client names, people or logos.</td></tr>
+      <tr><td>Privately-held angle</td><td>Lean into it: senior attention, agility, accountability, "the public giants" as the implicit contrast. Never punch down by name.</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- 09 accessibility -->
+<section class="sg" id="a11y">
+  <div class="wrap">
+    <div class="snum">09 · Accessibility</div>
+    <h2 class="stitle">Contrast Pairs</h2>
+    <p class="sdesc">The sanctioned text-on-surface combinations. All pass WCAG AA for their size class; most pass AAA. Anything not listed here needs a contrast check before shipping.</p>
+    <div class="pairrow">
+      <div class="pair" style="background:var(--navy);color:#fff"><b>White on Navy</b>Hero headlines, nav links<span class="mono">≈ 16.2 : 1 · AAA</span></div>
+      <div class="pair" style="background:var(--navy);color:var(--ice)"><b>Ice on Navy</b>Accent text, CTA headlines<span class="mono">≈ 11.4 : 1 · AAA</span></div>
+      <div class="pair" style="background:var(--blue);color:#fff"><b>White on Action Blue</b>Primary buttons<span class="mono">≈ 7.4 : 1 · AAA</span></div>
+      <div class="pair" style="background:#fff;color:var(--ink);border:1px solid var(--line)"><b>Ink on White</b>Headings<span class="mono">≈ 15.4 : 1 · AAA</span></div>
+      <div class="pair" style="background:#fff;color:var(--body);border:1px solid var(--line)"><b>Body on White</b>Paragraph text<span class="mono">≈ 9.3 : 1 · AAA</span></div>
+      <div class="pair" style="background:var(--cream);color:var(--muted)"><b>Muted on Cream</b>Captions, metadata<span class="mono">≈ 5.2 : 1 · AA</span></div>
+    </div>
+    <div class="rule-note"><b>Also required:</b> visible 2px Action Blue focus outlines on all interactive elements, 16px minimum body size, alt text on every image (no em dashes there either), and never color as the only signal of state.</div>
+  </div>
+</section>
+
+<!-- 10 do / don't -->
+<section class="sg" id="dd">
+  <div class="wrap">
+    <div class="snum">10 · Do &amp; Don't</div>
+    <h2 class="stitle">The Short List</h2>
+    <div class="dd">
+      <div class="ddcol do">
+        <h3><span>✓</span> Do</h3>
+        <ul>
+          <li>Lead every page with compliance and proof, then scale, then craft</li>
+          <li>Keep display type at weight 400 and let size carry hierarchy</li>
+          <li>Use one blue for all actions and Ice for all dark-surface accents</li>
+          <li>Alternate white, cream and navy sections for rhythm</li>
+          <li>Reuse the sticky rail, dark link list and stat tile patterns</li>
+          <li>Use real Platinum Press photography with the three sanctioned treatments</li>
+          <li>Repeat Contact Sales wherever a decision could happen</li>
+        </ul>
+      </div>
+      <div class="ddcol dont">
+        <h3><span>✕</span> Don't</h3>
+        <ul>
+          <li>Don't bold hero headlines or tighten line-height below 1.06</li>
+          <li>Don't introduce new colors, gradients or radii</li>
+          <li>Don't use stock photos, renders or invented client logos and quotes</li>
+          <li>Don't use em dashes anywhere in site copy</li>
+          <li>Don't mix light and dark systems inside one component</li>
+          <li>Don't use Action Blue decoratively; it means "clickable"</li>
+          <li>Don't redraw or restyle the Platinum Press logo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- axamo footer -->
+<footer class="axfoot">
+  <div class="wrap">
+    <div><span class="axmark">AXAMO</span><span style="margin-left:12px;font-size:13.5px">Design &amp; Development</span></div>
+    <div class="small">Platinum Press Design System · Style Guide v1.0 · July 2026</div>
+    <div class="small">Prepared for Platinum Press, Inc. · Confidential</div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Copied</div>
+<script>
+const toast=document.getElementById('toast');let tt;
+document.querySelectorAll('.sw').forEach(sw=>{
+  sw.addEventListener('click',()=>{
+    navigator.clipboard.writeText(sw.dataset.hex).then(()=>{
+      toast.textContent=sw.dataset.hex+' copied';
+      toast.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>toast.classList.remove('on'),1400);
+    });
+  });
+});
+</script>
+</body>
+</html>
