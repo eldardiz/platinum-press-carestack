@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>News &amp; Press | Platinum Press</title>
+<meta name="description" content="Press releases and company news from Platinum Press: the $15M headquarters expansion, Koenig and Bauer Rapida presses, VOC-free digital printing and serialization milestones.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0A1A33; --navy-2:#07203F; --black:#0A0D14; --card-dark:#0C1524;
+  --blue:#064FBC; --blue-h:#0A3F96; --ice:#BFD9FF; --ice-2:#9CC0F2;
+  --cream:#F3F5F8; --cream-2:#EEF1F6; --tileline:rgba(14,23,38,.08);
+  --ink:#131A26; --body:#3A4150; --muted:#5D6675; --eyebrow:#5B6472;
+  --line:#E4E6EB; --r:20px; --rs:12px; --rb:7px; --wrap:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Geist','Inter',system-ui,sans-serif;color:var(--body);background:#fff;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+h1,h2,h3,h4{font-weight:400;color:var(--ink);line-height:1.1;letter-spacing:-.2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:16px;letter-spacing:.8px;text-transform:uppercase;color:var(--eyebrow);font-weight:400}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;font-size:16px;font-weight:500;padding:12px 24px;border-radius:var(--rb);border:1px solid transparent;cursor:pointer;transition:background .15s ease-out,border-color .15s,color .15s;white-space:nowrap}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-h)}
+.btn-outline{background:#fff;border-color:#D7DAE0;color:var(--ink)}
+.btn-outline:hover{border-color:var(--ink)}
+.btn-outline-dark{background:transparent;border-color:rgba(255,255,255,.28);color:#fff}
+.btn-outline-dark:hover{border-color:#fff}
+
+/* topbar + nav */
+.topbar{background:var(--navy);color:rgba(255,255,255,.85);font-size:13.5px}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:46px;gap:16px}
+.topbar .pill{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:5px 14px;background:rgba(255,255,255,.05)}
+.topbar .pill .dot{width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--ice),var(--blue))}
+.topbar .pill b{font-weight:500;color:#fff}
+.topbar .pill .sep{color:rgba(255,255,255,.4)}
+.topbar .pill .cta{color:var(--ice)}
+.topbar .r{display:flex;align-items:center;gap:22px;white-space:nowrap}
+.topbar .r a:hover{color:#fff}
+.nav{position:sticky;top:0;z-index:100;background:#fff;color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;height:75px;gap:26px}
+.logo{font-weight:600;font-size:19px;letter-spacing:.5px;white-space:nowrap}
+.logo span{font-weight:400;opacity:.75}
+.nav .links{display:flex;align-items:center;gap:26px;font-size:16px;flex:1;margin-left:14px}
+.nav .links a{display:inline-flex;align-items:center;gap:5px;opacity:.92}
+.nav .links a:hover{opacity:1}
+.nav .links .chev{font-size:10px;opacity:.7;transform:translateY(1px)}
+.nav .innov{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(90deg,#DCEAFF,#BFD9FF);color:var(--navy);padding:7px 14px;border-radius:var(--rb);font-weight:500}
+.nav .cta{display:flex;align-items:center;gap:12px}
+.burger{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
+.burger span{width:22px;height:2px;background:currentColor;border-radius:2px}
+
+/* breadcrumb + hero band (from events index) */
+.nhero{background:var(--cream);padding:26px 0 88px}
+.crumb{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+.crumb .home{width:32px;height:32px;border-radius:8px;background:#fff;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center}
+.crumb b{color:var(--ink);font-weight:500}
+.nhero .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:90px;align-items:start;margin-top:72px}
+.nhero h1{font-size:52px;margin-top:14px}
+.nhero .btn{margin-top:30px}
+.nhero .intro p{margin-top:0;color:var(--body);font-size:17px}
+.nhero .intro p + p{margin-top:18px}
+.nhero .intro b{font-weight:600;color:var(--ink)}
+
+/* news grid */
+.ngrid{padding:88px 0 40px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ncard{border:1px solid var(--line);border-radius:var(--rs);padding:28px 28px 26px;display:flex;flex-direction:column;min-height:210px;transition:box-shadow .15s,transform .12s}
+.ncard:hover{box-shadow:0 14px 34px rgba(14,23,38,.1);transform:translateY(-2px)}
+.ncard .chips{display:flex;gap:8px;flex-wrap:wrap}
+.ncard .chip{border:1px solid var(--line);border-radius:6px;padding:4px 10px;font-size:11.5px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);font-weight:500}
+.ncard .chip.hl{background:linear-gradient(90deg,#DCEAFF,#BFD9FF);border-color:transparent;color:var(--navy);font-weight:600}
+.ncard h3{font-size:21px;font-weight:500;margin-top:16px;line-height:1.3;max-width:24ch}
+.ncard:hover h3{color:var(--blue)}
+.ncard .date{margin-top:auto;padding-top:18px;color:var(--muted);font-size:14.5px}
+
+/* press kit band */
+.kit{padding:56px 0 96px}
+.kit .box{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%);border-radius:var(--r);padding:64px 72px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.kit h2{color:var(--ice);font-size:36px;max-width:20ch}
+.kit p{color:rgba(255,255,255,.65);margin-top:14px;max-width:52ch}
+.kit .btns{display:flex;gap:14px;flex-wrap:wrap}
+
+/* footer */
+footer{background:#F4F5F7;padding:84px 0 40px;color:var(--body)}
+.fcols{display:grid;grid-template-columns:repeat(5,1fr);gap:36px}
+.fcols h5{font-size:16.5px;color:var(--ink);font-weight:600;margin-bottom:20px}
+.fcols a{display:block;font-size:15px;color:var(--body);padding:7px 0}
+.fcols a:hover{color:var(--ink)}
+.fbottom{border-top:1px solid var(--line);margin-top:56px;padding-top:32px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.fbottom .copy{font-size:14.5px;color:var(--muted)}
+.fbottom .legal{display:flex;gap:10px;align-items:center;font-size:14.5px;color:var(--muted)}
+.fbottom .social{display:flex;gap:18px;color:#8B929D;font-size:15px;font-weight:600}
+
+@media(max-width:1080px){
+  .nav .links{display:none}
+  .burger{display:flex}
+  .nhero .grid{grid-template-columns:1fr;gap:30px}
+  .nhero h1{font-size:36px}
+  .cards{grid-template-columns:1fr}
+  .kit .box{grid-template-columns:1fr;padding:40px 30px}
+  .fcols{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .topbar .r{display:none}
+  .fcols{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="pill"><span class="dot"></span><b>$15M HQ Expansion, Now Complete</b><span class="sep">·</span><span>Fort Worth, TX</span><span class="sep">·</span><a class="cta" href="news.html">Read the News ›</a></span>
+    <span class="r">
+      <a href="contact.html">✆ (817) 555-0100</a>
+      <a href="contact.html">Support</a>
+      <a href="insights.html">Insights</a>
+      <a href="about.html">Careers</a>
+      <a href="about.html">Company</a>
+      <a href="#">Client Login</a>
+      <span>🇺🇸</span>
+    </span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="v2.html">PLATINUM<span>PRESS</span></a>
+    <nav class="links">
+      <a href="products.html">Products <span class="chev">▼</span></a>
+      <a href="capabilities.html">Capabilities <span class="chev">▼</span></a>
+      <a href="pharma.html">Markets <span class="chev">▼</span></a>
+      <a href="about.html">Company <span class="chev">▼</span></a>
+      <a href="quality.html">Quality &amp; Compliance</a>
+      <a class="innov" href="innovations.html">✦ Innovations</a>
+    </nav>
+    <div class="cta">
+      <a class="btn btn-outline" href="work.html">Our Work</a>
+      <a class="btn btn-blue" href="contact.html">Contact Sales</a>
+      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- hero band -->
+<section class="nhero">
+  <div class="wrap">
+    <div class="crumb"><span class="home">⌂</span> › <a href="about.html">Company</a> › <b>News &amp; Press</b></div>
+    <div class="grid">
+      <div>
+        <div class="eyebrow">News &amp; Press</div>
+        <h1>Platinum Press, On the Record</h1>
+        <a class="btn btn-blue" href="contact.html">Press &amp; Media Inquiries</a>
+      </div>
+      <div class="intro">
+        <p>Platinum Press invests continuously in the capacity, technology and certifications that regulated packaging demands: <b>a $15 million headquarters expansion</b>, two high-speed Koenig and Bauer Rapida presses, a VOC and PFAS-free digital printing platform and serialization-ready production.</p>
+        <p>The releases below are the public record of that investment. For interviews, imagery or background on any announcement, our team responds within one business day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- news grid -->
+<section class="ngrid">
+  <div class="wrap cards">
+    <a class="ncard" href="#">
+      <div class="chips"><span class="chip hl">Milestone</span><span class="chip">Expansion</span></div>
+      <h3>Platinum Press Expands Headquarters with $15 Million Investment</h3>
+      <div class="date">Fort Worth, TX · 2026</div>
+    </a>
+    <a class="ncard" href="#">
+      <div class="chips"><span class="chip">Press Release</span><span class="chip">Printing</span></div>
+      <h3>Platinum Press Commences Large-scale Print Runs on Two High-speed Koenig and Bauer Rapida Presses</h3>
+      <div class="date">Fort Worth, TX · 2025</div>
+    </a>
+    <a class="ncard" href="#">
+      <div class="chips"><span class="chip">Press Release</span><span class="chip">Sustainability</span></div>
+      <h3>Platinum Press Introduces Digital Printing Platform Free of Potential Carcinogens</h3>
+      <div class="date">Fort Worth, TX · 2024</div>
+    </a>
+    <a class="ncard" href="https://www.webpackaging.com/en/portals/platinumpress/assets/11299094/platinum-press-inc-offers-serialization-ready-printed-packaging-components-for-pharmaceutical-industry/" target="_blank" rel="noopener">
+      <div class="chips"><span class="chip">Press Release</span><span class="chip">Serialization</span></div>
+      <h3>Platinum Press Offers Serialization-Ready Printed Packaging Components for the Pharmaceutical Industry</h3>
+      <div class="date">Fort Worth, TX · April 2016</div>
+    </a>
+    <a class="ncard" href="https://www.healthcarepackaging.com/home/press-release/13289132/platinum-press-inc-becomes-packaging-supplier-for-walgreens-pharmacies" target="_blank" rel="noopener">
+      <div class="chips"><span class="chip hl">Certification</span><span class="chip">Partnership</span></div>
+      <h3>Platinum Press Becomes Certified Packaging Supplier for Walgreens Pharmacies</h3>
+      <div class="date">Fort Worth, TX · May 2015</div>
+    </a>
+    <a class="ncard" href="insights.html">
+      <div class="chips"><span class="chip">Company News</span><span class="chip">Insights</span></div>
+      <h3>Platinum Insights Launches: A Resource Hub for Regulated Packaging</h3>
+      <div class="date">Fort Worth, TX · 2026</div>
+    </a>
+  </div>
+</section>
+
+<!-- press kit band -->
+<section class="kit">
+  <div class="wrap">
+    <div class="box">
+      <div>
+        <h2>Writing About Platinum Press?</h2>
+        <p>Request the press kit: company facts, leadership bios, facility photography and logo files, plus a direct line to the team behind any announcement.</p>
+      </div>
+      <div class="btns">
+        <a class="btn btn-blue" href="contact.html">Request the Press Kit</a>
+        <a class="btn btn-outline-dark" href="about.html">About Platinum Press</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <h5>Products</h5>
+        <a href="labels.html">Labels</a><a href="products.html#f-cartons">Folding Cartons</a><a href="products.html#f-lit">Literature, Inserts &amp; Outserts</a><a href="products.html#f-lidding">Foil Lidding</a><a href="products.html#f-flex">Flexible Packaging</a><a href="products.html#f-security">Security Products</a>
+      </div>
+      <div>
+        <h5>Capabilities</h5>
+        <a href="capabilities.html#c-printing">Printing</a><a href="capabilities.html#c-finishing">Finishing</a><a href="capabilities.html#c-serial">Serialization &amp; DSCSA</a><a href="capabilities.html#c-warehouse">Warehousing &amp; Fulfillment</a><a href="capabilities.html#c-vas">Value-Added Services</a>
+      </div>
+      <div>
+        <h5>Markets</h5>
+        <a href="pharma.html">Pharma / Prescription</a><a href="v2.html#markets">Medical Device</a><a href="v2.html#markets">OTC / Consumer Health</a><a href="v2.html#markets">Wellness &amp; Natural Health</a><a href="v2.html#markets">Animal &amp; Pet Health</a><a href="v2.html#markets">Personal Care / Cosmetic</a>
+      </div>
+      <div>
+        <h5>Connect</h5>
+        <a href="contact.html">Contact Sales</a><a href="insights.html">Insights</a><a href="article.html">Blog</a><a href="insights.html#guides">Downloads</a><a href="work.html">Case Studies</a>
+      </div>
+      <div>
+        <h5>About Us</h5>
+        <a href="about.html">Our Story</a><a href="work.html">Our Work</a><a href="news.html">News &amp; Press</a><a href="about.html">Careers</a><a href="quality.html">Quality &amp; Compliance</a><a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="fbottom">
+      <div>
+        <div style="font-weight:600;font-size:19px;color:var(--ink)">PLATINUM<span style="font-weight:400;opacity:.75">PRESS</span></div>
+        <div class="copy" style="margin-top:10px">© 2026 Platinum Press, Inc. All rights reserved.</div>
+      </div>
+      <div>
+        <div class="social"><a href="#">in</a><a href="#">yt</a><a href="#">f</a><a href="#">ig</a></div>
+        <div class="legal" style="margin-top:12px"><a href="#">Terms of use</a> · <a href="#">Privacy policy</a> · <a href="#">Accessibility</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

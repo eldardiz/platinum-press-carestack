@@ -32,6 +32,11 @@ The last three unbuilt rows of the CareStack template mapping. Every template fa
 
 **Placeholders in these pages:** case studies are anonymized program stories ("national Rx brand" style descriptors, no invented client names or logos); hero stat cards on work.html carry generic CLIENT ONE/TWO/THREE marks; all case-list entries currently link to the single case-study.html exemplar; dates/read-times are stand-ins; the download form does not submit anywhere.
 
+## Fourth wave (added 2026-07-15)
+- **`article.html`** — Blog article detail (from a CareStack resources article): split hero, sticky Contents TOC with scroll-spy, definition table, navy numbered checklist box, pull quote, Key Takeaways block (AEO), tag chips, Keep Reading row. Exemplar article: "DSCSA Aggregation Is Not Optional Anymore." This template powers the whole Blog branch.
+- **`news.html`** — News & Press index (from carestack.com/company/events layout): breadcrumb, cream two-column intro band, chip/title/date card grid, navy press-kit band. Populated with PP's REAL public press history: $15M expansion, K&B Rapida presses, VOC-free digital platform (titles verbatim from platinumpress.com/press-releases), plus the 2016 serialization-ready release and the 2015 Walgreens certified-supplier announcement (both link to their real third-party coverage). NOTE: only 2015/2016 dates are verified; other years are stand-ins pending client confirmation. "Platinum Insights Launches" is a stand-in item.
+- **`capabilities.html`** — Capabilities hub (reuses the products.html hub layout per the template model): hero collage, sticky 5-item rail (Printing / Finishing / Serialization & DSCSA / Warehousing & Fulfillment / Value-Added Services) with dark link-list cards, cross-links band (Products / Markets / Quality per the sitemap hub card), FAQ, big CTA. Nav "Capabilities" now lands here site-wide; footer capability links point to its anchors.
+
 ## V1 — carestack-inspired (`index.html`)
 
 A standalone homepage design exploration for **Platinum Press**, cloning the layout and feel of **carestack.com** (enterprise / premium / clean), reskinned with Platinum Press's own palette and imagery.

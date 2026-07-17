@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DSCSA Aggregation Is Not Optional Anymore. Here Is the Checklist. | Platinum Insights</title>
+<meta name="description" content="What DSCSA aggregation actually requires in 2026, where serialized packaging programs fail, and the checklist regulated brands should run before their next audit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0A1A33; --navy-2:#07203F; --black:#101216; --panel:#181B21;
+  --blue:#064FBC; --blue-h:#0A3F96; --ice:#BFD9FF; --ice-2:#9CC0F2;
+  --cream:#F3F5F8; --cream-2:#EEF1F6; --tileline:rgba(14,23,38,.08);
+  --ink:#131A26; --body:#3A4150; --muted:#5D6675;
+  --line:#E4E6EB; --r:16px; --rb:8px; --wrap:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Geist','Inter',system-ui,sans-serif;color:var(--body);background:#fff;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+h1,h2,h3,h4{color:var(--ink);line-height:1.15;letter-spacing:-.2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;font-size:15.5px;font-weight:500;padding:11px 22px;border-radius:var(--rb);border:1px solid transparent;cursor:pointer;transition:background .15s,border-color .15s;white-space:nowrap}
+.btn-accent{background:linear-gradient(90deg,#2E6FD3,#064FBC);color:#fff}
+.btn-accent:hover{background:var(--blue-h)}
+
+/* sub-brand dark nav */
+.snav{position:sticky;top:0;z-index:100;background:var(--black);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+.snav .wrap{display:flex;align-items:center;height:88px;gap:30px}
+.subbrand{line-height:1.02;font-weight:700;font-size:20px;letter-spacing:.2px;color:#fff}
+.subbrand small{display:block;font-size:11px;letter-spacing:2px;font-weight:500;color:rgba(255,255,255,.7)}
+.subbrand b{color:var(--ice)}
+.snav .links{display:flex;align-items:center;gap:28px;font-size:15.5px;color:rgba(255,255,255,.75);flex:1;justify-content:center}
+.snav .links a:hover{color:#fff}
+.snav .links a.on{color:#fff;font-weight:600}
+.snav .right{display:flex;align-items:center;gap:14px}
+.backlink{font-size:13.5px;color:rgba(255,255,255,.55)}
+.backlink:hover{color:#fff}
+
+/* split hero */
+.chero{background:var(--black);color:#fff}
+.chero .grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.chero .txt{padding:56px 60px 72px 0}
+.crumb{font-size:12px;letter-spacing:1.4px;color:rgba(255,255,255,.5);text-transform:uppercase;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.crumb b{color:rgba(255,255,255,.75);font-weight:500}
+.chero .cat{font-size:13.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--ice);font-weight:600;margin-top:64px}
+.chero h1{color:#fff;font-size:40px;font-weight:700;margin-top:18px;max-width:22ch}
+.chero .meta{color:rgba(255,255,255,.6);font-size:15px;margin-top:22px;display:flex;gap:12px;align-items:center}
+.chero .ph{position:relative;min-height:520px}
+.chero .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.chero .ph .tint{position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,26,51,.45),rgba(6,79,188,.2))}
+
+/* body layout */
+.cbody{padding:80px 0 40px}
+.cbody .grid{display:grid;grid-template-columns:1fr 410px;gap:96px;align-items:start}
+.article p{margin-top:22px;max-width:66ch}
+.article p a{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+.article h2{font-size:32px;font-weight:700;margin-top:64px;scroll-margin-top:120px}
+.article h3{font-size:22px;font-weight:700;margin-top:40px}
+.article .lead b{color:var(--ink)}
+
+/* definition table */
+.deftable{margin-top:36px;border-top:1px solid var(--line)}
+.defrow{display:grid;grid-template-columns:230px 1fr;gap:28px;padding:20px 0;border-bottom:1px solid var(--line)}
+.defrow .t{font-size:16.5px;font-weight:700;color:var(--ink)}
+.defrow .d{font-size:16px;color:var(--body)}
+
+/* checklist box */
+.check{background:var(--navy);border-radius:var(--r);padding:44px 48px;margin-top:44px;color:#fff}
+.check h3{color:var(--ice);font-size:24px;font-weight:700;margin:0}
+.check ol{margin:24px 0 0 2px;list-style:none;counter-reset:c;display:grid;gap:15px}
+.check li{counter-increment:c;position:relative;padding-left:44px;font-size:16.5px;color:rgba(255,255,255,.88);line-height:1.5}
+.check li::before{content:counter(c,decimal-leading-zero);position:absolute;left:0;top:1px;font-size:13px;font-weight:700;color:var(--ice);border:1px solid rgba(191,217,255,.4);border-radius:8px;padding:3px 7px}
+.check li b{color:#fff}
+
+/* pull quote */
+.pull{background:var(--cream);border-radius:var(--r);padding:40px 44px;margin-top:40px}
+.pull .qm{font-size:44px;line-height:.5;color:#C9CED6;font-weight:700}
+.pull p{font-size:21px;color:var(--ink);font-weight:600;line-height:1.45;margin-top:18px;max-width:40ch}
+.pull .who{margin-top:18px;font-size:15px;color:var(--muted)}
+.pull .who b{color:var(--ink);font-weight:600;display:block}
+
+/* takeaways */
+.takes{background:var(--cream);border-radius:var(--r);padding:40px 44px;margin-top:56px}
+.takes h2{margin-top:0 !important;font-size:26px !important}
+.takes ul{margin:20px 0 0 2px;list-style:none;display:grid;gap:13px}
+.takes li{padding-left:26px;position:relative;font-size:16.5px;color:var(--body)}
+.takes li::before{content:"→";position:absolute;left:0;color:var(--blue);font-weight:700}
+
+/* sticky side rail */
+.side{position:sticky;top:120px}
+.toc{background:var(--cream);border-radius:var(--r);padding:30px 34px}
+.toc h4{font-size:17px;font-weight:700;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.toc a{display:block;font-size:15.5px;color:var(--body);padding:9px 0}
+.toc a.on{color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:4px}
+.toc a:hover{color:var(--ink)}
+.author{display:flex;align-items:center;gap:14px;margin-top:34px}
+.author .av{width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--ice);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex:0 0 auto}
+.author b{font-size:16px;color:var(--ink);font-weight:600;display:block}
+.author span{font-size:13.5px;color:var(--muted)}
+.share{margin-top:30px}
+.share .lbl{font-size:12px;letter-spacing:1.4px;color:var(--muted);text-transform:uppercase}
+.share .icons{display:flex;gap:16px;margin-top:12px}
+.share .icons a{width:36px;height:36px;border-radius:8px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;font-size:13px}
+.share .icons a:hover{color:var(--ink);border-color:var(--ink)}
+
+/* tags + related */
+.tags{padding:40px 0 0}
+.tags h4{font-size:18px;font-weight:700}
+.tags .chips{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
+.tags .chips a{background:var(--cream);border-radius:10px;padding:11px 20px;font-size:15px;color:var(--body)}
+.tags .chips a:hover{color:var(--ink);background:var(--cream-2)}
+.related{padding:56px 0 96px}
+.related h3{font-size:26px;font-weight:700}
+.relgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
+.relcard{border:1px solid var(--tileline);border-radius:var(--r);overflow:hidden}
+.relcard .ph{height:160px;overflow:hidden;position:relative}
+.relcard .ph img{width:100%;height:100%;object-fit:cover}
+.relcard .ph .tag{position:absolute;left:14px;bottom:12px;background:rgba(10,26,51,.85);color:#fff;font-size:11px;font-weight:600;letter-spacing:.8px;padding:5px 11px;border-radius:6px;text-transform:uppercase}
+.relcard .c{padding:18px 20px}
+.relcard h4{font-size:17.5px;font-weight:700}
+.relcard .meta{color:var(--muted);font-size:13.5px;margin-top:8px}
+.relcard:hover h4{color:var(--blue)}
+
+/* footer */
+footer{background:var(--black);color:rgba(255,255,255,.6);padding:48px 0}
+footer .row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a:hover{color:#fff}
+footer .links{display:flex;gap:24px;font-size:14.5px}
+
+@media(max-width:1080px){
+  .snav .links{display:none}
+  .chero .grid,.cbody .grid{grid-template-columns:1fr}
+  .chero .txt{padding:56px 0}
+  .chero .ph{min-height:320px}
+  .side{position:static}
+  .chero h1{font-size:30px}
+  .defrow{grid-template-columns:1fr;gap:6px}
+  .relgrid{grid-template-columns:1fr}
+  .check{padding:30px 26px}
+}
+</style>
+</head>
+<body>
+
+<!-- sub-brand nav -->
+<nav class="snav">
+  <div class="wrap">
+    <a class="subbrand" href="insights.html"><small>PLATINUM</small>IN<b>SIGHTS</b></a>
+    <div class="links">
+      <a href="insights.html#latest">Topics ▾</a>
+      <a href="work.html">Case Studies</a>
+      <a href="insights.html#guides">Guides</a>
+      <a class="on" href="insights.html#articles">Articles</a>
+      <a href="insights.html#guides">Downloads</a>
+      <a href="news.html">Press</a>
+    </div>
+    <div class="right">
+      <a class="btn btn-accent" href="insights.html#guides">Compliance Guide 2026</a>
+      <a class="backlink" href="v2.html">← platinumpress.com</a>
+    </div>
+  </div>
+</nav>
+
+<!-- split hero -->
+<section class="chero">
+  <div class="wrap grid">
+    <div class="txt">
+      <div class="crumb"><a href="insights.html"><b>Home</b></a> → <a href="insights.html#articles"><b>Article</b></a> → <span>DSCSA Aggregation Checklist</span></div>
+      <div class="cat">Serialization · DSCSA</div>
+      <h1>DSCSA Aggregation Is Not Optional Anymore. Here Is the Checklist.</h1>
+      <div class="meta">Jun 2026 <span>·</span> 7 min read</div>
+    </div>
+    <div class="ph"><img src="images/pharma-line.jpg" alt="Serialized units on a pharmaceutical packaging line"><div class="tint"></div></div>
+  </div>
+</section>
+
+<!-- body -->
+<section class="cbody">
+  <div class="wrap grid">
+    <article class="article">
+      <h2 id="a1">What Changed</h2>
+      <p class="lead">For years, aggregation lived in the "eventually" column of DSCSA planning. The stabilization period let supply chains trade serialized product without every parent-child relationship documented, and plenty of programs shipped on that grace. <b>That period is over.</b> Trading partners now expect complete, accurate aggregation data with every serialized shipment, and wholesalers are rejecting product that arrives without it.</p>
+      <p>For regulated brands, the practical consequence is simple: aggregation is no longer a serialization feature. It is a shipping requirement. A pallet that cannot explain its own contents electronically does not move.</p>
+
+      <h2 id="a2">Aggregation, Defined</h2>
+      <p>Four terms carry most of the confusion in aggregation conversations. Here is what each one actually means on a packaging line.</p>
+      <div class="deftable">
+        <div class="defrow"><div class="t">Serialization</div><div class="d">Applying a unique identifier to every saleable unit: a 2D barcode carrying GTIN, serial number, lot and expiry.</div></div>
+        <div class="defrow"><div class="t">Aggregation</div><div class="d">Recording the parent-child relationships between those units and the cases and pallets that contain them, so a case code answers for every unit inside it.</div></div>
+        <div class="defrow"><div class="t">Inference</div><div class="d">A trading partner accepting a case without opening it, trusting the aggregation data to know what is inside. Inference only works when aggregation is accurate.</div></div>
+        <div class="defrow"><div class="t">EPCIS</div><div class="d">The data standard used to exchange serialization and aggregation events between trading partners.</div></div>
+      </div>
+
+      <h2 id="a3">The Checklist</h2>
+      <p>Run this against your current program. Every item is a question an auditor, a wholesaler or a 3PL will eventually ask.</p>
+      <div class="check">
+        <h3>The DSCSA Aggregation Checklist</h3>
+        <ol>
+          <li><b>Unit-level codes verified, not just applied.</b> Every serialized code is camera-read after printing, and failed reads are rejected in line.</li>
+          <li><b>Aggregation happens where packing happens.</b> Parent-child data is captured at the moment units enter cases, not reconstructed afterward.</li>
+          <li><b>Case and pallet labels carry their own serialized identifiers</b> linked to their contents.</li>
+          <li><b>EPCIS events generated for every commissioning and aggregation step</b>, in a format your partners have actually tested.</li>
+          <li><b>Rework has a procedure.</b> When a case is opened and repacked, the aggregation record is updated, not orphaned.</li>
+          <li><b>One party owns the audit trail.</b> Batch records, verification logs and EPCIS files live in one system, retrievable in hours.</li>
+          <li><b>Exception handling is documented.</b> Damaged units, samples and retains are decommissioned in the data, not just removed from the line.</li>
+          <li><b>Your printer and your packager agree on the spec.</b> Code placement, grading targets and data formats are one document, not two interpretations.</li>
+        </ol>
+      </div>
+
+      <h2 id="a4">Where Programs Fail</h2>
+      <h3>Codes applied but never verified</h3>
+      <p>A printed code is not a working code. Programs that sample-check serialized codes discover grading failures at the wholesaler, where the cost of the discovery is a rejected shipment. 100% in-line vision verification catches the same failure while the unit is still on the line.</p>
+      <h3>Aggregation at the packager, serialization at the printer</h3>
+      <p>When unit codes come from one vendor and case-level aggregation from another, every handoff is a place for parent-child data to drift. The seams between vendors, not the vendors themselves, produce most aggregation errors. This is the core argument for <a href="case-study.html">consolidating serialized programs under one roof</a>.</p>
+      <h3>Documentation scattered across systems</h3>
+      <p>The data exists, somewhere: verification logs with the printer, EPCIS files with the serialization provider, batch records with the packager. An audit that should take a morning takes two weeks of assembly.</p>
+
+      <div class="pull">
+        <div class="qm">"</div>
+        <p>Aggregation is not a data project bolted onto packaging. It is packaging, done with the data captured at the right moment.</p>
+        <div class="who"><b>Serialization Team</b>EasyCode and DSCSA Programs, Platinum Press</div>
+      </div>
+
+      <h2 id="a5">What Good Looks Like</h2>
+      <p>The programs that pass audits without drama share one design decision: serialization, verification and aggregation happen on the same line, owned by the same quality system. With <a href="innovations.html#easycode">EasyCode</a>, unit-level codes are printed, camera-verified and aggregated as cases pack, and the EPCIS record leaves the building with the product. There is no reconciliation step because nothing was ever separated.</p>
+      <p>That is also why aggregation readiness is a supplier-selection question, not just an internal one. A packaging partner that treats serialization as <a href="quality.html">a quality-system obligation</a> removes the seams where aggregation fails.</p>
+
+      <!-- key takeaways -->
+      <div class="takes">
+        <h2 id="a6">Key Takeaways</h2>
+        <ul>
+          <li>Aggregation is now a shipping requirement: wholesalers reject serialized product that arrives without parent-child data.</li>
+          <li>Verify every code in line; sampled checks discover failures after the product has shipped.</li>
+          <li>Capture aggregation where packing happens, and keep serialization and aggregation under one owner.</li>
+          <li>Keep one audit trail: batch records, verification logs and EPCIS events in one retrievable system.</li>
+          <li>Vet your packaging partner's aggregation capability the way you vet their certifications.</li>
+        </ul>
+      </div>
+      <p style="margin-top:36px">Running a serialized program that fails part of this checklist? <a href="contact.html">Talk to a packaging expert</a> about what closing the gaps looks like.</p>
+
+      <!-- tags -->
+      <div class="tags">
+        <h4>Related Tags</h4>
+        <div class="chips">
+          <a href="pharma.html">Serialization &amp; DSCSA</a>
+          <a href="innovations.html#easycode">EasyCode</a>
+          <a href="quality.html">Quality &amp; Compliance</a>
+          <a href="pharma.html">Pharma / Prescription</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- sticky rail -->
+    <aside class="side">
+      <div class="toc" id="toc">
+        <h4>Contents</h4>
+        <a href="#a1" class="on">1. What Changed</a>
+        <a href="#a2">2. Aggregation, Defined</a>
+        <a href="#a3">3. The Checklist</a>
+        <a href="#a4">4. Where Programs Fail</a>
+        <a href="#a5">5. What Good Looks Like</a>
+        <a href="#a6">6. Key Takeaways</a>
+      </div>
+      <div class="author"><span class="av">PP</span><div><b>Serialization Team</b><span>EasyCode and DSCSA Programs</span></div></div>
+      <div class="share">
+        <div class="lbl">Share This Post</div>
+        <div class="icons"><a href="#">in</a><a href="#">f</a><a href="#">x</a></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- related articles -->
+<section class="related">
+  <div class="wrap">
+    <h3>Keep Reading</h3>
+    <div class="relgrid">
+      <a class="relcard" href="case-study.html">
+        <div class="ph"><img src="images/cleanroom.jpg" alt="Cleanroom program"><span class="tag">Case Study</span></div>
+        <div class="c"><h4>Consolidating Five Vendors Into One Serialized Program</h4><div class="meta">May 2026 · 9 min read</div></div>
+      </a>
+      <a class="relcard" href="insights.html#articles">
+        <div class="ph"><img src="images/inspection.jpg" alt="Vision inspection"><span class="tag">Article</span></div>
+        <div class="c"><h4>What 100% In-Line Vision Inspection Actually Catches</h4><div class="meta">May 2026 · 6 min read</div></div>
+      </a>
+      <a class="relcard" href="insights.html#guides">
+        <div class="ph"><img src="images/prod-security.jpg" alt="Compliance guide"><span class="tag">Guide</span></div>
+        <div class="c"><h4>The State of Pharma Packaging Compliance 2026</h4><div class="meta">Annual Guide</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap row">
+    <div>
+      <span style="color:#fff;font-weight:700">PLATINUM IN<span style="color:var(--ice)">SIGHTS</span></span>
+      <span style="margin-left:14px;font-size:14px">by Platinum Press · Fort Worth, TX</span>
+    </div>
+    <div class="links">
+      <a href="v2.html">platinumpress.com</a>
+      <a href="insights.html#articles">Articles</a>
+      <a href="work.html">Case Studies</a>
+      <a href="contact.html">Contact Sales</a>
+    </div>
+    <div style="font-size:13.5px">© 2026 Platinum Press, Inc.</div>
+  </div>
+</footer>
+
+<script>
+const tocLinks=document.querySelectorAll('#toc a');
+const spy=new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(e.isIntersecting){
+      tocLinks.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));
+    }
+  });
+},{rootMargin:'-15% 0px -70% 0px'});
+document.querySelectorAll('.article h2[id]').forEach(h=>spy.observe(h));
+</script>
+</body>
+</html>
