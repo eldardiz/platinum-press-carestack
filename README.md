@@ -44,6 +44,16 @@ Template-reuse round proving the extend-the-templates model:
 - **`cartons.html`** — Folding Cartons product page (product detail template variant): constructions, the patented Combination Carton block, finishing and tamper evidence. Subnav: Labels ← → Literature.
 Also: article/news/capabilities captured into Figma (pages: Capabilities, News & Press, Blog Article, matching the file's new no-emoji Drafts convention).
 
+## Sixth wave (added 2026-07-18) — full sitemap coverage
+All 27 remaining sitemap nodes built as template variants (validated against CareStack sibling pages before the run):
+- **Products ×4**: literature, lidding, flexible, security (product detail template; full prev/next sibling chain across all 6 products)
+- **Markets ×4**: otc, wellness, animal-health, personal-care (market template; claims kept category-appropriate and printer-scoped)
+- **Capabilities ×12**: printing, finishing, serialization, warehousing, value-added (parents) + offset, flexo, digital, cold-foil, embossing, ablation, coating (children), all chained via sibling subnavs
+- **Innovations ×5**: combination-carton, easycode, codeshield, flatsert, source-tags (detail template + expanded spotlight content; the innovations.html spotlight now links each block to its full page). No one-page CareStack source exists for these; documented deviation.
+- **careers.html** — the ONE page composed from our own system (CareStack no longer has a careers page): job cards are representative stand-in roles, no invented people.
+- **downloads.html** — Platinum Insights library page; download links route to Contact (request-based) pending real files.
+Every sitemap node (44/44) now has a draft; every footer/nav link resolves to a real page (no v2.html#anchor stand-ins remain).
+
 ## V1 — carestack-inspired (`index.html`)
 
 A standalone homepage design exploration for **Platinum Press**, cloning the layout and feel of **carestack.com** (enterprise / premium / clean), reskinned with Platinum Press's own palette and imagery.
