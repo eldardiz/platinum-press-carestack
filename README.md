@@ -65,3 +65,10 @@ Static, no build. Drag the folder to Vercel/Netlify, or `vercel deploy` from her
 ## Notes
 - Logo is a text lockup placeholder (client logo files not yet delivered; logo is off-limits to redraw).
 - Fully responsive (desktop → mobile). Capturable into Figma via the HTML capture recipe for the design deliverable.
+
+## Fifth wave (added 2026-07-18)
+Template-reuse round proving the extend-the-templates model:
+- **`markets.html`** — Markets hub (hub layout): six market cards with relevant product/capability link lists, cross-links band, FAQ. Nav "Markets" now lands here site-wide.
+- **`medical-device.html`** — Medical Device market page (market template variant): UDI-ready labeling, instructions for use, device cartons, tamper evidence. FDA UDI labeling framed as printer-scope claims only.
+- **`cartons.html`** — Folding Cartons product page (product detail template variant): constructions, the patented Combination Carton block, finishing and tamper evidence. Subnav: Labels ← → Literature.
+Also: article/news/capabilities captured into Figma (pages: Capabilities, News & Press, Blog Article, matching the file's new no-emoji Drafts convention).
